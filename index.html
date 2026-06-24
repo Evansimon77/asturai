@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AsturAI — Done-for-you AI for business in Asturias</title>
+<meta name="description" content="AsturAI builds done-for-you AI systems for businesses in Asturias — handling messages, quotes, valuations and leads, so you spend less time on admin and more on what matters." />
+<link rel="icon" type="image/svg+xml" href="/assets/icon-gold.svg" />
+<link rel="apple-touch-icon" href="/assets/icon-navy-256.png" />
+<style>
+  :root{
+    --navy:#16294D;
+    --navy-deep:#0F1D38;
+    --ink:#27324A;
+    --gold:#C5A059;
+    --gold-deep:#a8843f;
+    --cream:#EFEBE2;
+    --cream-soft:#F5F1E8;
+    --taupe:#6F6857;
+    --line:rgba(22,41,77,.12);
+    --shadow:0 18px 50px -22px rgba(22,41,77,.35);
+    --serif:Georgia,'Times New Roman',serif;
+    --sans:ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.12;color:var(--navy)}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:100%;max-width:1140px;margin:0 auto;padding:0 22px}
+  .serif{font-family:var(--serif)}
+  .gold{color:var(--gold-deep)}
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(239,235,226,.82);
+    backdrop-filter:saturate(160%) blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:10px}
+  .brand img{height:34px;width:auto;display:block}
+  .nav-links{display:flex;align-items:center;gap:26px}
+  .nav-links a.nlink{font-size:14.5px;color:var(--ink);opacity:.8;transition:opacity .15s}
+  .nav-links a.nlink:hover{opacity:1}
+  .lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:#fff}
+  .lang button{
+    border:0;background:transparent;cursor:pointer;
+    font-family:var(--sans);font-size:13px;font-weight:600;color:var(--taupe);
+    padding:6px 11px;display:flex;align-items:center;gap:6px;transition:all .15s;
+  }
+  .lang button .flag{font-size:14px;line-height:1}
+  .lang button.on{background:var(--navy);color:var(--cream)}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;cursor:pointer;border:0;
+    font-family:var(--sans);font-weight:600;font-size:15px;
+    padding:12px 22px;border-radius:999px;transition:transform .12s,box-shadow .15s,background .15s;
+  }
+  .btn-gold{background:var(--gold);color:var(--navy-deep);box-shadow:0 10px 24px -12px rgba(197,160,89,.9)}
+  .btn-gold:hover{transform:translateY(-1px);background:#d0ad6a}
+  .btn-navy{background:var(--navy);color:var(--cream)}
+  .btn-navy:hover{transform:translateY(-1px);background:#1d3460}
+  .btn-ghost{background:transparent;color:var(--navy);border:1px solid var(--navy)}
+  .btn-ghost:hover{background:var(--navy);color:var(--cream)}
+  .nav .btn{padding:9px 18px;font-size:14px}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;overflow:hidden;padding:100px 0 88px}
+  .hero::before{
+    content:"";position:absolute;top:-22%;left:50%;transform:translateX(-50%);
+    width:760px;height:760px;max-width:130vw;border-radius:50%;z-index:0;
+    background:radial-gradient(circle,rgba(197,160,89,.18),rgba(197,160,89,0) 60%);
+  }
+  .hero-inner{position:relative;z-index:1;max-width:840px;margin:0 auto;text-align:center}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--gold-deep);margin-bottom:20px;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--gold)}
+  .hero h1{font-size:clamp(36px,6vw,62px);letter-spacing:-.01em}
+  .hero p.lead{font-size:clamp(17px,2vw,20px);color:var(--taupe);margin:24px auto 32px;max-width:40em}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+
+  /* ---------- TRUST STRIP ---------- */
+  .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--cream-soft)}
+  .strip-inner{display:flex;flex-wrap:wrap;gap:30px 48px;justify-content:center;padding:22px 0;text-align:center}
+  .strip-inner div{font-size:14.5px;color:var(--taupe)}
+  .strip-inner b{color:var(--navy);font-weight:600}
+
+  /* ---------- SECTION SHELL ---------- */
+  section.block{padding:84px 0}
+  .sec-head{max-width:36em;margin-bottom:48px}
+  .sec-head .eyebrow{margin-bottom:16px}
+  .sec-head h2{font-size:clamp(28px,3.6vw,40px)}
+  .sec-head p{color:var(--taupe);font-size:17px;margin-top:14px}
+
+  /* ---------- WHAT I DO ---------- */
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px 26px;
+    box-shadow:var(--shadow);transition:transform .15s;
+  }
+  .card:hover{transform:translateY(-3px)}
+  .card .num{
+    width:42px;height:42px;border-radius:12px;background:var(--cream);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-size:20px;color:var(--gold-deep);margin-bottom:18px;
+  }
+  .card h3{font-size:21px;margin-bottom:10px}
+  .card p{color:var(--taupe);font-size:15.5px}
+
+  /* ---------- WORK ---------- */
+  .work{background:var(--navy);color:var(--cream)}
+  .work h2,.work h3{color:var(--cream)}
+  .work .eyebrow{color:var(--gold)}
+  .work .sec-head p{color:rgba(239,235,226,.72)}
+  .work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .proj{
+    background:rgba(255,255,255,.04);border:1px solid rgba(239,235,226,.14);
+    border-radius:18px;padding:28px;transition:background .15s,transform .15s;
+  }
+  .proj:hover{background:rgba(255,255,255,.07);transform:translateY(-3px)}
+  .proj-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+  .tag{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+  .tag.live{background:rgba(197,160,89,.18);color:var(--gold)}
+  .tag.soon{background:rgba(239,235,226,.12);color:rgba(239,235,226,.8)}
+  .proj h3{font-size:22px;margin-bottom:8px}
+  .proj p{color:rgba(239,235,226,.74);font-size:15.5px}
+  .proj .kind{font-size:13px;color:var(--gold);font-weight:600;margin-bottom:4px;letter-spacing:.02em}
+
+  /* ---------- OCTOPUS / ABOUT ---------- */
+  .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center}
+  .about-art{display:flex;justify-content:center}
+  .about-art .panel{
+    width:100%;background:var(--cream-soft);border:1px solid var(--line);
+    border-radius:20px;padding:40px 32px;display:flex;justify-content:center;box-shadow:var(--shadow);
+  }
+  .about-art img{width:min(320px,90%);height:auto}
+  .about h2{font-size:clamp(26px,3.4vw,38px);margin-bottom:18px}
+  .about p{color:var(--taupe);font-size:16.5px;margin-bottom:16px}
+  .about .sign{font-family:var(--serif);font-size:18px;color:var(--navy);margin-top:8px}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:var(--navy-deep);color:var(--cream);text-align:center}
+  .contact h2{color:var(--cream);font-size:clamp(28px,4vw,44px)}
+  .contact p{color:rgba(239,235,226,.78);font-size:18px;max-width:32em;margin:18px auto 32px}
+  .contact-cta{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+  .btn-wa{background:#25D366;color:#04331a}
+  .btn-wa:hover{transform:translateY(-1px);background:#34e177}
+  .btn-mail{background:var(--gold);color:var(--navy-deep)}
+  .btn-mail:hover{transform:translateY(-1px);background:#d0ad6a}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--navy);color:rgba(239,235,226,.7);padding:40px 0 46px;border-top:1px solid rgba(239,235,226,.1)}
+  .foot-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px}
+  .foot-inner img{height:40px}
+  .foot-inner .small{font-size:13.5px}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:860px){
+    .hero{padding:72px 0 60px}
+    .cards3{grid-template-columns:1fr}
+    .work-grid{grid-template-columns:1fr}
+    .about-grid{grid-template-columns:1fr;gap:24px}
+    .about-art{order:-1}
+    .nav-links .nlink{display:none}
+    section.block{padding:62px 0}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="AsturAI">
+      <img src="/assets/asturai-primary-clear.svg" alt="AsturAI" />
+    </a>
+    <nav class="nav-links">
+      <a class="nlink" href="#what" data-i18n="nav.what">What I do</a>
+      <a class="nlink" href="#work" data-i18n="nav.work">My work</a>
+      <a class="nlink" href="#about" data-i18n="nav.about">About</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en"><span class="flag">🇬🇧</span>EN</button>
+        <button type="button" data-lang="es"><span class="flag">🇪🇸</span>ES</button>
+      </div>
+      <a class="btn btn-gold" href="#contact" data-i18n="nav.cta">Talk to me</a>
+    </nav>
+  </div>
+</header>
+
+<span id="top"></span>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <span class="eyebrow" data-i18n="hero.eyebrow">AI systems for business in Asturias</span>
+    <h1 data-i18n="hero.title">Put the boring work of your business on <span class="gold">autopilot</span>.</h1>
+    <p class="lead" data-i18n="hero.lead">AsturAI builds done-for-you AI systems for businesses in Asturias — answering messages, preparing quotes, valuing properties, following up with leads — so you spend less time on admin and more on what actually grows your business.</p>
+    <div class="hero-cta">
+      <a class="btn btn-navy" href="#contact" data-i18n="hero.cta1">Talk to me</a>
+      <a class="btn btn-ghost" href="#work" data-i18n="hero.cta2">See my work</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TRUST STRIP ===================== -->
+<div class="strip">
+  <div class="wrap strip-inner">
+    <div data-i18n="strip.1"><b>Done-for-you</b> — I build it, you use it</div>
+    <div data-i18n="strip.2"><b>Plain language</b> — no jargon, ever</div>
+    <div data-i18n="strip.3"><b>Local</b> — based in Asturias</div>
+    <div data-i18n="strip.4"><b>One monthly plan</b> — I keep it running</div>
+  </div>
+</div>
+
+<!-- ===================== WHAT I DO ===================== -->
+<section class="block" id="what">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="what.eyebrow">How it works</span>
+      <h2 data-i18n="what.title">I take the repetitive work off your plate.</h2>
+      <p data-i18n="what.sub">Every business has tasks that quietly eat hours each week. I find them, build an AI system that does them for you, and look after it — so you don't have to think about it.</p>
+    </div>
+    <div class="cards3">
+      <div class="card">
+        <div class="num">1</div>
+        <h3 data-i18n="what.c1t">I find the time-wasters</h3>
+        <p data-i18n="what.c1p">The same questions answered again and again, data copied by hand, the same emails written daily. I spot exactly where your hours leak.</p>
+      </div>
+      <div class="card">
+        <div class="num">2</div>
+        <h3 data-i18n="what.c2t">I build the system</h3>
+        <p data-i18n="what.c2p">A tailored AI assistant that does that work for you — in your voice, connected to the tools you already use. Built around your business, not a generic template.</p>
+      </div>
+      <div class="card">
+        <div class="num">3</div>
+        <h3 data-i18n="what.c3t">I keep it running</h3>
+        <p data-i18n="what.c3p">A simple monthly plan: I maintain it, improve it and watch over it. No technical headaches land on you — that's my job, not yours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WORK ===================== -->
+<section class="block work" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="work.eyebrow">Selected work</span>
+      <h2 data-i18n="work.title">Real systems I've built.</h2>
+      <p data-i18n="work.sub">A few of the AI tools I've designed and built — practical things that do real work, not demos for show.</p>
+    </div>
+    <div class="work-grid">
+      <div class="proj">
+        <div class="proj-top">
+          <span class="kind" data-i18n="work.p1k">Property valuation</span>
+          <span class="tag live" data-i18n="work.live">Live</span>
+        </div>
+        <h3 data-i18n="work.p1t">The Tasador</h3>
+        <p data-i18n="work.p1p">An honest property-valuation engine for Asturias. Type in a home and get a real market-value range in seconds — built for a local estate agency to value faster and price right.</p>
+      </div>
+      <div class="proj">
+        <div class="proj-top">
+          <span class="kind" data-i18n="work.p2k">AI back-office</span>
+          <span class="tag live" data-i18n="work.live">Live</span>
+        </div>
+        <h3 data-i18n="work.p2t">AI Operations System</h3>
+        <p data-i18n="work.p2p">A full AI back-office for a real-estate agency: handling leads, writing property listings, valuations and notes — all in one place, so the team does far less manual work.</p>
+      </div>
+      <div class="proj">
+        <div class="proj-top">
+          <span class="kind" data-i18n="work.p3k">Visibility tool</span>
+          <span class="tag live" data-i18n="work.live">Live</span>
+        </div>
+        <h3 data-i18n="work.p3t">AI Visibility Audit</h3>
+        <p data-i18n="work.p3p">A tool that checks whether AI assistants like ChatGPT recommend your business when a customer asks — and shows you exactly how to get named instead of your competitor.</p>
+      </div>
+      <div class="proj">
+        <div class="proj-top">
+          <span class="kind" data-i18n="work.p4k">Marketing automation</span>
+          <span class="tag live" data-i18n="work.live">Live</span>
+        </div>
+        <h3 data-i18n="work.p4t">Property Video Reels</h3>
+        <p data-i18n="work.p4p">Turns a handful of property photos into polished vertical video reels in three languages — ready for social media in minutes instead of an afternoon of editing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT / OCTOPUS ===================== -->
+<section class="block about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-art">
+      <div class="panel">
+        <img src="/assets/asturai-primary-clear.svg" alt="AsturAI" />
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow" data-i18n="about.eyebrow">Why an octopus</span>
+      <h2 data-i18n="about.title">Many arms. One brain.</h2>
+      <p data-i18n="about.p1">An octopus handles many things at once — but there's a single mind behind it all. That's exactly what good automation gives your business: lots of small tasks taken care of in the background, with one clear intelligence steering them.</p>
+      <p data-i18n="about.p2">I'm Evan, based in Asturias. I build practical AI that earns its keep — no hype, no jargon, just systems that quietly do the work so you can focus on your customers.</p>
+      <p class="sign" data-i18n="about.sign">— Evan, AsturAI</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="block contact" id="contact">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="contact.eyebrow" style="color:var(--gold)">Let's talk</span>
+    <h2 data-i18n="contact.title">Tell me one task that wastes your time.</h2>
+    <p data-i18n="contact.sub">Pick one thing that eats your week — and I'll show you, with no commitment, how AI could take it off your plate. First conversation is free.</p>
+    <div class="contact-cta">
+      <a class="btn btn-wa" id="wa-btn" href="https://wa.me/34613286809" target="_blank" rel="noopener" data-i18n="contact.wa">WhatsApp me</a>
+      <a class="btn btn-mail" id="mail-btn" href="mailto:evanastur@gmail.com" data-i18n="contact.mail">Send an email</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap foot-inner">
+    <img src="/assets/asturai-reversed.svg" alt="AsturAI" />
+    <div class="small">© <span id="year"></span> AsturAI · Asturias, España · <span data-i18n="foot.tag">Done-for-you AI for local business</span></div>
+  </div>
+</footer>
+
+<script>
+/* =========================================================
+   AsturAI — language (English default · auto-detect Spanish · toggle)
+   ========================================================= */
+const STR = {
+  en:{
+    "nav.what":"What I do","nav.work":"My work","nav.about":"About","nav.cta":"Talk to me",
+    "hero.eyebrow":"AI systems for business in Asturias",
+    "hero.title":"Put the boring work of your business on <span class='gold'>autopilot</span>.",
+    "hero.lead":"AsturAI builds done-for-you AI systems for businesses in Asturias — answering messages, preparing quotes, valuing properties, following up with leads — so you spend less time on admin and more on what actually grows your business.",
+    "hero.cta1":"Talk to me","hero.cta2":"See my work",
+    "strip.1":"<b>Done-for-you</b> — I build it, you use it",
+    "strip.2":"<b>Plain language</b> — no jargon, ever",
+    "strip.3":"<b>Local</b> — based in Asturias",
+    "strip.4":"<b>One monthly plan</b> — I keep it running",
+    "what.eyebrow":"How it works",
+    "what.title":"I take the repetitive work off your plate.",
+    "what.sub":"Every business has tasks that quietly eat hours each week. I find them, build an AI system that does them for you, and look after it — so you don't have to think about it.",
+    "what.c1t":"I find the time-wasters",
+    "what.c1p":"The same questions answered again and again, data copied by hand, the same emails written daily. I spot exactly where your hours leak.",
+    "what.c2t":"I build the system",
+    "what.c2p":"A tailored AI assistant that does that work for you — in your voice, connected to the tools you already use. Built around your business, not a generic template.",
+    "what.c3t":"I keep it running",
+    "what.c3p":"A simple monthly plan: I maintain it, improve it and watch over it. No technical headaches land on you — that's my job, not yours.",
+    "work.eyebrow":"Selected work","work.title":"Real systems I've built.",
+    "work.sub":"A few of the AI tools I've designed and built — practical things that do real work, not demos for show.",
+    "work.live":"Live","work.soon":"Coming soon",
+    "work.p1k":"Property valuation","work.p1t":"The Tasador",
+    "work.p1p":"An honest property-valuation engine for Asturias. Type in a home and get a real market-value range in seconds — built for a local estate agency to value faster and price right.",
+    "work.p2k":"AI back-office","work.p2t":"AI Operations System",
+    "work.p2p":"A full AI back-office for a real-estate agency: handling leads, writing property listings, valuations and notes — all in one place, so the team does far less manual work.",
+    "work.p3k":"Visibility tool","work.p3t":"AI Visibility Audit",
+    "work.p3p":"A tool that checks whether AI assistants like ChatGPT recommend your business when a customer asks — and shows you exactly how to get named instead of your competitor.",
+    "work.p4k":"Marketing automation","work.p4t":"Property Video Reels",
+    "work.p4p":"Turns a handful of property photos into polished vertical video reels in three languages — ready for social media in minutes instead of an afternoon of editing.",
+    "about.eyebrow":"Why an octopus","about.title":"Many arms. One brain.",
+    "about.p1":"An octopus handles many things at once — but there's a single mind behind it all. That's exactly what good automation gives your business: lots of small tasks taken care of in the background, with one clear intelligence steering them.",
+    "about.p2":"I'm Evan, based in Asturias. I build practical AI that earns its keep — no hype, no jargon, just systems that quietly do the work so you can focus on your customers.",
+    "about.sign":"— Evan, AsturAI",
+    "contact.eyebrow":"Let's talk","contact.title":"Tell me one task that wastes your time.",
+    "contact.sub":"Pick one thing that eats your week — and I'll show you, with no commitment, how AI could take it off your plate. First conversation is free.",
+    "contact.wa":"WhatsApp me","contact.mail":"Send an email",
+    "foot.tag":"Done-for-you AI for local business"
+  },
+  es:{
+    "nav.what":"Qué hago","nav.work":"Mi trabajo","nav.about":"Sobre mí","nav.cta":"Hablemos",
+    "hero.eyebrow":"Sistemas de IA para empresas de Asturias",
+    "hero.title":"Pon en <span class='gold'>piloto automático</span> el trabajo aburrido de tu negocio.",
+    "hero.lead":"AsturAI crea sistemas de inteligencia artificial a medida para empresas de Asturias — responder mensajes, preparar presupuestos, valorar inmuebles, hacer seguimiento de clientes — para que dediques menos tiempo al papeleo y más a lo que de verdad hace crecer tu negocio.",
+    "hero.cta1":"Hablemos","hero.cta2":"Ver mi trabajo",
+    "strip.1":"<b>Hecho por mí</b> — yo lo construyo, tú lo usas",
+    "strip.2":"<b>Lenguaje claro</b> — sin tecnicismos, nunca",
+    "strip.3":"<b>Local</b> — desde Asturias",
+    "strip.4":"<b>Una cuota mensual</b> — yo lo mantengo en marcha",
+    "what.eyebrow":"Cómo funciona",
+    "what.title":"Te quito de encima el trabajo repetitivo.",
+    "what.sub":"Todo negocio tiene tareas que devoran horas cada semana sin que te des cuenta. Yo las encuentro, construyo un sistema de IA que las hace por ti y lo cuido — para que no tengas que pensar en ello.",
+    "what.c1t":"Encuentro lo que te roba tiempo",
+    "what.c1p":"Las mismas preguntas respondidas una y otra vez, datos copiados a mano, los mismos correos cada día. Detecto exactamente por dónde se te escapan las horas.",
+    "what.c2t":"Construyo el sistema",
+    "what.c2p":"Un asistente de IA a medida que hace ese trabajo por ti — con tu tono, conectado a las herramientas que ya usas. Hecho para tu negocio, no una plantilla genérica.",
+    "what.c3t":"Lo mantengo en marcha",
+    "what.c3p":"Una cuota mensual sencilla: lo mantengo, lo mejoro y lo vigilo. Cero dolores de cabeza técnicos para ti — de eso me encargo yo, no tú.",
+    "work.eyebrow":"Trabajos seleccionados","work.title":"Sistemas reales que he construido.",
+    "work.sub":"Algunas de las herramientas de IA que he diseñado y construido — cosas prácticas que hacen trabajo de verdad, no demos de escaparate.",
+    "work.live":"En uso","work.soon":"Próximamente",
+    "work.p1k":"Valoración de inmuebles","work.p1t":"El Tasador",
+    "work.p1p":"Un motor de valoración de inmuebles honesto para Asturias. Escribe una vivienda y obtén un rango de valor de mercado real en segundos — creado para una inmobiliaria local para valorar más rápido y poner el precio justo.",
+    "work.p2k":"Oficina con IA","work.p2t":"Sistema de Operaciones con IA",
+    "work.p2p":"Una oficina trasera completa con IA para una inmobiliaria: gestión de clientes, redacción de anuncios, valoraciones y notas — todo en un solo sitio, para que el equipo haga mucho menos trabajo manual.",
+    "work.p3k":"Herramienta de visibilidad","work.p3t":"Auditoría de Visibilidad en IA",
+    "work.p3p":"Una herramienta que comprueba si asistentes como ChatGPT recomiendan tu negocio cuando un cliente pregunta — y te muestra exactamente cómo conseguir que te nombren a ti en vez de a tu competencia.",
+    "work.p4k":"Automatización de marketing","work.p4t":"Reels de Inmuebles",
+    "work.p4p":"Convierte unas pocas fotos de un inmueble en reels verticales cuidados en tres idiomas — listos para redes sociales en minutos, en vez de una tarde de edición.",
+    "about.eyebrow":"Por qué un pulpo","about.title":"Muchos brazos. Un solo cerebro.",
+    "about.p1":"Un pulpo se ocupa de muchas cosas a la vez — pero hay una sola mente detrás de todo. Eso es justo lo que una buena automatización le da a tu negocio: muchas tareas pequeñas resueltas en segundo plano, con una inteligencia clara que las dirige.",
+    "about.p2":"Soy Evan, desde Asturias. Construyo IA práctica que se gana su sueldo — sin humo, sin tecnicismos, solo sistemas que hacen el trabajo en silencio para que tú te centres en tus clientes.",
+    "about.sign":"— Evan, AsturAI",
+    "contact.eyebrow":"Hablemos","contact.title":"Dime una tarea que te hace perder el tiempo.",
+    "contact.sub":"Elige una sola cosa que te coma la semana — y te enseño, sin compromiso, cómo la IA podría quitártela de encima. La primera conversación es gratis.",
+    "contact.wa":"Escríbeme por WhatsApp","contact.mail":"Enviar un correo",
+    "foot.tag":"IA hecha a medida para el negocio local"
+  }
+};
+
+const LANG_KEY = "asturai_lang";
+function pickInitial(){
+  const saved = localStorage.getItem(LANG_KEY);
+  if (saved === "en" || saved === "es") return saved;
+  // automatic detection from the visitor's browser
+  return (navigator.language || "en").toLowerCase().startsWith("es") ? "es" : "en";
+}
+function setLang(lang){
+  const dict = STR[lang] || STR.en;
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key = el.getAttribute("data-i18n");
+    if (dict[key] != null) el.innerHTML = dict[key];
+  });
+  document.querySelectorAll(".lang button").forEach(b=>{
+    b.classList.toggle("on", b.dataset.lang === lang);
+  });
+  localStorage.setItem(LANG_KEY, lang);
+}
+document.querySelectorAll(".lang button").forEach(b=>{
+  b.addEventListener("click", ()=> setLang(b.dataset.lang));
+});
+setLang(pickInitial());
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
