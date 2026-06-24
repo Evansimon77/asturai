@@ -134,6 +134,9 @@
   .tag.soon{background:rgba(239,235,226,.12);color:rgba(239,235,226,.8)}
   .proj h3{font-size:22px;margin-bottom:8px}
   .proj p{color:rgba(239,235,226,.74);font-size:15.5px}
+  .proj-link{text-decoration:none;cursor:pointer}
+  .proj-cta{display:inline-block;margin-top:16px;color:var(--gold);font-weight:600;font-size:14.5px;transition:transform .15s}
+  .proj-link:hover .proj-cta{transform:translateX(3px)}
   .proj .kind{font-size:13px;color:var(--gold);font-weight:600;margin-bottom:4px;letter-spacing:.02em}
 
   /* ---------- OCTOPUS / ABOUT ---------- */
@@ -259,14 +262,15 @@
       <p data-i18n="work.sub">A few of the AI tools I've designed and built — practical things that do real work, not demos for show.</p>
     </div>
     <div class="work-grid">
-      <div class="proj">
+      <a class="proj proj-link" href="https://tasador.asturai.com" target="_blank" rel="noopener">
         <div class="proj-top">
           <span class="kind" data-i18n="work.p1k">Property valuation</span>
           <span class="tag live" data-i18n="work.live">Live</span>
         </div>
         <h3 data-i18n="work.p1t">The Tasador</h3>
         <p data-i18n="work.p1p">An honest property-valuation engine for Asturias. Type in a home and get a real market-value range in seconds — built for a local estate agency to value faster and price right.</p>
-      </div>
+        <span class="proj-cta" data-i18n="work.p1cta">Try it live →</span>
+      </a>
       <div class="proj">
         <div class="proj-top">
           <span class="kind" data-i18n="work.p2k">AI back-office</span>
@@ -363,6 +367,7 @@ const STR = {
     "work.live":"Live","work.soon":"Coming soon",
     "work.p1k":"Property valuation","work.p1t":"The Tasador",
     "work.p1p":"An honest property-valuation engine for Asturias. Type in a home and get a real market-value range in seconds — built for a local estate agency to value faster and price right.",
+    "work.p1cta":"Try it live →",
     "work.p2k":"AI back-office","work.p2t":"AI Operations System",
     "work.p2p":"A full AI back-office for a real-estate agency: handling leads, writing property listings, valuations and notes — all in one place, so the team does far less manual work.",
     "work.p3k":"Visibility tool","work.p3t":"AI Visibility Audit",
@@ -402,6 +407,7 @@ const STR = {
     "work.live":"En uso","work.soon":"Próximamente",
     "work.p1k":"Valoración de inmuebles","work.p1t":"El Tasador",
     "work.p1p":"Un motor de valoración de inmuebles honesto para Asturias. Escribe una vivienda y obtén un rango de valor de mercado real en segundos — creado para una inmobiliaria local para valorar más rápido y poner el precio justo.",
+    "work.p1cta":"Pruébalo en vivo →",
     "work.p2k":"Oficina con IA","work.p2t":"Sistema de Operaciones con IA",
     "work.p2p":"Una oficina trasera completa con IA para una inmobiliaria: gestión de clientes, redacción de anuncios, valoraciones y notas — todo en un solo sitio, para que el equipo haga mucho menos trabajo manual.",
     "work.p3k":"Herramienta de visibilidad","work.p3t":"Auditoría de Visibilidad en IA",
