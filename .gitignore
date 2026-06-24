@@ -1,0 +1,30 @@
+# dependencies / build
+node_modules/
+dist/
+.output/
+.astro/
+build/
+out/
+
+# secrets / env
+.env
+.env.*
+*.key
+*.pem
+
+# os / editor
+.DS_Store
+.vscode/
+.idea/
+
+# heavy media working files (keep repo light)
+*.mov
+*.mp4
+*.psd
+*.wav
+*.mp3
+*.m4a
+*.aiff
+
+# netlify
+.netlify
