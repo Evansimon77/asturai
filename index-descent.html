@@ -95,7 +95,7 @@ html.lenis,html.lenis body{height:auto}
 
 /* ---------- Scroll length spacer (gives the dive its distance) ---------- */
 #scroll{position:relative; z-index:1;}
-.seg{height:120vh;}
+.seg{height:94vh;}
 
 /* ---------- Beats: one calm statement at a time, centred ---------- */
 #beats{position:fixed; inset:0; z-index:5; pointer-events:none;}
@@ -226,6 +226,16 @@ header>*{pointer-events:auto;}
   border-bottom:1.4px solid var(--gold); transform:rotate(45deg); animation:dive 1.9s ease-in-out infinite;}
 @keyframes dive{0%,100%{transform:rotate(45deg) translate(0,0); opacity:.35}50%{transform:rotate(45deg) translate(4px,4px); opacity:1}}
 
+/* ---------- Skip the dive (escape hatch for hurried visitors) ---------- */
+#skip{position:fixed; left:50%; bottom:26px; z-index:26; transform:translateX(-50%);
+  background:rgba(5,10,20,.55); backdrop-filter:blur(6px); border:1px solid var(--line);
+  color:var(--cream-dim); font-family:inherit; font-size:.74rem; font-weight:500; letter-spacing:.02em;
+  padding:9px 18px; border-radius:999px; cursor:pointer; text-decoration:none; white-space:nowrap;
+  opacity:0; pointer-events:none; transition:opacity .5s var(--ease), color .25s, border-color .25s;}
+#skip.show{opacity:1; pointer-events:auto;}
+#skip:hover{color:var(--gold); border-color:var(--gold);}
+@media (max-width:720px){#skip{font-size:.68rem; bottom:18px;}}
+
 /* ---------- Loading reveal (Elva-style 0→100%) ---------- */
 #loader{position:fixed; inset:0; z-index:90; background:#02050c; display:flex;
   flex-direction:column; align-items:center; justify-content:center; gap:26px;
@@ -242,7 +252,7 @@ header>*{pointer-events:auto;}
 @media (max-width:720px){
   #octopus{width:46vh;} #gauge .label{display:none;}
   #bubble{width:78px; height:78px; font-size:.64rem;}
-  .seg{height:100vh;}
+  .seg{height:80vh;}
 }
 </style>
 
@@ -395,6 +405,7 @@ header>*{pointer-events:auto;}
 <nav id="gauge" aria-label="Sections"></nav>
 <button id="bubble" data-go="5"><span data-t="bubble">Free first look</span></button>
 <div id="hint"><span data-t="hint">Dive deeper</span><span class="arrow"></span></div>
+<a id="skip" href="#" data-go="5"><span data-t="skip">Skip to the free look →</span></a>
 
 <div id="loader">
   <div class="lb">Astur<b>Ai</b></div>
@@ -419,7 +430,7 @@ const I18N={
   "r4.e":"Why us, not a template","r4.h":"Built around you. <span class='gold'>Private by law</span>.","r4.l":"We design your system around how your business truly works — not a generic tool you bend yourself around. Each person's clients stay private by default, built to meet EU and Spanish data law. A studio that designs it, builds it, and stays with you.",
   "r5.e":"Your no-risk first step","r5.h":"A <span class='gold'>free first look</span>.","r5.l":"We study your business — or your website — and show you exactly where the hours and leads are leaking, and what we'd build. No cost. No commitment.","r5.k1":"For your website","r5.b1":"Do AI assistants like ChatGPT recommend you — or someone else?","r5.k2":"For your company","r5.b2":"Like a doctor, we point to exactly what to fix first.","r5.c1":"Book it on WhatsApp","r5.c2":"Or email us","r5.re":"Pricing is shaped to each business — <span class='gold'>it can start small and grow with you</span>.",
   "r6.e":"Not ready today?","r6.h":"Stay in the <span class='gold'>current</span>.","r6.l":"Get our one-pager — the everyday jobs AI can take off your plate this month. No spam, ever.","r6.ph1":"Your name","r6.ph2":"Your email","r6.c":"Send it to me","r6.li":"Follow along on LinkedIn →",
-  "bubble":"Free first look","hint":"Dive deeper",
+  "bubble":"Free first look","hint":"Dive deeper","skip":"Skip to the free look →",
   "g0":"Surface","g1":"The pain","g2":"The after","g3":"Proof","g4":"Why us","g5":"Free look","g6":"Stay in touch"},
  es:{ "nav.cta":"Diagnóstico gratis",
   "r0.h":"El <span class='gold'>segundo cerebro</span> de tu negocio.","r0.l":"Una mente tranquila que se encarga, en silencio, del trabajo que consume las horas de tu equipo — hecha a la medida de cómo funciona de verdad tu negocio.","r0.c1":"Diagnóstico gratis","r0.c2":"Ver lo que hemos creado",
@@ -433,7 +444,7 @@ const I18N={
   "r4.e":"Por qué nosotros, no una plantilla","r4.h":"Hecho a tu medida. <span class='gold'>Privado por ley</span>.","r4.l":"Diseñamos tu sistema en torno a cómo funciona de verdad tu negocio — no una herramienta genérica a la que adaptarte. Los clientes de cada persona son privados por defecto, hecho para cumplir la ley de datos europea y española. Un estudio que lo diseña, lo construye y se queda contigo.",
   "r5.e":"Tu primer paso sin riesgo","r5.h":"Un <span class='gold'>diagnóstico gratis</span>.","r5.l":"Estudiamos tu negocio — o tu web — y te mostramos exactamente dónde se escapan las horas y los clientes, y qué construiríamos. Sin coste. Sin compromiso.","r5.k1":"Para tu web","r5.b1":"¿Te recomiendan asistentes como ChatGPT — o a otro?","r5.k2":"Para tu empresa","r5.b2":"Como un médico, señalamos exactamente qué arreglar primero.","r5.c1":"Resérvalo por WhatsApp","r5.c2":"O escríbenos","r5.re":"El precio se adapta a cada negocio — <span class='gold'>puede empezar pequeño y crecer contigo</span>.",
   "r6.e":"¿Aún no es el momento?","r6.h":"Quédate en la <span class='gold'>corriente</span>.","r6.l":"Recibe nuestra guía — las tareas cotidianas que la IA puede quitarte de encima este mes. Sin spam, nunca.","r6.ph1":"Tu nombre","r6.ph2":"Tu correo","r6.c":"Envíamela","r6.li":"Sígueme en LinkedIn →",
-  "bubble":"Diagnóstico gratis","hint":"Bucea más hondo",
+  "bubble":"Diagnóstico gratis","hint":"Bucea más hondo","skip":"Saltar al diagnóstico →",
   "g0":"Superficie","g1":"El dolor","g2":"El después","g3":"Pruebas","g4":"Por qué","g5":"Diagnóstico","g6":"Sigamos"}
 };
 let lang=(navigator.language||"en").toLowerCase().startsWith("es")?"es":"en";
@@ -454,7 +465,8 @@ const N=beats.length;
 const water=document.getElementById("water"), rays=document.getElementById("rays"),
       shaft=document.getElementById("shaft"),
       brain=document.getElementById("brain"), octo=document.getElementById("octopus"),
-      bubble=document.getElementById("bubble"), hint=document.getElementById("hint");
+      bubble=document.getElementById("bubble"), hint=document.getElementById("hint"),
+      skip=document.getElementById("skip");
 let introT0=0;   // set when the loader lifts → octopus emerges
 
 /* depth colour anchors (surface → abyss) */
@@ -521,6 +533,8 @@ function render(p, time){
   if(gfill) gfill.style.height=(p*100)+"%";
   bubble.classList.toggle("bloom", idx===5);
   hint.style.opacity = p<0.04 ? "1":"0";
+  // escape hatch: visible once you're diving but haven't reached the offer yet
+  skip.classList.toggle("show", p>0.05 && p<0.66);
 }
 
 /* ===================== particles: depth + motion-blur streaks ===================== */

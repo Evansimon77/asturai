@@ -16,7 +16,11 @@ its design. Full method + every locked decision live in **REDESIGN-DECISIONS.md*
   real **LinkedIn** link, **no-JS safety net** (`<noscript>` so beats aren't a black screen).
   **Brand casing locked to "AsturAi"** (lowercase i, matching the logo — build_assets.py: "capital I → lowercase i");
   reverted all-caps everywhere on both files. **Open:** paste analytics token + Formspree id + confirm LinkedIn URL;
-  align brand docs/memory (still say "AsturAI"); scroll-jacking on Descent still to make skippable before any go-live.
+  align brand docs/memory (still say "AsturAI").
+- **2026-06-26 — Descent: skip-the-dive control + shorter dive.** Added a fading "Skip to the free look →"
+  button (EN/ES, jumps to the offer beat, hidden once you arrive) and trimmed stage height (120→94vh desktop,
+  100→80vh mobile) so the full dive is ~22% less scrolling — choreography unchanged. **Evan then asked to
+  pause Descent and work only on the live site (`index.html`); Descent parked here.**
 - **2026-06-25 — descent VISUAL CONCEPT locked** via mockup `design/sketches/descent-concept-09.png`:
   an underwater descent — surface light → an octopus guide → a glowing "second brain" deep below.
   Three locked elements: (1) octopus with golden-top / blue-teal-underside balance; (2) the bold
