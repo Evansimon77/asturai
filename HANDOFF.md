@@ -1,86 +1,78 @@
-# HANDOFF — asturai-site (AsturAI website redesign) · 2026-06-25
-
+# HANDOFF — asturai-site (AsturAi "Descent" redesign) · 2026-06-25
 project: /Users/evansimonenko/Documents/Cursor Code/Projects/asturai-site
 
 ## Resume in one move
-Start the local server and open the THREE candidate redesigns for Evan to pick from:
-```
-cd ~/Documents/"Cursor Code"/Projects/asturai-site && python3 -m http.server 8300
-```
-then open: index-kinetic.html, index-3d.html, index-cinematic.html (all at http://localhost:8300/).
-**We are waiting for Evan to choose which of the 3 directions wins.** Once he picks, take that ONE
-to truly world-class (perfection pass) and make it the real `index.html`.
+Start the local server, hard-refresh the page, and ask Evan for the ONE next thing that's off:
+`cd "/Users/evansimonenko/Documents/Cursor Code/Projects/asturai-site" && python3 -m http.server 8300`
+→ open http://localhost:8300/index-descent.html
 
 ## Goal
-Redesign asturai.com to look genuinely **next-level / Awwwards-quality** — it's Evan's portfolio AND
-his proof of web-design skill for clients. He rejected every incremental change; he wants a DRASTIC,
-world-class leap. Keep all existing copy, the EN/ES toggle, and the JSON-LD search data intact.
+Build a brand-new homepage for asturai.com — a **scroll-driven cinematic underwater "dive"** where
+scrolling IS a camera descending: surface light → octopus guide → a glowing "second brain" deep below.
+Reuse only the *text/info* from the live site, none of its design. Studio "we" voice. Desktop-first.
+Reference feel Evan picked: **elvalabs.ai** (smooth camera-scroll, calm/minimal, big quiet type, loading reveal).
 
 ## State
-- **Done — 3 full DRASTIC candidate versions built (each a complete single file, validated):**
-  - `index-kinetic.html` — "Kinetic Editorial": giant type, broken grid, custom gold cursor,
-    hover-reveal photos, Lenis smooth scroll + GSAP. (95 KB)
-  - `index-3d.html` — "3D Interactive Octopus": live WebGL gold octopus (Three.js) reacting to
-    mouse/scroll in the hero. (85 KB)
-  - `index-cinematic.html` — "Cinematic Film": full-screen office-photo scenes, GSAP/Lenis scroll
-    transitions, huge type over imagery. (80 KB)
-  - All 3 pass: JSON-LD valid, EN/ES key parity OK, libs present. Built by 3 parallel subagents.
-- **Done — assets created:** `assets/evan-portrait.jpg` (886×1100, optimized from Desktop/Firmas),
-  `assets/office-1.jpg / office-stand.jpg / office-lounge.jpg / office-server.jpg / office-atrium.jpg`,
-  and `assets/asturai-clear-cream.svg` (the gold+cream octopus lockup on TRANSPARENT bg — made by
-  stripping the navy `<rect>` out of asturai-reversed.svg; use this on dark backgrounds).
-- **Done — design-skill context:** `PRODUCT.md` + `DESIGN.md` written at project root.
-- **Current `index.html`** = the earlier "dark cinematic + WebGL mesh-gradient backdrop" version
-  (Evan called it only a "small improvement" — it is NOT the target; the 3 candidates supersede it).
-- **In flight:** waiting on Evan to pick the winning direction (Kinetic / 3D / Cinematic). Nothing
-  half-edited. Next action is his choice, then a perfection pass on that one file.
-- **Blocked / open:** none blocking. Could not auto-screenshot the 3 candidates (headless Chrome
-  hangs on the CDN animation libs) — they were opened live in Evan's browser for him to judge.
+- Done:
+  - Full cinematic build lives in **index-descent.html** (a SEPARATE file — the LIVE `index.html`
+    "Cinematic Film" homepage is untouched and still deployed).
+  - Mechanic: tall scroll spacer + fixed visual stage; smooth scroll via **Lenis** (CDN); a per-frame
+    `render(p,time)` maps scroll progress 0→1 to everything. Failure-proof: if Lenis dies, native scroll
+    + self-computed velocity still drive it.
+  - Coded/free effects: loading reveal (0→100%), darkening water, central god-ray **shaft**, surface
+    caustics, rising bubbles, depth particles that **streak on fast scroll** (the "diving" cue),
+    octopus (emerges on entry, leans into the dive, mouse-parallax), brain (grows from a pinpoint →
+    breathing hero), staggered text reveals per beat, depth-gauge meter+menu (right), gold free-look
+    bubble (blooms at offer), EN/ES, reduced-motion, JSON-LD for AI search, SVG favicon.
+  - **7 beats** = the locked journey (surface hook → pain → after → proof → why bespoke+private → free
+    first look → stay in touch). Real facts reused (Tasador live link, Verter, AI Ops, Ask-Your-Docs;
+    WhatsApp +34 613 286 809; email evanastur@gmail.com).
+  - Two hero images only, cleaned & tiny (`assets/descent/`): octopus.webp (160K) + brain.webp (128K).
+  - **Just fixed (uncommitted):** (1) octopus "blurry stuff" — removed the attached top light-fan by
+    fading the image top to transparent + keeping the largest connected shape; (2) brain "square" —
+    subtracted its navy background to true black + feathered edges so the screen-blend box is gone;
+    (3) brain "too big" — cut ~half (CSS width min(46vh,330px), JS bScale 0.12+bp*0.95) and sits lower.
+- In flight: the three image fixes above are applied to files and the HTML but **NOT yet committed**
+  (git shows brain.webp, octopus.webp/png, index-descent.html modified). Waiting on Evan to eyeball.
+- Blocked / open: Evan has mostly been saying "go on" without watching it move — needs a real look and
+  ONE concrete reaction to aim the next round. Direction confirmed "good — keep refining."
 
 ## Next steps
-1. Get Evan's pick of the 3 directions (or "push these one or two").
-2. Open the chosen file live, fix any rough edges / bugs, then do a full world-class polish pass
-   (timing, spacing, type, motion, mobile, reduced-motion, accessibility).
-3. Promote the winner to `index.html` (keep the others or archive them).
-4. Only then offer `/save` (GitHub) and `/publish` (Cloudflare live). NOTHING is deployed yet.
+1. Get Evan's look at the 3 fixes (octopus haze, brain box, brain size). Adjust if still off.
+2. `/save` to commit the image fixes (they're currently uncommitted).
+3. Keep refining per his ONE piece of feedback. Possible later fork (his words): may go MORE minimal/
+   abstract like Elva (less literal water) — not now.
+4. Eventually decide go-live: replace `index.html` with the descent build (deploy = git push →
+   Cloudflare Pages auto-build). NOT until Evan says so.
+5. Still-open content TODOs: 2–3 real client quotes for Proof; the email-freebie one-pager.
 
 ## Key files
-- `index-kinetic.html`, `index-3d.html`, `index-cinematic.html` — the 3 candidate redesigns.
-- `index.html` — current live-ish dark version (superseded by the candidates; don't ship as-is).
-- `PRODUCT.md` / `DESIGN.md` — design-skill strategy + visual system (heraldic→dark luxury, gold accent).
-- `assets/` — logos (use `asturai-clear-cream.svg` on dark), `evan-portrait.jpg`, `office-*.jpg`.
-- Scratchpad (reused content cores + brief for any rebuild):
-  `/private/tmp/claude-501/-Users-evansimonenko/b28d2920-94b5-4b4e-8872-ed8d99d0c61f/scratchpad/`
-  → `_head_meta.html` (DOCTYPE→JSON-LD, paste verbatim), `_str_lang.html` (STR EN/ES dict + lang
-  toggle JS, paste verbatim), `SHARED_BRIEF.md` (full rules), `build*.py` (past surgical builds).
+- /Users/evansimonenko/Documents/Cursor Code/Projects/asturai-site/index-descent.html — the new build (self-contained: CSS + JS + i18n inline).
+- /Users/evansimonenko/Documents/Cursor Code/Projects/asturai-site/assets/descent/octopus.webp — cleaned transparent octopus (reusable character).
+- /Users/evansimonenko/Documents/Cursor Code/Projects/asturai-site/assets/descent/brain.webp — cleaned brain (screen-blended glow).
+- /Users/evansimonenko/Documents/Cursor Code/Projects/asturai-site/REDESIGN-DECISIONS.md — source of truth: all locked rounds + the descent concept.
+- /Users/evansimonenko/Documents/Cursor Code/Projects/asturai-site/PROGRESS.md — current state (live site facts + the new build).
+- /Users/evansimonenko/Documents/Cursor Code/Projects/asturai-site/index.html — the LIVE site (Cinematic Film). DO NOT touch until go-live decision.
+- Source/originals: design/assets/octopus-hero.png (octopus on black), Ex/Brain set.png (brain source).
 
 ## Don't-trip wires
-- **Evan wants DRASTIC + premium, not incremental.** He rejected: light reskin, dark-with-cheap-line-
-  tentacles, and the WebGL fog ("small improvement"). Thin SVG/line "filigree" reads CHEAP to him —
-  avoid it. Aim Awwwards Site-of-the-Day (studios: Obys, Locomotive, Active Theory, Cuberto, Resn).
-- **Every visible string lives in the `STR={en,es}` dictionary + has a `data-i18n` key.** EN/ES must
-  stay in perfect key parity and the JSON-LD must stay valid. Validate after ANY edit:
-  ```bash
-  python3 -c "import re,json;h=open('index-kinetic.html').read();json.loads(re.search(r'<script type=\"application/ld\+json\">(.*?)</script>',h,re.S).group(1));k=set(re.findall(r'data-i18n=\"([^\"]+)\"',h));en=set(re.findall(r'\"([a-zA-Z0-9.]+)\":',re.search(r'en:\{(.*?)\n  \},\n  es:',h,re.S).group(1)));es=set(re.findall(r'\"([a-zA-Z0-9.]+)\":',re.search(r'es:\{(.*)\n  \}\n\};',h,re.S).group(1)));print('JSONLD ok | keys',len(k),'| parity',('OK' if not(k-en or en^es) else 'BROKEN'))"
-  ```
-- **Logo:** Evan LIKES the octopus + "AsturAi" wordmark lockup; he DISLIKES the plain octopus-in-a-
-  circle symbol as a hero element. On dark bg use `asturai-clear-cream.svg` (transparent). The plain
-  `asturai-reversed.svg` has a navy rectangle baked in — don't use it on near-black.
-- **Identity locked:** name "Evan D. Simon"; title "AI Solutions Architect & Developer · Automation &
-  Systems Engineer"; freelance, fully REMOTE, WORLDWIDE (never region-lock to Asturias/Spain — kills
-  AI-search reach). Photo caption uses the short "AI Solutions Architect & Developer".
-- The 3 candidates load **GSAP / Lenis / Three.js from CDN** → they need internet to look right, and
-  **headless screenshots hang on them** — verify by opening live in a real browser, not via Chrome
-  headless. Reduced-motion fallbacks are built in.
-- One self-contained HTML file each, no build step (Cloudflare Pages serves static). CDN libs are OK
-  for now; could inline later for the final.
-- Hosting: domain at Hostinger → Cloudflare nameservers → Cloudflare Pages, repo `Evansimon77/asturai`
-  (folder `asturai-site`), auto-deploys on push to `main`. Contact: WhatsApp +34 613 286 809,
-  evanastur@gmail.com.
+- **index-descent.html is NOT live.** asturai.com still serves `index.html`. Never overwrite the live
+  file or push a deploy without Evan's explicit go.
+- The brain uses CSS `mix-blend-mode:screen` — it MUST sit on pure black or a box reappears. If you
+  re-export it, subtract the navy background again (it was ~[15,31,43]).
+- Octopus haze can't be split by brightness/saturation (it's equally bright AND colorful) — only by
+  SHAPE (top-fade + largest connected component). Don't waste time on threshold tricks.
+- Higgsfield credits ~207, shared across projects. `remove_background` has NO price preview and cost
+  ~13 credits last time. Rule: any tool with no visible price = STOP and warn before running it. All
+  the image cleanup here was done FREE with Python PIL+numpy+scipy — keep it that way.
+- All motion is coded (free). Buy the puppet (octopus/brain), code the movement. No generated video.
+- Reporting to Evan: plain language, no jargon, ONE real-world picture for hard ideas, English. He's
+  divergent/ADHD — "still complicated" means simpler, not longer.
+- `/website` skill was improved this session (global, not project): discovery now always asks for
+  reference sites + which exact parts the owner likes, and re-asks when a draft misses. Style stays neutral.
 
 ## Run / verify
-- Serve locally: `cd ~/Documents/"Cursor Code"/Projects/asturai-site && python3 -m http.server 8300`
-  then open `http://localhost:8300/index-kinetic.html` (and `-3d`, `-cinematic`). Judge LIVE (move the
-  mouse, scroll) — the cursor, hover-reveals, 3D, and scroll transitions don't show in a screenshot.
-- After any text edit, run the parity/JSON-LD validator above on that file.
-- Confirm current site still live (the OLD design): `curl -sI https://asturai.com | head -1` → 200.
+- Serve: `cd "/Users/evansimonenko/Documents/Cursor Code/Projects/asturai-site" && python3 -m http.server 8300`
+- Open: http://localhost:8300/index-descent.html — scroll slow AND fast (fast = particle streaks), move mouse (parallax).
+- JS sanity check after edits: extract the last `<script>` block and `node --check` it (done routinely this session).
+- Verify it FEELS like diving: water darkens, light shaft recedes up, brain grows + breathes, octopus leans on fast scroll.

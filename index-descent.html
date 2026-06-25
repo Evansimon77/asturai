@@ -74,11 +74,11 @@ html.lenis,html.lenis body{height:auto}
   background:linear-gradient(180deg, rgba(160,210,238,.26), rgba(120,185,220,.06) 55%, transparent 82%);
   clip-path:polygon(43% 0,57% 0,84% 100%,16% 100%); filter:blur(16px);}
 #brain{position:absolute; left:50%; top:50%; pointer-events:none;
-  width:min(82vh,600px); aspect-ratio:768/1344;
+  width:min(46vh,330px); aspect-ratio:768/1344;
   background:url("/assets/descent/brain.webp") center/contain no-repeat;
   mix-blend-mode:screen; transform:translate(-50%,-50%);}
 #octopus{position:absolute; left:50%; top:50%; pointer-events:none;
-  width:min(58vh,520px); aspect-ratio:1/1;
+  width:min(56vh,500px); aspect-ratio:885/764;
   background:url("/assets/descent/octopus.webp") center/contain no-repeat;
   filter:drop-shadow(0 30px 70px rgba(0,0,0,.6)) drop-shadow(0 0 34px rgba(95,233,212,.12));
   transform:translate(-50%,-50%);}
@@ -457,7 +457,7 @@ function render(p, time){
   const bp=smooth(clamp((p-0.18)/0.82,0,1));
   const pulse  = reduce?1:(1+Math.sin(time*0.0011)*0.025);     // breathing size
   const pulseB = reduce?1:(1+Math.sin(time*0.0011)*0.10);      // breathing glow
-  const bScale=(0.12+bp*1.45)*pulse, bY=L(78,5,bp), bO=clamp(p*1.35-0.08,0,1);
+  const bScale=(0.12+bp*0.95)*pulse, bY=L(78,8,bp), bO=clamp(p*1.35-0.08,0,1);
   brain.style.transform=`translate(calc(-50% + ${pmx*1.0}vw),calc(-50% + ${bY+pmy*0.6}vh)) scale(${bScale})`;
   brain.style.opacity=bO;
   brain.style.filter=`saturate(${1+p*.4}) brightness(${(.85+p*.55)*pulseB})`;
