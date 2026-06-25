@@ -9,7 +9,12 @@
 <meta property="og:title" content="AsturAi — Your business's second brain" />
 <meta property="og:description" content="A bespoke AI system built around how your business works, and kept running for you. Free first look." />
 <meta property="og:url" content="https://asturai.com/" />
+<meta property="og:image" content="https://asturai.com/assets/og-cover.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="AsturAi — your business's second brain" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://asturai.com/assets/og-cover.jpg" />
 <meta name="theme-color" content="#050a14" />
 <link rel="canonical" href="https://asturai.com/" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23050a14'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='42' fill='%23e6b65f' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
@@ -240,6 +245,17 @@ header>*{pointer-events:auto;}
   .seg{height:100vh;}
 }
 </style>
+
+<!-- Safety net: if scripts never run, the loader won't lift and every beat stays invisible.
+     This makes the whole story read as a plain, scrollable page instead of a black screen. -->
+<noscript><style>
+  #loader,#hint,#gauge,#bubble,#scroll{display:none!important;}
+  #beats{position:static!important;}
+  .beat{position:static!important;opacity:1!important;height:auto;min-height:0;padding:64px 6vw;}
+  .beat .eyebrow,.beat h1,.beat .say,.beat .cta,.beat .proof,.beat .duo,
+  .beat .signup,.beat .reassure,.beat .linkedin{opacity:1!important;transform:none!important;filter:none!important;}
+  body{overflow:auto;}
+</style></noscript>
 </head>
 <body>
 
@@ -353,12 +369,13 @@ header>*{pointer-events:auto;}
       <div class="eyebrow" data-t="r6.e">Not ready today?</div>
       <h1 data-t="r6.h">Stay in the <span class="gold">current</span>.</h1>
       <p class="say" data-t="r6.l">Get our one-pager — the everyday jobs AI can take off your plate this month. No spam, ever.</p>
-      <form class="signup" onsubmit="return false">
-        <input type="text" data-ph="r6.ph1" placeholder="Your name" aria-label="Your name" />
-        <input type="email" data-ph="r6.ph2" placeholder="Your email" aria-label="Your email" />
+      <form class="signup" id="signupForm" action="https://formspree.io/f/PASTE_FORM_ID" method="POST">
+        <input type="text" name="name" data-ph="r6.ph1" placeholder="Your name" aria-label="Your name" />
+        <input type="email" name="email" required data-ph="r6.ph2" placeholder="Your email" aria-label="Your email" />
         <button class="btn btn-gold" type="submit" data-t="r6.c">Send it to me</button>
       </form>
-      <br><a class="linkedin" href="#" target="_blank" rel="noopener" data-t="r6.li">Follow along on LinkedIn →</a>
+      <p class="reassure" id="signupMsg" role="status" hidden></p>
+      <br><a class="linkedin" href="https://www.linkedin.com/company/asturai" target="_blank" rel="noopener" data-t="r6.li">Follow along on LinkedIn →</a>
     </div>
   </section>
 
@@ -677,6 +694,33 @@ function boot(){
   };
   boot(); tick();
 })();
+
+/* ===================== newsletter signup (Formspree) =====================
+   TO TURN ON: create a free form at formspree.io, then replace PASTE_FORM_ID
+   in the <form action="..."> above with the id Formspree gives you. */
+(function(){
+  const f=document.getElementById("signupForm"); if(!f) return;
+  const msg=document.getElementById("signupMsg");
+  const SAY={
+    en:{ok:"Got it — I'll be in touch soon. 🐙", err:"That didn't send. Email me at evanastur@gmail.com.", todo:"Almost there — the form still needs its Formspree id."},
+    es:{ok:"¡Listo! Te escribo pronto. 🐙", err:"No se pudo enviar. Escríbeme a evanastur@gmail.com.", todo:"Casi — al formulario le falta su id de Formspree."}
+  };
+  const show=t=>{ msg.hidden=false; msg.textContent=t; };
+  f.addEventListener("submit",async e=>{
+    e.preventDefault();
+    const L=SAY[typeof lang!=="undefined"?lang:"en"]||SAY.en;
+    if(f.action.includes("PASTE_FORM_ID")){ show(L.todo); return; }
+    try{
+      const r=await fetch(f.action,{method:"POST",body:new FormData(f),headers:{Accept:"application/json"}});
+      show(r.ok?L.ok:L.err); if(r.ok) f.reset();
+    }catch(_){ show(L.err); }
+  });
+})();
 </script>
+
+<!-- ============ VISITOR ANALYTICS (Cloudflare Web Analytics — free, privacy-first, no cookies) ============
+     TO TURN ON: paste your Cloudflare Web Analytics token below (same token as the main site). -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token": "PASTE_YOUR_TOKEN_HERE"}'></script>
 </body>
 </html>

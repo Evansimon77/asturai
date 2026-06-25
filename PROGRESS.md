@@ -7,6 +7,16 @@ One page, bilingual, no build step.
 A full from-scratch redesign is underway, reusing only the *text/info* from the live site, none of
 its design. Full method + every locked decision live in **REDESIGN-DECISIONS.md** (the source of truth).
 
+- **2026-06-26 — analysis + fixes pass (both files; nothing deployed).** Analysed `index-descent.html`.
+  Applied: real 1200×630 **share card** from the brand logo (`assets/og-cover.jpg`, cream version —
+  navy+gold octopus on cream; built from `asturai/brand/source/asturai-final.svg`, copied to
+  `assets/asturai-final.svg`); both files now point og:image/twitter:image there + `summary_large_image`.
+  Added **Cloudflare Web Analytics** beacon to both (token placeholder `PASTE_YOUR_TOKEN_HERE`).
+  Descent: wired the dead email form to **Formspree** (placeholder `PASTE_FORM_ID`, EN/ES status msgs),
+  real **LinkedIn** link, **no-JS safety net** (`<noscript>` so beats aren't a black screen).
+  **Brand casing locked to "AsturAi"** (lowercase i, matching the logo — build_assets.py: "capital I → lowercase i");
+  reverted all-caps everywhere on both files. **Open:** paste analytics token + Formspree id + confirm LinkedIn URL;
+  align brand docs/memory (still say "AsturAI"); scroll-jacking on Descent still to make skippable before any go-live.
 - **2026-06-25 — descent VISUAL CONCEPT locked** via mockup `design/sketches/descent-concept-09.png`:
   an underwater descent — surface light → an octopus guide → a glowing "second brain" deep below.
   Three locked elements: (1) octopus with golden-top / blue-teal-underside balance; (2) the bold
