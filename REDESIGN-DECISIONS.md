@@ -4,7 +4,7 @@
 > temporary site — none of its design, colors, or visual ideas. Nothing gets built
 > until Evan says **"confirm"**. Visual direction starts from Evan's **sketch** (coming later).
 
-_Last updated: 2026-06-25 (Round 3 locked)_
+_Last updated: 2026-06-25 (Round 4 locked — planning complete, awaiting sketch)_
 
 ---
 
@@ -136,13 +136,56 @@ TODO: gather 2–3 real client quotes (with permission) to add later.
 
 ---
 
+## ROUND 4 — Channels, Catch, Metric (LOCKED ✅)
+
+**Channels — where people come from:**
+- **Channel #1 (master it, don't dilute): direct, personal outreach to hand-picked businesses.**
+  Strongest channel today; right fit for high-trust bespoke work. (Book: "if you try several and
+  nail none, you're finished.")
+- **Hunting ground starts local:** real estate + nearby businesses in **northern Spain** (proof +
+  proximity + warm contacts). Bilbao = later expansion; cold international = long-term, not first.
+- **The SITE stays global/remote** — only the *hunting* is local. "Global storefront, local first
+  hunting ground." (Honors the remote-worldwide positioning — never a Spain-only brand.)
+- **No paid ads yet** (IG/FB) — only once a deal or two proves the model (don't scale a money-loser).
+- **Upwork** = separate quick-cash stream; keep it from dragging the AsturAi pitch/pricing down.
+- **AI-search findability: YES** — own site built to be named by ChatGPT/Gemini; owned, compounding
+  asset that feeds the international future.
+
+**The "stay in touch" catch (for the ~80% not ready today): LinkedIn + email freebie.**
+- "Follow on LinkedIn" link (zero upkeep) **+** email capture tied to a useful one-pager (built once,
+  owned forever). Email = the asset you keep; LinkedIn = rented but free.
+- TODO (later): write the one-pager, e.g. "5 jobs AI can take off your plate this month."
+
+**Keeping warm leads warm:** the free diagnosis IS the follow-up reason; personal + FAST (hot leads
+cool in ~48h), light check-ins after — not automated spam. Same pipe (email + LinkedIn) serves both
+not-ready browsers and post-diagnosis leads.
+
+**The ONE number: good-fit free-looks booked per month** (qualified businesses, not tire-kickers).
+- Diagnostics behind it: visitor→booking rate (finds the leak) + "how did you find me?" (which
+  channel works). No vanity counts. LTV/CAC math later, once there's ad spend.
+
+**What the SITE must include (from Round 4):**
+- One primary action: **book the free first look.**
+- Capture **name + email + permission** at that step.
+- Stay-in-touch beat: **LinkedIn follow + email-for-one-pager.**
+- **Built to be found by AI search** (clear, structured, plainly named).
+- Track one number: good-fit free-looks/month + "how did you find me?" + light privacy-friendly counting.
+
+---
+
 ## ROUND PLAN
 
 - **Round 1** — Foundation ✅ locked
 - **Round 2** — Positioning & Offer ✅ locked
 - **Round 3** — The journey (sections + order + flag idea) ✅ locked
-- **Round 4** — Channels (where visitors come from), the "stay in touch" catch, the one "it's working" number
-- **Round 5** — (after the sketch) feeling, color, fonts, light/dark, motion
+- **Round 4** — Channels, the "stay in touch" catch, the one number ✅ locked
+- **Round 5** — (AFTER THE SKETCH) feeling, color, fonts, light/dark, motion — **NOT STARTED; waiting on sketch**
+
+## OPEN TODOs (later, not now)
+- Gather 2–3 real client quotes (with permission) for the Proof room.
+- Write the email-freebie one-pager (e.g. "5 jobs AI can take off your plate this month").
+- Evan to send a SKETCH before any visual build begins.
+- Nothing gets built until Evan says **"confirm"** on the visual direction.
 
 ---
 
