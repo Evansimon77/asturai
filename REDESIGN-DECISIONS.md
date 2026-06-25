@@ -179,7 +179,23 @@ not-ready browsers and post-diagnosis leads.
 - **Round 2** — Positioning & Offer ✅ locked
 - **Round 3** — The journey (sections + order + flag idea) ✅ locked
 - **Round 4** — Channels, the "stay in touch" catch, the one number ✅ locked
-- **Round 5** — (AFTER THE SKETCH) feeling, color, fonts, light/dark, motion — **NOT STARTED; waiting on sketch**
+- **Round 5** — (AFTER THE SKETCH) feeling, color, fonts, light/dark, motion — visual brainstorm started (see below)
+
+## ROUND 5 — Visual brainstorm (IN PROGRESS)
+
+**Spatial concept CHOSEN: Option A — "The Descent" (ocean).**
+The "go deeper" mechanic = **diving into the sea toward the octopus's glowing brain** (your
+"second brain"). Unifies brand + Asturias (the sea) + the deeper-mechanic into one idea, and is
+the deliberate opposite of the generic AI-startup look.
+- **Surface = entry/hook;** each scroll dives deeper; the water darkens; a glow (the brain) grows below.
+- **Tentacles hold the services / proof** — literally "many arms, one brain."
+- **Deepest rooms = you're WITH the octopus** (bespoke & safe = inside, protected) → free look → stay in touch.
+- **Fly-through transition** = diving down toward the glowing brain (big jumps between rooms).
+- **Layer/overlay transition** = currents/light sliding past (softer reveals).
+- **Depth gauge** (diver's meter, side of screen) = where you are + the menu; replaces scrollbar, gives a sense of *place*.
+- Color/fonts/light/dark still OPEN → decided once the sketch exists.
+
+**Next:** Evan sketches Option A (boxes + arrows fine). Bookmark tag set at this point: `plan-v1-descent`.
 
 ## OPEN TODOs (later, not now)
 - Gather 2–3 real client quotes (with permission) for the Proof room.
