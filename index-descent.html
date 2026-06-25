@@ -65,13 +65,13 @@ html.lenis,html.lenis body{height:auto}
   background:linear-gradient(180deg,#0c3349 0%,#072237 46%,#02101e 100%);}
 #rays{position:absolute; inset:-10% 0 0 0; pointer-events:none; mix-blend-mode:screen;
   background:
-   radial-gradient(60% 80% at 38% -10%, rgba(150,205,230,.16), transparent 60%),
-   radial-gradient(50% 75% at 62% -10%, rgba(120,185,220,.12), transparent 60%);
+   radial-gradient(62% 85% at 38% -12%, rgba(165,215,240,.26), transparent 62%),
+   radial-gradient(54% 80% at 64% -12%, rgba(135,195,228,.20), transparent 62%);
   transform-origin:50% 0;}
 /* the strong central god-ray shaft (locked concept) */
 #shaft{position:absolute; top:-14%; left:50%; width:56vw; height:128vh; pointer-events:none;
   transform:translateX(-50%); transform-origin:50% 0; mix-blend-mode:screen;
-  background:linear-gradient(180deg, rgba(160,210,238,.26), rgba(120,185,220,.06) 55%, transparent 82%);
+  background:linear-gradient(180deg, rgba(175,222,245,.40), rgba(130,195,228,.10) 55%, transparent 82%);
   clip-path:polygon(43% 0,57% 0,84% 100%,16% 100%); filter:blur(16px);}
 #brain{position:absolute; left:50%; top:50%; pointer-events:none;
   width:min(46vh,330px); aspect-ratio:768/1344;
@@ -80,7 +80,7 @@ html.lenis,html.lenis body{height:auto}
 #octopus{position:absolute; left:50%; top:50%; pointer-events:none;
   width:min(56vh,500px); aspect-ratio:1100/854;
   background:url("/assets/descent/octopus.webp") center/contain no-repeat;
-  filter:drop-shadow(0 30px 70px rgba(0,0,0,.6)) drop-shadow(0 0 34px rgba(95,233,212,.12));
+  filter:url(#octoWobble) drop-shadow(0 30px 70px rgba(0,0,0,.6)) drop-shadow(0 0 34px rgba(95,233,212,.12));
   transform:translate(-50%,-50%);}
 #fx{position:absolute; inset:0; pointer-events:none;}
 #vignette{position:absolute; inset:0; pointer-events:none;
@@ -232,7 +232,8 @@ header>*{pointer-events:auto;}
 #loader .barwrap{width:min(38vw,260px); height:1px; background:var(--line); overflow:hidden;}
 #loader .bar{height:100%; width:0; background:var(--gold);}
 
-@media (prefers-reduced-motion:reduce){*{animation:none!important; transition-duration:.2s!important;}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important; transition-duration:.2s!important;}
+  #octopus{filter:drop-shadow(0 30px 70px rgba(0,0,0,.6)) drop-shadow(0 0 34px rgba(95,233,212,.12));}}
 @media (max-width:720px){
   #octopus{width:46vh;} #gauge .label{display:none;}
   #bubble{width:78px; height:78px; font-size:.64rem;}
@@ -241,6 +242,16 @@ header>*{pointer-events:auto;}
 </style>
 </head>
 <body>
+
+<!-- underwater "current" that ripples through the octopus so the tentacles drift -->
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <filter id="octoWobble" x="-25%" y="-25%" width="150%" height="150%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.006 0.013" numOctaves="2" seed="7" result="n">
+      <animate attributeName="baseFrequency" dur="17s" values="0.006 0.013;0.009 0.017;0.006 0.013" repeatCount="indefinite"/>
+    </feTurbulence>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="15" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
 
 <!-- visual stage (fixed) -->
 <div id="stage">
@@ -508,6 +519,54 @@ const B=Array.from({length:reduce?4:10},()=>({x:Math.random(), y:Math.random()*1
   r:(2+Math.random()*5), sp:(0.0012+Math.random()*0.002), w:Math.random()*6.28, wob:0.001+Math.random()*0.0015}));
 
 let curP=0, vel=0;
+
+/* the underwater surface seen from below: bright band + moving caustic ripples */
+function drawSurface(time,rayF){
+  const bandH=H2*0.16;
+  cx.save(); cx.globalCompositeOperation="screen";
+  const g=cx.createLinearGradient(0,0,0,bandH);
+  g.addColorStop(0,`rgba(178,222,246,${0.20*rayF})`);
+  g.addColorStop(1,"rgba(178,222,246,0)");
+  cx.fillStyle=g; cx.fillRect(0,0,W2,bandH);
+  if(!reduce){
+    const k=0.010/DPR;
+    for(let l=0;l<3;l++){
+      cx.beginPath();
+      const amp=(7+l*5)*DPR, yb=(0.015+l*0.032)*H2;
+      for(let x=0;x<=W2;x+=8*DPR){
+        const y=yb+Math.sin(x*k+time*0.0015+l*2)*amp+Math.sin(x*k*2.3+time*0.001)*amp*0.4;
+        x===0?cx.moveTo(x,y):cx.lineTo(x,y);
+      }
+      cx.strokeStyle=`rgba(205,233,250,${0.11*rayF})`;
+      cx.lineWidth=(1.2+l*0.7)*DPR; cx.stroke();
+    }
+  }
+  cx.restore();
+}
+
+/* volumetric god-ray beams fanning down from the surface, slowly swaying */
+function drawGodRays(time,rayF){
+  cx.save(); cx.globalCompositeOperation="screen";
+  const beams=5, bottom=H2*0.92;
+  for(let i=0;i<beams;i++){
+    const baseX=((i+0.5)/beams)*W2;
+    const sway=reduce?0:Math.sin(time*0.00018+i*1.3)*0.045*W2;
+    const topX=baseX+sway*0.4, botX=baseX+sway;
+    const w=(0.035+0.022*Math.abs(Math.sin(i*1.7)))*W2;
+    const a=(0.05+(reduce?0.02:0.045*(0.5+0.5*Math.sin(time*0.0008+i))))*rayF;
+    const grad=cx.createLinearGradient(0,0,0,bottom);
+    grad.addColorStop(0,`rgba(186,224,248,${a})`);
+    grad.addColorStop(0.5,`rgba(150,205,235,${a*0.45})`);
+    grad.addColorStop(1,"rgba(150,205,235,0)");
+    cx.fillStyle=grad;
+    cx.beginPath();
+    cx.moveTo(topX-w*0.3,0); cx.lineTo(topX+w*0.3,0);
+    cx.lineTo(botX+w*1.15,bottom); cx.lineTo(botX-w*1.15,bottom);
+    cx.closePath(); cx.fill();
+  }
+  cx.restore();
+}
+
 function drawFX(time){
   cx.clearRect(0,0,W2,H2);
   const depth=curP;
@@ -515,18 +574,11 @@ function drawFX(time){
   const dir=vel>=0?1:-1;                            // down-scroll → world rises
   const baseA=0.18+depth*0.32;
 
-  // caustic light dappling near the surface — fades as we descend
+  // surface + god rays near the top — fade out as we descend
   const rayF=clamp(1-depth*1.5,0,1);
-  if(rayF>0.02 && !reduce){
-    cx.save(); cx.globalCompositeOperation="screen";
-    for(let i=0;i<3;i++){
-      const cxx=(0.30+0.20*i + Math.sin(time*0.0002+i*2)*0.06)*W2;
-      const cyy=(0.04+0.05*i)*H2, rad=(0.22+0.05*i)*W2;
-      const g=cx.createRadialGradient(cxx,cyy,0,cxx,cyy,rad);
-      g.addColorStop(0,`rgba(150,205,230,${0.05*rayF})`); g.addColorStop(1,"rgba(150,205,230,0)");
-      cx.fillStyle=g; cx.beginPath(); cx.arc(cxx,cyy,rad,0,7); cx.fill();
-    }
-    cx.restore();
+  if(rayF>0.02){
+    drawSurface(time,rayF);
+    drawGodRays(time,rayF);
   }
 
   for(const p of P){

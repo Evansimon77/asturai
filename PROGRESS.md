@@ -33,8 +33,22 @@ its design. Full method + every locked decision live in **REDESIGN-DECISIONS.md*
   bright *and* smooth-vs-textured only partly). Evan supplied a clean transparent PNG (`Ex/Pulpo.png`);
   it's now the hero octopus: tidied of stray specks, scaled to web size (137K webp), frame ratio set to
   1100/854 in `index-descent.html`. The old generated `design/assets/octopus-hero*.png` remain as source.
-- **Next:** Evan to confirm the new octopus sits right in the dive; then keep polishing, and only later
-  decide go-live (replace `index.html`) vs the more-minimal Elva route.
+- **2026-06-25 — living water added** (bookmark `descent-living-water`): a real underwater surface at the
+  top (bright band + moving caustic ripples = waves seen from below), five swaying/shimmering god-ray
+  beams that fade with depth, and an animated displacement "current" that flows through the octopus so its
+  tentacles drift instead of sitting frozen. All coded/free; respects reduced-motion.
+- **2026-06-25 — full design audit done** (against PRODUCT.md quiet-luxury brief; score ~25/40
+  "gorgeous, not yet effective"). Biggest issue: the 7-screen forced dive blocks the skimming buyer.
+  Prioritised fix list to implement next:
+  - P0/P1: wire the dead signup form + LinkedIn link; fix mobile overflow on the busy beats (Proof,
+    Free-look) where stacked content runs off a phone screen; strengthen Proof (more live links /
+    screenshot / a real quote); collapse the 7 `<h1>`s to one + h2s; add visible keyboard focus states.
+  - P2: stop using the same gold-italic device in all 7 headlines; vary the all-centred compositions
+    (move text off the octopus so the blur scrim isn't needed); bring Evan (a face, "I" not "we") in;
+    make depth-gauge labels always visible (and present on mobile).
+  - P3: ease down octopus mouse-parallax (seasick risk); recheck dim-text contrast over moving water.
+  - Direction chosen: keep the cinematic dive but add a fast skim path for the wary buyer (Option A).
+- **Next:** implement the audit fixes (start P0/P1). Only later decide go-live (replace `index.html`).
 - **Skill improvement (global):** added a reference-sites step to the `/website` discovery (always ask for
   example sites + which exact parts the owner likes; re-ask when a draft misses). Style stays neutral.
 
