@@ -28,8 +28,13 @@ its design. Full method + every locked decision live in **REDESIGN-DECISIONS.md*
   dive, mouse-parallax), the brain (grows from a pinpoint → breathing hero at the offer), staggered text
   reveals per beat, depth-gauge meter + menu (right), gold free-look bubble that blooms at the offer,
   EN/ES, reduced-motion, JSON-LD for AI search, favicon. **7 beats** = the locked journey. Studio "we" voice.
-- **Next:** Evan to watch it move and give the ONE thing that bugs him most (refining was running blind);
-  then keep polishing, and only later decide go-live (replace `index.html`) vs the more-minimal Elva route.
+- **2026-06-25 — octopus replaced with Evan's own art.** Earlier auto-cutouts kept leaving a glow/box
+  stuck to the head (brightness, color, and texture tricks all failed — the god-rays are golden *and*
+  bright *and* smooth-vs-textured only partly). Evan supplied a clean transparent PNG (`Ex/Pulpo.png`);
+  it's now the hero octopus: tidied of stray specks, scaled to web size (137K webp), frame ratio set to
+  1100/854 in `index-descent.html`. The old generated `design/assets/octopus-hero*.png` remain as source.
+- **Next:** Evan to confirm the new octopus sits right in the dive; then keep polishing, and only later
+  decide go-live (replace `index.html`) vs the more-minimal Elva route.
 - **Skill improvement (global):** added a reference-sites step to the `/website` discovery (always ask for
   example sites + which exact parts the owner likes; re-ask when a draft misses). Style stays neutral.
 
