@@ -17,8 +17,21 @@ its design. Full method + every locked decision live in **REDESIGN-DECISIONS.md*
 - **Reference images** Evan supplied live in `Ex/` (The Neural Connection, Brain set, human brain).
 - **Credit note:** Higgsfield balance ~207; background-removal cost ~13 credits (no price preview) —
   new rule added to the `/website` skill: any tool without a visible price = stop and warn first.
-- **Next:** generate the few still scene-plates if needed, then leave mockups and start the real
-  **coded** deep-water build (this octopus + a softly pulsing brain; motion in code, not video).
+- **2026-06-25 — CODED CINEMATIC DIVE BUILT → `index-descent.html`** (separate file; live site untouched).
+  After a first slideshow attempt scored 1/10 ("no sense of diving"), Evan pointed at **elvalabs.ai**
+  as the target feel and chose a **scroll-driven cinematic dive**: smooth hijacked scroll (Lenis) *is*
+  the camera descending; real depth from parallax layers + motion-blur streaks on fast scroll. Setting
+  stays the underwater descent (open to going more minimal/abstract later). Evan confirmed the direction
+  is **good — keep refining**. Built so far (all coded/free, two WebP images only — `assets/descent/`):
+  loading reveal (0→100%), darkening water, central god-ray shaft, surface caustics, rising bubbles,
+  drifting depth particles that streak when scrolling fast, the octopus (emerges on entry, leans into the
+  dive, mouse-parallax), the brain (grows from a pinpoint → breathing hero at the offer), staggered text
+  reveals per beat, depth-gauge meter + menu (right), gold free-look bubble that blooms at the offer,
+  EN/ES, reduced-motion, JSON-LD for AI search, favicon. **7 beats** = the locked journey. Studio "we" voice.
+- **Next:** Evan to watch it move and give the ONE thing that bugs him most (refining was running blind);
+  then keep polishing, and only later decide go-live (replace `index.html`) vs the more-minimal Elva route.
+- **Skill improvement (global):** added a reference-sites step to the `/website` discovery (always ask for
+  example sites + which exact parts the owner likes; re-ask when a draft misses). Style stays neutral.
 
 ## Current state (LIVE)
 - **Live at https://asturai.com** (and www) — hosted on **Cloudflare Pages**, auto-deploys

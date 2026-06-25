@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>AsturAi — Your business's second brain</title>
+<meta name="description" content="AsturAi designs, builds and runs a bespoke AI system around how your business actually works — a studio that stays with you. Free first look, no risk." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="AsturAi — Your business's second brain" />
+<meta property="og:description" content="A bespoke AI system built around how your business works, and kept running for you. Free first look." />
+<meta property="og:url" content="https://asturai.com/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#050a14" />
+<link rel="canonical" href="https://asturai.com/" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23050a14'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='42' fill='%23e6b65f' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
+
+<!-- Structured data so AI search (ChatGPT / Gemini / Claude) can name AsturAi -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ProfessionalService",
+  "name":"AsturAi",
+  "description":"A studio that designs, builds and runs bespoke AI systems around how your business actually works — and stays with you. Free first look, no risk.",
+  "url":"https://asturai.com/",
+  "slogan":"Your business's second brain.",
+  "areaServed":["Worldwide","Europe","Spain","Asturias"],
+  "knowsAbout":["AI automation","bespoke AI systems","AI assistants","property valuation","CRM integration","AI search visibility","data privacy (GDPR / AEPD)"],
+  "makesOffer":{"@type":"Offer","name":"Free first look","description":"A free diagnosis of your business or website, showing where hours and leads are leaking and what to build.","price":"0","priceCurrency":"EUR"}
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+/* ============================================================
+   AsturAi — "The Descent"  (v2 — cinematic, calm, scroll = camera)
+   Smooth hijacked scroll drives a camera diving through water.
+   Real depth: layers scale toward you and rush past at different
+   speeds. Minimal, dark, big quiet type. Two images only.
+   ============================================================ */
+:root{
+  --cream:#eee6d6; --cream-dim:#9aa6ad;
+  --gold:#e6b65f; --gold-hi:#f4cf8a;
+  --ink:#050a14; --teal:#5fe9d4;
+  --line:rgba(238,230,214,.12); --glass:rgba(238,230,214,.04);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --fd:"Fraunces",Georgia,serif; --fb:"Inter",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:auto}
+body{
+  font-family:var(--fb); color:var(--cream); background:#02050c;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+/* lenis */
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+
+/* ---------- The fixed stage: everything visible lives here ---------- */
+#stage{position:fixed; inset:0; z-index:0; overflow:hidden;}
+#water{position:absolute; inset:0;
+  background:linear-gradient(180deg,#0c3349 0%,#072237 46%,#02101e 100%);}
+#rays{position:absolute; inset:-10% 0 0 0; pointer-events:none; mix-blend-mode:screen;
+  background:
+   radial-gradient(60% 80% at 38% -10%, rgba(150,205,230,.16), transparent 60%),
+   radial-gradient(50% 75% at 62% -10%, rgba(120,185,220,.12), transparent 60%);
+  transform-origin:50% 0;}
+/* the strong central god-ray shaft (locked concept) */
+#shaft{position:absolute; top:-14%; left:50%; width:56vw; height:128vh; pointer-events:none;
+  transform:translateX(-50%); transform-origin:50% 0; mix-blend-mode:screen;
+  background:linear-gradient(180deg, rgba(160,210,238,.26), rgba(120,185,220,.06) 55%, transparent 82%);
+  clip-path:polygon(43% 0,57% 0,84% 100%,16% 100%); filter:blur(16px);}
+#brain{position:absolute; left:50%; top:50%; pointer-events:none;
+  width:min(82vh,600px); aspect-ratio:768/1344;
+  background:url("/assets/descent/brain.webp") center/contain no-repeat;
+  mix-blend-mode:screen; transform:translate(-50%,-50%);}
+#octopus{position:absolute; left:50%; top:50%; pointer-events:none;
+  width:min(58vh,520px); aspect-ratio:1/1;
+  background:url("/assets/descent/octopus.webp") center/contain no-repeat;
+  filter:drop-shadow(0 30px 70px rgba(0,0,0,.6)) drop-shadow(0 0 34px rgba(95,233,212,.12));
+  transform:translate(-50%,-50%);}
+#fx{position:absolute; inset:0; pointer-events:none;}
+#vignette{position:absolute; inset:0; pointer-events:none;
+  background:radial-gradient(125% 100% at 50% 42%, transparent 38%, rgba(0,0,0,.62) 100%);}
+#grain{position:absolute; inset:0; pointer-events:none; opacity:.045; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+/* ---------- Scroll length spacer (gives the dive its distance) ---------- */
+#scroll{position:relative; z-index:1;}
+.seg{height:120vh;}
+
+/* ---------- Beats: one calm statement at a time, centred ---------- */
+#beats{position:fixed; inset:0; z-index:5; pointer-events:none;}
+.beat{position:absolute; inset:0; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; text-align:center;
+  padding:0 6vw; opacity:0; will-change:transform,opacity;}
+.beat .in{position:relative; max-width:880px;}
+.beat.live .in{pointer-events:auto;}
+/* soft scrim so the words always read cleanly over the octopus / brain */
+.beat .in::before{content:""; position:absolute; inset:-50px -36px; z-index:-1;
+  background:radial-gradient(62% 66% at 50% 50%, rgba(2,6,14,.58), rgba(2,6,14,0) 72%); filter:blur(20px);}
+.eyebrow{font-size:.72rem; font-weight:500; letter-spacing:.34em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:26px; opacity:.9;}
+.beat h1{font-family:var(--fd); font-weight:300; line-height:1.02; letter-spacing:-.012em;
+  font-size:clamp(2.6rem,7.2vw,6rem); margin:0 auto;}
+.beat h1 .gold{color:var(--gold); font-style:italic; font-weight:400;}
+.say{font-size:clamp(1.05rem,1.7vw,1.4rem); line-height:1.55; color:var(--cream-dim);
+  max-width:56ch; margin:30px auto 0; font-weight:400;}
+
+/* staggered entrance — content rises into focus when its beat settles */
+.beat .eyebrow,.beat h1,.beat .say,.beat .cta,.beat .proof,.beat .duo,
+.beat .signup,.beat .reassure,.beat .linkedin{
+  opacity:0; transform:translateY(24px); transition:opacity .7s var(--ease), transform .7s var(--ease);}
+.beat.live .eyebrow{transition-delay:.04s} .beat.live h1{transition-delay:.12s}
+.beat.live .say{transition-delay:.22s}
+.beat.live .cta,.beat.live .proof,.beat.live .duo,.beat.live .signup,
+.beat.live .reassure,.beat.live .linkedin{transition-delay:.32s}
+.beat.live .eyebrow,.beat.live h1,.beat.live .say,.beat.live .cta,.beat.live .proof,
+.beat.live .duo,.beat.live .signup,.beat.live .reassure,.beat.live .linkedin{
+  opacity:1; transform:none;}
+
+/* calls to action */
+.cta{display:flex; gap:14px; justify-content:center; margin-top:42px; flex-wrap:wrap;}
+.btn{font-family:inherit; font-size:.92rem; font-weight:500; cursor:pointer; text-decoration:none;
+  padding:15px 30px; border-radius:999px; transition:.3s var(--ease); border:1px solid transparent;}
+.btn-gold{background:var(--gold); color:#0a0f1a;}
+.btn-gold:hover{background:var(--gold-hi); transform:translateY(-2px); box-shadow:0 14px 34px rgba(230,182,95,.32);}
+.btn-ghost{background:transparent; color:var(--cream); border-color:var(--line);}
+.btn-ghost:hover{border-color:var(--gold); color:var(--gold); transform:translateY(-2px);}
+
+/* proof — a clean restrained row, not big busy cards */
+.proof{display:flex; gap:30px 44px; justify-content:center; flex-wrap:wrap; margin-top:46px;}
+.pitem{min-width:150px; max-width:210px; text-decoration:none; color:inherit; transition:.3s var(--ease);}
+.pitem:hover{transform:translateY(-3px);}
+.pitem:hover .nm{color:var(--gold-hi);}
+.pitem:hover .dt{box-shadow:0 0 16px var(--teal);}
+.pitem .ll{transition:.25s var(--ease);}
+.pitem:hover .ll{transform:translateX(3px);}
+.pitem .nm{font-family:var(--fd); font-weight:400; font-size:1.2rem; color:var(--cream); transition:.25s;}
+.pitem .nm a,.pitem .nm{display:inline-flex; align-items:center; gap:8px;}
+.pitem .dt{display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--teal);
+  box-shadow:0 0 10px var(--teal); margin-right:2px; vertical-align:middle;}
+.pitem .ds{font-size:.84rem; color:var(--cream-dim); line-height:1.45; margin-top:8px;}
+.pitem .ll{color:var(--gold); font-size:.8rem; font-weight:500; margin-top:8px; display:inline-block;}
+
+/* free-look branches — minimal */
+.duo{display:flex; gap:40px; justify-content:center; flex-wrap:wrap; margin-top:40px; max-width:680px; margin-left:auto; margin-right:auto;}
+.duo > div{max-width:260px;}
+.duo .k{font-size:.7rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); font-weight:500;}
+.duo p{font-size:.92rem; line-height:1.5; color:var(--cream-dim); margin-top:10px;}
+.reassure{font-size:.86rem; color:var(--cream-dim); margin-top:30px; line-height:1.5;}
+.reassure .gold{color:var(--gold);}
+
+/* stay-in-touch */
+.signup{display:flex; gap:10px; justify-content:center; margin:34px auto 0; flex-wrap:wrap; max-width:540px;}
+.signup input{flex:1; min-width:170px; background:var(--glass); border:1px solid var(--line);
+  border-radius:999px; padding:14px 22px; color:var(--cream); font-family:inherit; font-size:.92rem;}
+.signup input::placeholder{color:var(--cream-dim);}
+.signup input:focus{outline:none; border-color:var(--gold);}
+.linkedin{display:inline-block; margin-top:22px; color:var(--cream-dim); text-decoration:none;
+  font-weight:500; font-size:.9rem; border-bottom:1px solid var(--line); padding-bottom:3px; transition:.25s;}
+.linkedin:hover{color:var(--gold); border-color:var(--gold);}
+
+/* ---------- Top bar ---------- */
+header{position:fixed; top:0; left:0; right:0; z-index:30; display:flex; align-items:center;
+  justify-content:space-between; padding:24px clamp(20px,4vw,52px); pointer-events:none;}
+header>*{pointer-events:auto;}
+.brand{font-family:var(--fd); font-weight:400; font-size:1.4rem; letter-spacing:.5px;
+  color:var(--cream); text-decoration:none;}
+.brand b{color:var(--gold); font-weight:400;}
+.tr{display:flex; align-items:center; gap:18px;}
+.lang{display:flex; font-size:.76rem; font-weight:500; border:1px solid var(--line);
+  border-radius:999px; overflow:hidden; background:var(--glass); backdrop-filter:blur(6px);}
+.lang button{background:none; border:0; color:var(--cream-dim); padding:7px 13px; cursor:pointer;
+  font-family:inherit; font-weight:500; transition:.25s;}
+.lang button.on{background:var(--gold); color:#0a0f1a;}
+.top-cta{font-size:.82rem; font-weight:500; color:#0a0f1a; background:var(--gold);
+  padding:9px 18px; border-radius:999px; text-decoration:none; transition:.25s; white-space:nowrap;}
+.top-cta:hover{background:var(--gold-hi);}
+
+/* ---------- Depth gauge (right) — the diver's meter + menu ---------- */
+#gauge{position:fixed; right:clamp(14px,2.2vw,36px); top:50%; transform:translateY(-50%);
+  z-index:30; display:flex; flex-direction:column; gap:2px; align-items:flex-end;}
+#gauge .track{position:absolute; right:3.5px; top:14px; bottom:14px; width:1px;
+  background:var(--line); z-index:-1;}
+#gauge .track i{position:absolute; top:0; left:0; right:0; height:0%;
+  background:linear-gradient(var(--gold),var(--gold-hi)); box-shadow:0 0 8px var(--gold);}
+.tick{display:flex; align-items:center; gap:12px; cursor:pointer; padding:8px 0;
+  border:0; background:none; font-family:inherit; color:var(--cream-dim);
+  transition:.3s var(--ease); flex-direction:row-reverse;}
+.tick .label{font-size:.72rem; font-weight:400; white-space:nowrap; opacity:0;
+  transform:translateX(8px); transition:.3s var(--ease);}
+.tick .meter{font-size:.6rem; font-variant-numeric:tabular-nums; opacity:.5; width:40px; text-align:right;}
+.tick .node{width:8px; height:8px; border-radius:50%; border:1.4px solid var(--cream-dim);
+  background:transparent; transition:.3s var(--ease);}
+.tick:hover .label,.tick.on .label{opacity:1; transform:translateX(0);}
+.tick.on{color:var(--cream);}
+.tick.on .node{background:var(--gold); border-color:var(--gold); box-shadow:0 0 12px var(--gold);}
+.tick.passed .node{border-color:var(--gold);}
+
+/* ---------- Free-first-look bubble ---------- */
+#bubble{position:fixed; left:clamp(18px,3vw,44px); bottom:clamp(20px,4vh,44px); z-index:30;
+  width:96px; height:96px; border-radius:50%; cursor:pointer; display:flex; align-items:center;
+  justify-content:center; text-align:center; font-size:.72rem; font-weight:500; line-height:1.25;
+  color:#0a0f1a; background:radial-gradient(circle at 38% 32%,var(--gold-hi),var(--gold) 70%);
+  box-shadow:0 12px 36px rgba(0,0,0,.45); border:0; font-family:inherit; padding:13px;
+  transition:transform .6s var(--ease), opacity .6s; opacity:0;}
+#bubble.show{opacity:1; animation:bob 5.5s ease-in-out infinite;}
+#bubble:hover{transform:scale(1.07);}
+#bubble.bloom{transform:scale(1.16);}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -9px}}
+
+/* scroll hint */
+#hint{position:fixed; left:50%; bottom:28px; z-index:25; transform:translateX(-50%);
+  color:var(--cream-dim); font-size:.72rem; letter-spacing:.24em; text-transform:uppercase;
+  display:flex; flex-direction:column; align-items:center; gap:10px; transition:opacity .6s;}
+#hint .arrow{width:16px; height:16px; border-right:1.4px solid var(--gold);
+  border-bottom:1.4px solid var(--gold); transform:rotate(45deg); animation:dive 1.9s ease-in-out infinite;}
+@keyframes dive{0%,100%{transform:rotate(45deg) translate(0,0); opacity:.35}50%{transform:rotate(45deg) translate(4px,4px); opacity:1}}
+
+/* ---------- Loading reveal (Elva-style 0→100%) ---------- */
+#loader{position:fixed; inset:0; z-index:90; background:#02050c; display:flex;
+  flex-direction:column; align-items:center; justify-content:center; gap:26px;
+  transition:opacity 1s var(--ease); }
+#loader.done{opacity:0; pointer-events:none;}
+#loader .lb{font-family:var(--fd); font-weight:300; font-size:2.4rem; letter-spacing:1px; color:var(--cream);}
+#loader .lb b{color:var(--gold); font-weight:300;}
+#loader .pct{font-variant-numeric:tabular-nums; font-size:.8rem; letter-spacing:.4em; color:var(--cream-dim);}
+#loader .barwrap{width:min(38vw,260px); height:1px; background:var(--line); overflow:hidden;}
+#loader .bar{height:100%; width:0; background:var(--gold);}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important; transition-duration:.2s!important;}}
+@media (max-width:720px){
+  #octopus{width:46vh;} #gauge .label{display:none;}
+  #bubble{width:78px; height:78px; font-size:.64rem;}
+  .seg{height:100vh;}
+}
+</style>
+</head>
+<body>
+
+<!-- visual stage (fixed) -->
+<div id="stage">
+  <div id="water"></div>
+  <div id="rays"></div>
+  <div id="shaft"></div>
+  <div id="brain"></div>
+  <div id="octopus"></div>
+  <canvas id="fx"></canvas>
+  <div id="vignette"></div>
+  <div id="grain"></div>
+</div>
+
+<!-- scroll distance -->
+<div id="scroll">
+  <div class="seg"></div><div class="seg"></div><div class="seg"></div>
+  <div class="seg"></div><div class="seg"></div><div class="seg"></div><div class="seg"></div>
+</div>
+
+<!-- beats (fixed, faded in by scroll) -->
+<div id="beats">
+
+  <section class="beat" data-i="0">
+    <div class="in">
+      <div class="eyebrow">AsturAi</div>
+      <h1 data-t="r0.h">Your business's <span class="gold">second brain</span>.</h1>
+      <p class="say" data-t="r0.l">One calm mind, quietly running the work that drains your team's hours — built around how your business truly works.</p>
+      <div class="cta">
+        <a class="btn btn-gold" data-go="5" href="#" data-t="r0.c1">Free first look</a>
+        <a class="btn btn-ghost" data-go="3" href="#" data-t="r0.c2">See what we've built</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="beat" data-i="1">
+    <div class="in">
+      <div class="eyebrow" data-t="r1.e">The cost of the everyday</div>
+      <h1 data-t="r1.h">The hours you <span class="gold">never get back</span>.</h1>
+      <p class="say" data-t="r1.l">Repetitive admin done by hand. Leads that quietly slip away. A client's story scattered across inboxes, chats and people's heads.</p>
+    </div>
+  </section>
+
+  <section class="beat" data-i="2">
+    <div class="in">
+      <div class="eyebrow" data-t="r2.e">Life with the brain</div>
+      <h1 data-t="r2.h">Now it's just <span class="gold">handled</span>.</h1>
+      <p class="say" data-t="r2.l">The busywork runs itself in the background. Every lead is caught and followed through. Your people are freed for the work only they can do.</p>
+    </div>
+  </section>
+
+  <section class="beat" data-i="3">
+    <div class="in">
+      <div class="eyebrow" data-t="r3.e">Already running</div>
+      <h1 data-t="r3.h">Real systems, <span class="gold">real businesses</span>.</h1>
+      <p class="say" data-t="r3.l">Real estate is where we go deepest — these run there today.</p>
+      <div class="proof">
+        <a class="pitem" href="https://tasador.asturai.com" target="_blank" rel="noopener">
+          <div class="nm"><span class="dt"></span><span data-t="r3.t1">The Tasador</span></div>
+          <div class="ds" data-t="r3.d1">Honest property valuation in seconds, from Spain's land registry.</div>
+          <span class="ll" data-t="r3.cta1">Try it live →</span>
+        </a>
+        <div class="pitem"><div class="nm"><span class="dt"></span><span data-t="r3.t2">AI Operations System</span></div>
+          <div class="ds" data-t="r3.d2">A full AI back-office running a real-estate agency.</div></div>
+        <div class="pitem"><div class="nm"><span class="dt"></span><span data-t="r3.t3">Verter</span></div>
+          <div class="ds" data-t="r3.d3">A Telegram bot that connects the right people automatically.</div></div>
+        <div class="pitem"><div class="nm"><span class="dt"></span><span data-t="r3.t4">Ask-Your-Documents</span></div>
+          <div class="ds" data-t="r3.d4">Answers from your own files, on your own machine.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="beat" data-i="4">
+    <div class="in">
+      <div class="eyebrow" data-t="r4.e">Why us, not a template</div>
+      <h1 data-t="r4.h">Built around you. <span class="gold">Private by law</span>.</h1>
+      <p class="say" data-t="r4.l">We design your system around how your business truly works — not a generic tool you bend yourself around. Each person's clients stay private by default, built to meet EU and Spanish data law. A studio that designs it, builds it, and stays with you.</p>
+    </div>
+  </section>
+
+  <section class="beat" data-i="5">
+    <div class="in">
+      <div class="eyebrow" data-t="r5.e">Your no-risk first step</div>
+      <h1 data-t="r5.h">A <span class="gold">free first look</span>.</h1>
+      <p class="say" data-t="r5.l">We study your business — or your website — and show you exactly where the hours and leads are leaking, and what we'd build. No cost. No commitment.</p>
+      <div class="duo">
+        <div><div class="k" data-t="r5.k1">For your website</div><p data-t="r5.b1">Do AI assistants like ChatGPT recommend you — or someone else?</p></div>
+        <div><div class="k" data-t="r5.k2">For your company</div><p data-t="r5.b2">Like a doctor, we point to exactly what to fix first.</p></div>
+      </div>
+      <div class="cta">
+        <a class="btn btn-gold" href="https://wa.me/34613286809" target="_blank" rel="noopener" data-t="r5.c1">Book it on WhatsApp</a>
+        <a class="btn btn-ghost" href="mailto:evanastur@gmail.com" data-t="r5.c2">Or email us</a>
+      </div>
+      <p class="reassure" data-t="r5.re">Pricing is shaped to each business — <span class="gold">it can start small and grow with you</span>.</p>
+    </div>
+  </section>
+
+  <section class="beat" data-i="6">
+    <div class="in">
+      <div class="eyebrow" data-t="r6.e">Not ready today?</div>
+      <h1 data-t="r6.h">Stay in the <span class="gold">current</span>.</h1>
+      <p class="say" data-t="r6.l">Get our one-pager — the everyday jobs AI can take off your plate this month. No spam, ever.</p>
+      <form class="signup" onsubmit="return false">
+        <input type="text" data-ph="r6.ph1" placeholder="Your name" aria-label="Your name" />
+        <input type="email" data-ph="r6.ph2" placeholder="Your email" aria-label="Your email" />
+        <button class="btn btn-gold" type="submit" data-t="r6.c">Send it to me</button>
+      </form>
+      <br><a class="linkedin" href="#" target="_blank" rel="noopener" data-t="r6.li">Follow along on LinkedIn →</a>
+    </div>
+  </section>
+
+</div>
+
+<header>
+  <a class="brand" href="#" data-go="0">Astur<b>Ai</b></a>
+  <div class="tr">
+    <div class="lang" role="group" aria-label="Language">
+      <button data-lang="en" class="on">EN</button>
+      <button data-lang="es">ES</button>
+    </div>
+    <a class="top-cta" href="#" data-go="5" data-t="nav.cta">Free first look</a>
+  </div>
+</header>
+
+<nav id="gauge" aria-label="Sections"></nav>
+<button id="bubble" data-go="5"><span data-t="bubble">Free first look</span></button>
+<div id="hint"><span data-t="hint">Dive deeper</span><span class="arrow"></span></div>
+
+<div id="loader">
+  <div class="lb">Astur<b>Ai</b></div>
+  <div class="barwrap"><div class="bar"></div></div>
+  <div class="pct">0%</div>
+</div>
+
+<!-- smooth scroll (optional; site works without it) -->
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script>
+/* ===================== i18n EN/ES ===================== */
+const I18N={
+ en:{ "nav.cta":"Free first look",
+  "r0.h":"Your business's <span class='gold'>second brain</span>.","r0.l":"One calm mind, quietly running the work that drains your team's hours — built around how your business truly works.","r0.c1":"Free first look","r0.c2":"See what we've built",
+  "r1.e":"The cost of the everyday","r1.h":"The hours you <span class='gold'>never get back</span>.","r1.l":"Repetitive admin done by hand. Leads that quietly slip away. A client's story scattered across inboxes, chats and people's heads.",
+  "r2.e":"Life with the brain","r2.h":"Now it's just <span class='gold'>handled</span>.","r2.l":"The busywork runs itself in the background. Every lead is caught and followed through. Your people are freed for the work only they can do.",
+  "r3.e":"Already running","r3.h":"Real systems, <span class='gold'>real businesses</span>.","r3.l":"Real estate is where we go deepest — these run there today.",
+  "r3.t1":"The Tasador","r3.d1":"Honest property valuation in seconds, from Spain's land registry.","r3.cta1":"Try it live →",
+  "r3.t2":"AI Operations System","r3.d2":"A full AI back-office running a real-estate agency.",
+  "r3.t3":"Verter","r3.d3":"A Telegram bot that connects the right people automatically.",
+  "r3.t4":"Ask-Your-Documents","r3.d4":"Answers from your own files, on your own machine.",
+  "r4.e":"Why us, not a template","r4.h":"Built around you. <span class='gold'>Private by law</span>.","r4.l":"We design your system around how your business truly works — not a generic tool you bend yourself around. Each person's clients stay private by default, built to meet EU and Spanish data law. A studio that designs it, builds it, and stays with you.",
+  "r5.e":"Your no-risk first step","r5.h":"A <span class='gold'>free first look</span>.","r5.l":"We study your business — or your website — and show you exactly where the hours and leads are leaking, and what we'd build. No cost. No commitment.","r5.k1":"For your website","r5.b1":"Do AI assistants like ChatGPT recommend you — or someone else?","r5.k2":"For your company","r5.b2":"Like a doctor, we point to exactly what to fix first.","r5.c1":"Book it on WhatsApp","r5.c2":"Or email us","r5.re":"Pricing is shaped to each business — <span class='gold'>it can start small and grow with you</span>.",
+  "r6.e":"Not ready today?","r6.h":"Stay in the <span class='gold'>current</span>.","r6.l":"Get our one-pager — the everyday jobs AI can take off your plate this month. No spam, ever.","r6.ph1":"Your name","r6.ph2":"Your email","r6.c":"Send it to me","r6.li":"Follow along on LinkedIn →",
+  "bubble":"Free first look","hint":"Dive deeper",
+  "g0":"Surface","g1":"The pain","g2":"The after","g3":"Proof","g4":"Why us","g5":"Free look","g6":"Stay in touch"},
+ es:{ "nav.cta":"Diagnóstico gratis",
+  "r0.h":"El <span class='gold'>segundo cerebro</span> de tu negocio.","r0.l":"Una mente tranquila que se encarga, en silencio, del trabajo que consume las horas de tu equipo — hecha a la medida de cómo funciona de verdad tu negocio.","r0.c1":"Diagnóstico gratis","r0.c2":"Ver lo que hemos creado",
+  "r1.e":"El precio de lo cotidiano","r1.h":"Las horas que <span class='gold'>no vuelven</span>.","r1.l":"Administración repetitiva hecha a mano. Clientes que se escapan en silencio. La historia de un cliente dispersa entre correos, chats y la cabeza de cada uno.",
+  "r2.e":"La vida con el cerebro","r2.h":"Ahora simplemente <span class='gold'>está resuelto</span>.","r2.l":"El trabajo mecánico se hace solo, en segundo plano. Cada cliente potencial se captura y se atiende. Tu gente queda libre para lo que solo las personas pueden hacer.",
+  "r3.e":"Ya funcionando","r3.h":"Sistemas reales, <span class='gold'>negocios reales</span>.","r3.l":"El sector inmobiliario es donde llegamos más hondo — esto ya funciona allí hoy.",
+  "r3.t1":"El Tasador","r3.d1":"Valoración honesta de inmuebles en segundos, desde el catastro de España.","r3.cta1":"Pruébalo en vivo →",
+  "r3.t2":"Sistema de Operaciones IA","r3.d2":"Un back-office de IA completo gestionando una inmobiliaria.",
+  "r3.t3":"Verter","r3.d3":"Un bot de Telegram que conecta a las personas adecuadas automáticamente.",
+  "r3.t4":"Pregunta a tus documentos","r3.d4":"Respuestas desde tus propios archivos, en tu propia máquina.",
+  "r4.e":"Por qué nosotros, no una plantilla","r4.h":"Hecho a tu medida. <span class='gold'>Privado por ley</span>.","r4.l":"Diseñamos tu sistema en torno a cómo funciona de verdad tu negocio — no una herramienta genérica a la que adaptarte. Los clientes de cada persona son privados por defecto, hecho para cumplir la ley de datos europea y española. Un estudio que lo diseña, lo construye y se queda contigo.",
+  "r5.e":"Tu primer paso sin riesgo","r5.h":"Un <span class='gold'>diagnóstico gratis</span>.","r5.l":"Estudiamos tu negocio — o tu web — y te mostramos exactamente dónde se escapan las horas y los clientes, y qué construiríamos. Sin coste. Sin compromiso.","r5.k1":"Para tu web","r5.b1":"¿Te recomiendan asistentes como ChatGPT — o a otro?","r5.k2":"Para tu empresa","r5.b2":"Como un médico, señalamos exactamente qué arreglar primero.","r5.c1":"Resérvalo por WhatsApp","r5.c2":"O escríbenos","r5.re":"El precio se adapta a cada negocio — <span class='gold'>puede empezar pequeño y crecer contigo</span>.",
+  "r6.e":"¿Aún no es el momento?","r6.h":"Quédate en la <span class='gold'>corriente</span>.","r6.l":"Recibe nuestra guía — las tareas cotidianas que la IA puede quitarte de encima este mes. Sin spam, nunca.","r6.ph1":"Tu nombre","r6.ph2":"Tu correo","r6.c":"Envíamela","r6.li":"Sígueme en LinkedIn →",
+  "bubble":"Diagnóstico gratis","hint":"Bucea más hondo",
+  "g0":"Superficie","g1":"El dolor","g2":"El después","g3":"Pruebas","g4":"Por qué","g5":"Diagnóstico","g6":"Sigamos"}
+};
+let lang=(navigator.language||"en").toLowerCase().startsWith("es")?"es":"en";
+if(localStorage.getItem("asturai_lang")) lang=localStorage.getItem("asturai_lang");
+function applyLang(){
+  const d=I18N[lang]; document.documentElement.lang=lang;
+  document.querySelectorAll("[data-t]").forEach(el=>{const k=el.getAttribute("data-t"); if(d[k]!=null) el.innerHTML=d[k];});
+  document.querySelectorAll("[data-ph]").forEach(el=>{const k=el.getAttribute("data-ph"); if(d[k]!=null) el.placeholder=d[k];});
+  document.querySelectorAll(".tick").forEach((t,i)=>{const l=t.querySelector(".label"); if(l&&d["g"+i]!=null) l.textContent=d["g"+i];});
+  document.querySelectorAll(".lang button").forEach(b=>b.classList.toggle("on",b.dataset.lang===lang));
+}
+document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.lang; localStorage.setItem("asturai_lang",lang); applyLang();}));
+
+/* ===================== refs ===================== */
+const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+const beats=[...document.querySelectorAll(".beat")];
+const N=beats.length;
+const water=document.getElementById("water"), rays=document.getElementById("rays"),
+      shaft=document.getElementById("shaft"),
+      brain=document.getElementById("brain"), octo=document.getElementById("octopus"),
+      bubble=document.getElementById("bubble"), hint=document.getElementById("hint");
+let introT0=0;   // set when the loader lifts → octopus emerges
+
+/* depth colour anchors (surface → abyss) */
+const A={top:[[12,51,73],[2,12,24]],mid:[[7,34,55],[1,8,16]],bot:[[2,16,30],[1,4,10]]};
+const L=(a,b,t)=>a+(b-a)*t, MX=(c,t)=>c[0].map((v,i)=>Math.round(L(v,c[1][i],t))), RGB=a=>`rgb(${a[0]},${a[1]},${a[2]})`;
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v)), smooth=t=>t<=0?0:t>=1?1:t*t*(3-2*t);
+
+/* ===================== the dive (scroll = camera) ===================== */
+let maxScroll=1, octoLean=0, mx=0,my=0,pmx=0,pmy=0;
+function recalc(){ maxScroll=Math.max(1, document.getElementById("scroll").offsetHeight - innerHeight); }
+addEventListener("resize",()=>{recalc(); resizeFX();});
+addEventListener("mousemove",e=>{ mx=(e.clientX/innerWidth-0.5)*2; my=(e.clientY/innerHeight-0.5)*2; });
+
+function render(p, time){
+  p=clamp(p,0,1);
+  if(!reduce){ pmx+=(mx-pmx)*0.06; pmy+=(my-pmy)*0.06; }   // smoothed mouse depth-parallax
+
+  // water darkens as we descend
+  water.style.background=`linear-gradient(180deg, ${RGB(MX(A.top,p))} 0%, ${RGB(MX(A.mid,p))} 47%, ${RGB(MX(A.bot,p))} 100%)`;
+
+  // surface light recedes UP and fades — you're leaving the surface behind
+  const rayF=clamp(1-p*1.5,0,1);
+  rays.style.opacity=rayF; rays.style.transform=`translateY(${-p*42}vh) scale(${1+p*0.7})`;
+  const shSway=reduce?0:Math.sin(time*0.00025)*1.4;
+  shaft.style.opacity=rayF; shaft.style.transform=`translateX(calc(-50% + ${shSway+pmx*0.5}vw)) translateY(${-p*34}vh) scale(${1+p*0.35})`;
+
+  // brain grows from a pinpoint far below, rising toward you → hero near the end
+  const bp=smooth(clamp((p-0.18)/0.82,0,1));
+  const pulse  = reduce?1:(1+Math.sin(time*0.0011)*0.025);     // breathing size
+  const pulseB = reduce?1:(1+Math.sin(time*0.0011)*0.10);      // breathing glow
+  const bScale=(0.12+bp*1.45)*pulse, bY=L(78,5,bp), bO=clamp(p*1.35-0.08,0,1);
+  brain.style.transform=`translate(calc(-50% + ${pmx*1.0}vw),calc(-50% + ${bY+pmy*0.6}vh)) scale(${bScale})`;
+  brain.style.opacity=bO;
+  brain.style.filter=`saturate(${1+p*.4}) brightness(${(.85+p*.55)*pulseB})`;
+
+  // octopus: star at the surface, then recedes upward & shrinks as the brain takes over
+  const bob = reduce?0:Math.sin(time*0.0006)*1.2;       // gentle breath (vh)
+  const sway= reduce?0:Math.sin(time*0.0004)*1.0;       // gentle drift (vw)
+  const tgt = reduce?0:clamp(vel/26,-1,1);              // lean into the dive
+  octoLean += (tgt-octoLean)*0.08;
+  const intro = introT0 ? smooth(clamp((time-introT0)/1100,0,1)) : 0;   // emerge as loader lifts
+  const oY=L(-2,-34,p)+bob+octoLean*2.2, oScale=L(1.0,0.42,p)*L(1.14,1,intro), oO=L(1,.5,smooth(p))*intro;
+  octo.style.transform=`translate(calc(-50% + ${sway+pmx*2.4}vw),calc(-50% + ${oY+pmy*1.7}vh)) scale(${oScale}) rotate(${sway*1.1+octoLean*5+pmx*1.5}deg)`;
+  octo.style.opacity=oO;
+
+  // beats — one calm statement rises up, centres, passes overhead
+  const W=1/N;
+  beats.forEach((b,i)=>{
+    const t=(p - i*W)/W;               // local 0..1 across this beat's window
+    let op;
+    if(i===0)      op = t<0.62 ? 1 : 1-smooth((t-0.62)/0.38);
+    else if(i===N-1) op = t<0.38 ? smooth(t/0.38) : 1;
+    else           op = smooth(clamp(t/0.32,0,1)) * (1-smooth(clamp((t-0.68)/0.32,0,1)));
+    const ty=(0.5-t)*70;               // enters from below, exits above (px-ish → vh*?)
+    b.style.opacity=op;
+    b.style.transform=`translateY(${ty}px) scale(${0.985+op*0.015})`;
+    b.style.filter = op>0.985 ? "none" : `blur(${(1-op)*4}px)`;   // swims into focus
+    b.classList.toggle("live", op>0.6);
+  });
+
+  // gauge + ui
+  const idx=clamp(Math.floor(p*N),0,N-1);
+  document.querySelectorAll(".tick").forEach((tk,i)=>{tk.classList.toggle("on",i===idx); tk.classList.toggle("passed",i<idx);});
+  if(gfill) gfill.style.height=(p*100)+"%";
+  bubble.classList.toggle("bloom", idx===5);
+  hint.style.opacity = p<0.04 ? "1":"0";
+}
+
+/* ===================== particles: depth + motion-blur streaks ===================== */
+const cv=document.getElementById("fx"), cx=cv.getContext("2d");
+let W2,H2,DPR;
+function resizeFX(){ DPR=Math.min(devicePixelRatio||1,2); W2=cv.width=innerWidth*DPR; H2=cv.height=innerHeight*DPR; }
+resizeFX();
+// z = closeness (0 far .. 1 near). near = bigger, faster, brighter → the "rushing past" layer
+const P=Array.from({length:reduce?40:110},()=>{const z=Math.pow(Math.random(),1.6);return{
+  x:Math.random(), y:Math.random(), z, r:(0.4+z*2.6), base:(0.04+z*0.10)};});
+// a few rising bubbles for life
+const B=Array.from({length:reduce?4:10},()=>({x:Math.random(), y:Math.random()*1.2-0.1,
+  r:(2+Math.random()*5), sp:(0.0012+Math.random()*0.002), w:Math.random()*6.28, wob:0.001+Math.random()*0.0015}));
+
+let curP=0, vel=0;
+function drawFX(time){
+  cx.clearRect(0,0,W2,H2);
+  const depth=curP;
+  const nv=clamp(Math.abs(vel)/26,0,1.6);          // normalised scroll speed
+  const dir=vel>=0?1:-1;                            // down-scroll → world rises
+  const baseA=0.18+depth*0.32;
+
+  // caustic light dappling near the surface — fades as we descend
+  const rayF=clamp(1-depth*1.5,0,1);
+  if(rayF>0.02 && !reduce){
+    cx.save(); cx.globalCompositeOperation="screen";
+    for(let i=0;i<3;i++){
+      const cxx=(0.30+0.20*i + Math.sin(time*0.0002+i*2)*0.06)*W2;
+      const cyy=(0.04+0.05*i)*H2, rad=(0.22+0.05*i)*W2;
+      const g=cx.createRadialGradient(cxx,cyy,0,cxx,cyy,rad);
+      g.addColorStop(0,`rgba(150,205,230,${0.05*rayF})`); g.addColorStop(1,"rgba(150,205,230,0)");
+      cx.fillStyle=g; cx.beginPath(); cx.arc(cxx,cyy,rad,0,7); cx.fill();
+    }
+    cx.restore();
+  }
+
+  for(const p of P){
+    if(!reduce){
+      const speed=(p.base*0.5 + nv*p.z*0.9);        // ambient + scroll-driven
+      p.y -= dir*speed*0.016;                        // move up when diving down
+      if(p.y<-0.05){p.y=1.05; p.x=Math.random();}
+      if(p.y>1.05){p.y=-0.05; p.x=Math.random();}
+    }
+    const x=p.x*W2, y=p.y*H2, r=p.r*DPR;
+    const streak=nv*p.z*70*DPR;                      // motion blur = the dive feeling
+    const a=baseA*(0.35+p.z*0.65);
+    const col=p.z>0.6?`rgba(225,238,242,${a})`:`rgba(150,190,215,${a})`;
+    if(streak>2){
+      cx.strokeStyle=col; cx.lineWidth=r*0.9; cx.lineCap="round";
+      cx.beginPath(); cx.moveTo(x,y); cx.lineTo(x, y+dir*streak); cx.stroke();
+    }else{
+      cx.fillStyle=col; cx.beginPath(); cx.arc(x,y,r,0,7); cx.fill();
+    }
+  }
+
+  // rising bubbles
+  const ba=0.10+depth*0.12;
+  for(const b of B){
+    if(!reduce){ b.y -= (b.sp + nv*0.004); b.w+=b.wob*16; if(b.y<-0.06){ b.y=1.06; b.x=Math.random(); } }
+    const bx=(b.x + Math.sin(b.w)*0.012)*W2, by=b.y*H2, br=b.r*DPR;
+    cx.strokeStyle=`rgba(205,228,238,${ba})`; cx.lineWidth=DPR;
+    cx.beginPath(); cx.arc(bx,by,br,0,7); cx.stroke();
+    cx.fillStyle=`rgba(235,245,250,${ba*0.8})`;
+    cx.beginPath(); cx.arc(bx-br*0.3,by-br*0.3,DPR*0.8,0,7); cx.fill();
+  }
+}
+
+/* ===================== scroll plumbing (Lenis if present) ===================== */
+let lenis=null;
+function curScroll(){ return lenis ? lenis.scroll : (window.scrollY||document.documentElement.scrollTop||0); }
+function scrollToBeat(i){
+  const target=((i+0.5)/N)*maxScroll;
+  if(lenis) lenis.scrollTo(target,{duration:1.4});
+  else window.scrollTo({top:target,behavior:"smooth"});
+}
+document.querySelectorAll("[data-go]").forEach(el=>el.addEventListener("click",e=>{e.preventDefault(); scrollToBeat(parseInt(el.dataset.go,10));}));
+
+/* gauge build */
+const gauge=document.getElementById("gauge");
+const gtrack=document.createElement("div"); gtrack.className="track"; gtrack.innerHTML="<i></i>";
+gauge.appendChild(gtrack);
+const gfill=gtrack.querySelector("i");
+beats.forEach((b,i)=>{
+  const meters=i===0?"0m":"−"+(i*20)+"m";
+  const btn=document.createElement("button");
+  btn.className="tick";
+  btn.innerHTML=`<span class="node"></span><span class="label">${I18N[lang]["g"+i]||""}</span><span class="meter">${meters}</span>`;
+  btn.addEventListener("click",()=>scrollToBeat(i));
+  gauge.appendChild(btn);
+});
+
+/* main loop */
+let lastScroll=0, lastT=0;
+function loop(time){
+  const s=curScroll();
+  if(!lenis){ vel = s-lastScroll; lastScroll=s; }     // native fallback velocity
+  curP = s/maxScroll;
+  render(curP, time);
+  if(!reduce) drawFX(time);
+  requestAnimationFrame(loop);
+}
+
+/* ===================== boot + loading reveal ===================== */
+function startSmooth(){
+  if(typeof Lenis==="undefined") return;
+  try{
+    lenis=new Lenis({duration:1.25, easing:t=>Math.min(1,1.001-Math.pow(2,-10*t)), smoothWheel:true});
+    lenis.on("scroll",e=>{ vel=e.velocity||0; });
+    function raf(t){ lenis.raf(t); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+  }catch(e){ lenis=null; }
+}
+
+function boot(){
+  recalc(); applyLang();
+  if(!reduce) startSmooth();
+  requestAnimationFrame(loop);
+  render(0,0); if(reduce) drawFX(0);
+}
+
+/* loading reveal 0→100% */
+(function loaderReveal(){
+  const ld=document.getElementById("loader"), bar=ld.querySelector(".bar"), pct=ld.querySelector(".pct");
+  if(reduce){ ld.classList.add("done"); boot(); introT0=performance.now(); bubble.classList.add("show"); return; }
+  let v=0; const tick=()=>{
+    v+=Math.random()*9+4; if(v>100)v=100;
+    bar.style.width=v+"%"; pct.textContent=Math.round(v)+"%";
+    if(v<100){ setTimeout(tick, 70+Math.random()*70); }
+    else{ setTimeout(()=>{ ld.classList.add("done"); introT0=performance.now(); bubble.classList.add("show"); }, 320); }
+  };
+  boot(); tick();
+})();
+</script>
+</body>
+</html>
