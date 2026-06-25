@@ -3,6 +3,23 @@
 The public company site at **asturai.com**: done-for-you AI for businesses in Asturias.
 One page, bilingual, no build step.
 
+## NEW REDESIGN IN PROGRESS — "The Descent" (not yet live; replaces the Cinematic homepage)
+A full from-scratch redesign is underway, reusing only the *text/info* from the live site, none of
+its design. Full method + every locked decision live in **REDESIGN-DECISIONS.md** (the source of truth).
+
+- **2026-06-25 — descent VISUAL CONCEPT locked** via mockup `design/sketches/descent-concept-09.png`:
+  an underwater descent — surface light → an octopus guide → a glowing "second brain" deep below.
+  Three locked elements: (1) octopus with golden-top / blue-teal-underside balance; (2) the bold
+  glowing **Brain-set** brain as the hero "final stage" (orange-gold core, spark cascade); (3) deep
+  blue water + central god-ray shaft.
+- **Hero asset generated & saved:** `design/assets/octopus-hero.png` (clean complete octopus, all
+  tentacles, on black) + `design/assets/octopus-hero-cutout.png` (free transparent cutout, reusable).
+- **Reference images** Evan supplied live in `Ex/` (The Neural Connection, Brain set, human brain).
+- **Credit note:** Higgsfield balance ~207; background-removal cost ~13 credits (no price preview) —
+  new rule added to the `/website` skill: any tool without a visible price = stop and warn first.
+- **Next:** generate the few still scene-plates if needed, then leave mockups and start the real
+  **coded** deep-water build (this octopus + a softly pulsing brain; motion in code, not video).
+
 ## Current state (LIVE)
 - **Live at https://asturai.com** (and www) — hosted on **Cloudflare Pages**, auto-deploys
   from GitHub repo `Evansimon77/asturai` on every push to `main`.

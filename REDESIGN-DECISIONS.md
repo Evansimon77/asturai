@@ -4,7 +4,7 @@
 > temporary site — none of its design, colors, or visual ideas. Nothing gets built
 > until Evan says **"confirm"**. Visual direction starts from Evan's **sketch** (coming later).
 
-_Last updated: 2026-06-25 (Round 4 locked — planning complete, awaiting sketch)_
+_Last updated: 2026-06-25 (descent visual concept LOCKED — concept-08)_
 
 ---
 
@@ -206,7 +206,74 @@ the deliberate opposite of the generic AI-startup look.
 
 **Next:** Evan sketches Option A (boxes + arrows fine). Bookmark tag at the pre-sketch point: `plan-v1-descent`.
 
+## PALETTE & GRAPHICS BUDGET (CONFIRMED ✅ — 2026-06-25)
+
+**Colors are flexible / not locked to the old logo — chosen for MARKETING, not sentiment.**
+Marketing reason to keep the warm-deep family: it makes AsturAi look **nothing like the
+generic AI brand** (neon-purple, cold, robotic = "cheap tech tool"). Warm navy/gold/cream reads
+as a **trusted private craft house** = the "bespoke studio that stays with you" position made
+visible. Different beats better. Also: deep water = octopus = Asturias coast (story coheres for
+free) and a dark base is required for the underwater **descent**.
+
+**Working palette (worn by the sketch + Round 5; confirm for real on-screen):**
+- **The abyss (base):** deep navy → near-black teal, darkening as you descend.
+- **The ink:** logo navy — structure + the octopus.
+- **The guide-light:** gold — the CTA, the depth gauge, the octopus's glow (the eye-magnet).
+- **Human warmth:** warm cream (not stark white) — text + the cards a tentacle hands you.
+- **The "brain" spark:** ONE restrained bioluminescent teal, used ONLY at the brain/deep moments —
+  the single nod to "AI," kept rare so it never goes neon-cliché.
+
+**GRAPHICS BUDGET RULE (protects Higgsfield credits — only ~225 left, shared w/ other projects):**
+- **Generate almost nothing as video.** The two signature transitions (slide + fly-through dive)
+  are **code/CSS/WebGL motion — free**, and read MORE premium than generated video (no "melty AI").
+- **Spend credits only on:** the **octopus** (generate ONCE as a clean transparent cutout, reuse +
+  re-pose in code everywhere) + maybe **2–3 still background scenes** (surface / deep / brain).
+- **Do in code for free:** all motion, water glow, caustics, particles, depth haze, tentacle-hands-card,
+  hover, the depth gauge.
+- **Formats:** AVIF for still images (tiny + sharp). Avoid background video; if ever needed, short AV1
+  (.webm) loop. Still image + coded motion is the fast + premium default.
+- **Rule before any spend:** show Evan the exact prompt + credit cost; he approves each generation.
+
+**LOGO CLEANUP (done):** Only `asturai-primary-clear.svg` + `.png` kept active in
+`asturai-brand/logo/`. 34 other files (variants, mono, master, symbol/icon set) moved to
+`logo/_archive/` (recoverable). The dark site will need a **light/cream re-ink of the SAME approved
+mark** (not a new style) — make it at build time, free. Octopus style CONFIRMED = **rich & cinematic**
+— atmospheric film-still look, octopus rendered as a real creature (light-rays, depth, glow), NOT
+flat-graphic. Premium look. **Consistency plan (for credits):** generate the octopus ONCE as a
+locked character/reference, then reuse that reference across the ~3 scene plates so it stays the
+same creature. Cinematic *look* is delivered as **still AVIF plates + coded motion on top**
+(parallax, drifting particles, animated light-rays, depth haze) — so we get the film feel without
+paying for video and the site still loads fast.
+
+## DESCENT VISUAL CONCEPT — LOCKED ✅ (2026-06-25)
+
+The look/feel of the descent is locked via the mockup `design/sketches/descent-concept-08.png`.
+It is a **mockup that proves the direction**, not a final asset. The three locked elements:
+
+- **Octopus** — the iteration-1 octopus: golden-brown on top, **cool blue-teal underside** (warm+cool
+  balance, NOT all-yellow). This is the look to match.
+- **The "second brain"** — the **Brain set** style (`Ex/Brain set.png`): a glowing blue-white brain with
+  a **bright orange-gold core** and a **cascade of light-sparks trailing downward**. It must read as the
+  **bold HERO / final stage at the bottom of the descent — solid and present, never faded or ghostly.**
+- **Water + light** — **deep rich blue** water with a strong **central god-ray shaft** from the surface
+  (from `descent-concept-02-orb.png`). Realistic rays. Darkens with depth.
+
+**Mockup artifacts to FIX in the real build (don't matter for the mockup, do matter for the final):**
+- The octopus in the mockup is a background-removal cutout → it has **faded detached tentacle bits** and
+  **missing/hidden tentacles**. The fix is NOT to patch the cutout — it is to **generate ONE clean,
+  complete hero octopus** (all 8 tentacles, clean edges, no ghost pieces) and lock it as the reusable
+  character. (This is already the plan: octopus generated once, reused everywhere.)
+- The brain in the real build comes in at this strength as a still, with a **slow coded pulse/glow** on the
+  core so it breathes — free, keeps the "living final stage" feel.
+
+**CREDIT LESSON (2026-06-25):** background-removal (`remove_background`) cost **~13 credits** — far more
+than expected, and it had **no cost-preview**, so it was run without a preflight. Balance went ~224 → ~209
+this session. **NEW RULE (added to the /website graphics-budget skill): any tool with no visible price is
+treated as potentially expensive — STOP and warn before running it,** not just the named generation models.
+The clean octopus cutout is saved (`design/sketches/_octopus-cutout.png`) so that spend isn't repeated.
+
 ## OPEN TODOs (later, not now)
+- **Generate the clean hero octopus** (one complete creature, all tentacles) as the locked reusable character.
 - Gather 2–3 real client quotes (with permission) for the Proof room.
 - Write the email-freebie one-pager (e.g. "5 jobs AI can take off your plate this month").
 - Evan to send a SKETCH before any visual build begins.
