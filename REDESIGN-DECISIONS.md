@@ -195,7 +195,16 @@ the deliberate opposite of the generic AI-startup look.
 - **Depth gauge** (diver's meter, side of screen) = where you are + the menu; replaces scrollbar, gives a sense of *place*.
 - Color/fonts/light/dark still OPEN → decided once the sketch exists.
 
-**Next:** Evan sketches Option A (boxes + arrows fine). Bookmark tag set at this point: `plan-v1-descent`.
+**Option A — three creative choices LOCKED:**
+- **Octopus = companion all the way.** Greets you at the surface and dives WITH you — a calm friendly
+  guide that hands you each room, present on every screen. The glowing brain below = what it leads you
+  to (the "second brain" itself). (Warmth/guidance over mystery-reveal.)
+- **Tentacles hand you cards.** Its arms reach in holding one thing each (a project/service) on clean
+  cards — "many arms, one brain" shown literally by the same guiding octopus.
+- **"Free first look" follows you down** — small floating bubble/buoy, reachable at any depth, blooms
+  open when you reach the brain.
+
+**Next:** Evan sketches Option A (boxes + arrows fine). Bookmark tag at the pre-sketch point: `plan-v1-descent`.
 
 ## OPEN TODOs (later, not now)
 - Gather 2–3 real client quotes (with permission) for the Proof room.
