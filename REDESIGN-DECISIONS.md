@@ -4,7 +4,7 @@
 > temporary site — none of its design, colors, or visual ideas. Nothing gets built
 > until Evan says **"confirm"**. Visual direction starts from Evan's **sketch** (coming later).
 
-_Last updated: 2026-06-25 (Round 2 locked)_
+_Last updated: 2026-06-25 (Round 3 locked)_
 
 ---
 
@@ -102,12 +102,46 @@ Structure: **free first look (diagnosis) → full assessment (paid) → bespoke 
 
 ---
 
+## ROUND 3 — The Journey (LOCKED ✅)
+
+**The flag (the ONE idea AsturAi owns): "Your business's second brain."**
+One calm brain quietly running the boring work — the octopus (many arms, one mind). Everything
+else becomes **proof OF the brain**, not competing headlines: no lost leads, everything in one
+place, privacy by design = supports, not separate flags.
+- Rule applied: own one idea; "a message that says everything says nothing."
+- Ties brand + mascot + name + positioning into one spine.
+
+**Reach: broad, with real estate as the STAR.**
+Site speaks to any business, but real estate is the lead example + main proof (live systems run
+there). Open to all without reading as "for no one." Widen as other niches get proof.
+- Applies "riches in the niches" without slamming the door on non-RE visitors.
+- Also: we're early in a new field → own the category (be first in mind), don't fight a crowded one.
+
+**The journey — 7 beats (6 agreed rooms + 2 funnel-driven adds):**
+1. **Entry** — hook on "your business's second brain" (+ octopus). The **aha is hinted HERE**, not delayed.
+2. **The pain** — losing hours, losing leads, scattered info. They feel seen.
+3. **The after** — life with the brain: hours back, nothing slips, staff freed up.
+4. **Proof** — real systems built & run, **real estate as the star**, **+ client-results beat**
+   (concrete outcomes now; real quotes added later).
+5. **Why bespoke + safe** — built around your business; private by design (protected by law).
+6. **The free first look** — no-risk next step + how to reach you.
+7. **Stay in touch** — soft catch for the ~80% not ready today (exact form → Round 4).
+   (Rooms 6 & 7 may share a screen or be neighbors — settle with the sketch.)
+
+**Two funnel rules applied:** (a) the journey is a loop, not a one-way pipe — win/engage/grow run
+at once; (b) activation (the "aha") is the biggest lever, so hit it early.
+
+**Testimonials status:** results yes, quotes not yet → client beat leads with OUTCOMES now.
+TODO: gather 2–3 real client quotes (with permission) to add later.
+
+---
+
 ## ROUND PLAN
 
 - **Round 1** — Foundation ✅ locked
 - **Round 2** — Positioning & Offer ✅ locked
-- **Round 3** — The journey: what sections exist and the order they pull someone deeper
-- **Round 4** — Channels (where visitors come from), catching not-ready visitors, the one "it's working" number
+- **Round 3** — The journey (sections + order + flag idea) ✅ locked
+- **Round 4** — Channels (where visitors come from), the "stay in touch" catch, the one "it's working" number
 - **Round 5** — (after the sketch) feeling, color, fonts, light/dark, motion
 
 ---
