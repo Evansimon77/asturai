@@ -6,6 +6,17 @@ One page, bilingual, no build step.
 ## Current state (LIVE)
 - **Live at https://asturai.com** (and www) — hosted on **Cloudflare Pages**, auto-deploys
   from GitHub repo `Evansimon77/asturai` on every push to `main`.
+- **2026-06-25 — full visual REDESIGN shipped: "Cinematic Film" homepage.** `index.html` is now a
+  dark, cinematic, photo-led design (full-screen office-photo scenes, huge type, GSAP + Lenis
+  smooth scroll, custom gold cursor, intro curtain, filmic color grade, scroll-velocity motion
+  blur, gold film-frame furniture). Uses Evan's pro photos (`assets/evan-portrait.jpg`,
+  `assets/office-*.jpg`) + transparent gold/cream lockup (`assets/asturai-clear-cream.svg`).
+  All prior copy + EN/ES toggle + JSON-LD preserved intact (109 keys, parity OK).
+  - Explored 3 directions; Evan picked Cinematic. The other two drafts are kept in the repo:
+    `index-kinetic.html` (kinetic editorial), `index-3d.html` (Three.js octopus). Old dark-gradient
+    version saved as `index-darkgradient.html`. Design context in `PRODUCT.md` + `DESIGN.md`.
+  - CDN libs (GSAP, Lenis) load from jsdelivr/cdnjs; motion is failure-proof (if a lib fails, all
+    content still shows — earlier blank-sections bug was a dead Lenis CDN link, now fixed).
 - **2026-06-24 — big content + SEO expansion** (after a full scan of every project Evan has built):
   - Sections now: top bar (logo + 🇬🇧/🇪🇸 + "Talk to me"), hero, trust strip (5 badges),
     **9 service cards** ("What I build"), how-it-works (3 steps), **8 portfolio cards** with
@@ -40,8 +51,13 @@ Change files here → `git push` (or `/save`) → Cloudflare rebuilds automatica
 Local preview: `python3 -m http.server 8300`.
 
 ## Next (optional ideas)
-- **Redesign the layout** (Evan's next step — content is now all in place to design around).
-- **Close the demo gap:** get 2–3 "demo on request" pieces publicly viewable (host them, or short
-  screen-recordings) so visitors can actually try them — currently only the Tasador is clickable.
-- Make the other portfolio cards clickable once those tools have public homes.
+- **Keep polishing the Cinematic homepage** (Evan is iterating live): possible next steps he raised —
+  full WebGL water-dissolve transitions between scenes (the big version of "liquid"), finer crop
+  tuning, more photo curation. Headless screenshots hang on the CDN/animation libs, so verify in a
+  real browser.
+- Consider removing the unlinked draft pages (`index-3d.html`, `index-kinetic.html`,
+  `index-darkgradient.html`) from the deploy once the final is locked (they're reachable by direct
+  URL on the live site but not linked anywhere).
+- **Close the demo gap:** get 2–3 "demo on request" pieces publicly viewable so visitors can try
+  them — currently only the Tasador is clickable.
 - Add an @asturai.com email inbox if ever wanted (currently none — uses Gmail).
