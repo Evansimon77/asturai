@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<base href="/palacio-concepcion/" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Palacio de la Concepción — Bodas en un château de 1903 · Gijón, Asturias</title>
+<meta name="description" content="Un château francés de 1903 sobre Gijón, con cinco hectáreas de jardines victorianos y vistas al Cantábrico. Bodas y eventos." />
+<!-- Vista previa al compartir el enlace (WhatsApp, Instagram, Telegram, Facebook) -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://asturai.com/palacio-concepcion/" />
+<meta property="og:title" content="Palacio de la Concepción — Bodas en un château de 1903" />
+<meta property="og:description" content="Un château francés de 1903 sobre Gijón, con cinco hectáreas de jardines victorianos y vistas al Cantábrico." />
+<meta property="og:image" content="https://asturai.com/palacio-concepcion/assets/site/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="es_ES" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Palacio de la Concepción — Bodas en un château de 1903" />
+<meta name="twitter:description" content="Un château francés de 1903 sobre Gijón, con cinco hectáreas de jardines victorianos y vistas al Cantábrico." />
+<meta name="twitter:image" content="https://asturai.com/palacio-concepcion/assets/site/og.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#23262b; --ink-soft:#41454c; --cream:#f2eee5; --paper:#fbf8f2;
+    --navy:#1f2d3d; --navy-2:#16212e; --gold:#ab8753; --gold-soft:#c6a36a;
+    --grey:#8b877e; --line:#e7e1d5;
+    --serif:'Cormorant Garamond', Georgia, serif; --sans:'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--paper);font-weight:300;-webkit-font-smoothing:antialiased;line-height:1.65}
+  a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 44px}
+  h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spacing:-.01em}
+  .eyebrow{font-size:11px;letter-spacing:.38em;text-transform:uppercase;color:var(--gold)}
+  .lbl{display:flex;align-items:center;gap:14px;margin-bottom:26px}.lbl span{width:30px;height:1px;background:var(--gold)}
+  p{font-size:16px;color:var(--ink-soft)}
+  .btn{display:inline-block;font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;padding:17px 34px;border:1px solid var(--gold);background:var(--gold);color:#fff;transition:.35s ease;cursor:pointer}
+  .btn:hover{background:transparent;color:var(--gold)}
+  .btn.ghost{background:rgba(16,22,30,.28);color:#fff;border-color:rgba(255,255,255,.65);backdrop-filter:blur(2px);text-shadow:0 1px 10px rgba(0,0,0,.5)}
+  .btn.ghost:hover{background:#fff;color:var(--ink);border-color:#fff}
+  .reveal{opacity:0;transform:translateY(32px);transition:1s cubic-bezier(.16,.8,.24,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:60;transition:.4s ease}
+  header .bar{display:flex;align-items:center;justify-content:space-between;height:90px;transition:.4s ease}
+  .brand{position:relative;display:flex;flex-direction:column;line-height:1;color:#fff;transition:.4s;padding-left:18px}
+  .brand::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:2px;height:38px;
+      background:linear-gradient(180deg,var(--gold-soft),var(--gold));box-shadow:0 0 3px rgba(0,0,0,.5)}
+  .brand .n{font-family:var(--serif);font-size:25px;font-weight:500;letter-spacing:.04em;
+      text-shadow:0 1px 14px rgba(10,16,24,.7), 0 1px 3px rgba(10,16,24,.4)}
+  .brand .s{font-family:var(--sans);font-size:9.5px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;
+      color:rgba(255,255,255,.92);margin-top:7px;
+      text-shadow:0 1px 10px rgba(10,16,24,.7), 0 1px 2px rgba(10,16,24,.4)}
+  .brand .s i{font-style:normal;color:var(--gold-soft);margin:0 3px}
+  nav ul{display:flex;gap:34px;list-style:none}
+  nav a{font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;transition:.3s;text-shadow:0 1px 3px rgba(0,0,0,.7),0 2px 14px rgba(0,0,0,.55)}
+  nav a:hover{color:var(--gold-soft)}
+  .nav-cta{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--gold);border:1px solid var(--gold);padding:12px 22px;transition:.35s}
+  .nav-cta:hover{background:transparent;color:#fff;border-color:rgba(255,255,255,.8);text-shadow:0 1px 3px rgba(0,0,0,.6)}
+  header.solid{background:var(--navy-2)} header.solid .bar{height:72px}
+  /* hamburger (móvil) */
+  .burger{display:none;flex-direction:column;justify-content:center;gap:6px;width:44px;height:44px;padding:0;background:none;border:0;cursor:pointer;position:relative;z-index:61}
+  .burger span{display:block;width:26px;height:2px;background:#fff;margin:0 auto;border-radius:2px;transition:transform .35s ease,opacity .2s ease}
+  .burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+  .mobile-menu{position:fixed;inset:0;z-index:55;background:rgba(22,33,46,.98);backdrop-filter:blur(6px);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;
+    opacity:0;pointer-events:none;transition:opacity .4s ease}
+  .mobile-menu.open{opacity:1;pointer-events:auto}
+  .mobile-menu a{font-family:var(--serif);font-size:32px;color:#fff;letter-spacing:.02em}
+  .mobile-menu a.mm-cta{font-family:var(--sans);font-size:13px;letter-spacing:.22em;text-transform:uppercase;
+    border:1px solid var(--gold-soft);color:var(--gold-soft);padding:15px 34px;margin-top:16px}
+  body.menu-open{overflow:hidden}
+
+  /* HERO slideshow */
+  .hero{position:relative;height:100vh;min-height:680px;overflow:hidden;display:flex;align-items:center;background:#1a232f}
+  .hero .bg{position:absolute;inset:0;z-index:0}
+  .hero .bg .slide{position:absolute;inset:0;opacity:0;transition:opacity 2.2s ease}
+  .hero .bg .slide.active{opacity:1}
+  .hero .bg .slide img,.hero .bg .slide video{width:100%;height:100%;object-fit:cover}
+  .hero .bg .slide.kb img{animation:kenburns 13s ease-in-out infinite alternate}
+  @keyframes kenburns{from{transform:scale(1.02)}to{transform:scale(1.12)}}
+  .hero .scrim{position:absolute;inset:0;z-index:1;background:
+      linear-gradient(180deg, rgba(10,14,20,.16) 0%, rgba(10,14,20,0) 22%, rgba(10,14,20,0) 80%, rgba(10,14,20,.34) 100%)}
+  /* globos sobre el palacio (slide 2) */
+  .hero .balloons{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+  .hero .balloon{position:absolute;bottom:-22%;width:42px;height:53px;border-radius:50% 50% 49% 49%/44% 44% 56% 56%;
+    box-shadow:inset -7px -9px 14px rgba(0,0,0,.22), 0 4px 10px rgba(0,0,0,.18);opacity:0;
+    animation:rise 13s linear infinite}
+  .hero .balloon::after{content:'';position:absolute;top:99%;left:50%;width:1px;height:46px;background:linear-gradient(rgba(255,255,255,.55),rgba(255,255,255,0));transform:translateX(-50%)}
+  .hero .balloon::before{content:'';position:absolute;top:14%;left:24%;width:34%;height:26%;border-radius:50%;background:rgba(255,255,255,.35);filter:blur(1px)}
+  .hero .balloon.b1{left:8%; background:#c8a24a; width:48px;height:61px; animation-duration:14s;animation-delay:-1s}
+  .hero .balloon.b2{left:18%;background:#f3ecd9; width:36px;height:46px; animation-duration:17s;animation-delay:-6s}
+  .hero .balloon.b3{left:28%;background:#7d2233; width:42px;height:53px; animation-duration:15s;animation-delay:-9s}
+  .hero .balloon.b4{left:40%;background:#e7d39a; width:45px;height:57px; animation-duration:19s;animation-delay:-3s}
+  .hero .balloon.b5{left:52%;background:#28415c; width:38px;height:48px; animation-duration:16s;animation-delay:-12s}
+  .hero .balloon.b6{left:63%;background:#c8a24a; width:42px;height:53px; animation-duration:18s;animation-delay:-7s}
+  .hero .balloon.b7{left:74%;background:#f3ecd9; width:47px;height:59px; animation-duration:15s;animation-delay:-2s}
+  .hero .balloon.b8{left:84%;background:#7d2233; width:35px;height:45px; animation-duration:20s;animation-delay:-14s}
+  .hero .balloon.b9{left:92%;background:#e7d39a; width:43px;height:54px; animation-duration:17s;animation-delay:-5s}
+  @keyframes rise{
+    0%{transform:translateY(0) translateX(0) rotate(-3deg);opacity:0}
+    8%{opacity:.9}
+    50%{transform:translateY(-62vh) translateX(16px) rotate(3deg)}
+    90%{opacity:.85}
+    100%{transform:translateY(-128vh) translateX(-10px) rotate(-2deg);opacity:0}
+  }
+  @media(prefers-reduced-motion:reduce){.hero .balloon{animation:none;display:none}}
+  .hero .inner{position:relative;z-index:2;color:#fff;max-width:960px;text-align:center;margin:0 auto}
+  .hero .eyebrow{color:#fff;margin-bottom:30px;display:inline-flex;align-items:center;gap:14px;
+      font-size:15px;font-weight:700;letter-spacing:.32em;text-shadow:none}
+  .hero .eyebrow span{width:34px;height:1px;background:var(--gold-soft)}
+  /* TITULAR — composición tipográfica */
+  .hero h1{display:flex;flex-direction:column;align-items:center;color:#fff;margin-bottom:30px;line-height:1;
+      text-shadow:0 1px 3px rgba(0,0,0,.6), 0 2px 24px rgba(0,0,0,.55)}
+  .hero h1 .l1{font-size:clamp(24px,3vw,40px);font-weight:500;letter-spacing:.02em;color:#fff}
+  .hero h1 .l2{font-style:italic;font-weight:500;color:var(--gold-soft);
+      font-size:clamp(72px,12vw,168px);line-height:.86;letter-spacing:-.01em;margin:.04em 0 .02em;
+      text-shadow:0 2px 4px rgba(0,0,0,.6), 0 4px 32px rgba(0,0,0,.6), 0 0 60px rgba(0,0,0,.45)}
+  .hero h1 .l3{font-family:var(--sans);font-weight:400;font-size:clamp(13px,1.4vw,17px);
+      letter-spacing:.52em;text-transform:uppercase;color:#fff;
+      display:flex;align-items:center;gap:18px;margin-top:.5em;text-shadow:0 1px 4px rgba(0,0,0,.75), 0 2px 16px rgba(0,0,0,.6)}
+  .hero h1 .l3::before,.hero h1 .l3::after{content:'';width:30px;height:1px;background:rgba(255,255,255,.6)}
+  .hero p.lead{font-size:18px;font-weight:500;color:#fff;max-width:540px;margin:0 auto 36px;
+      text-shadow:0 1px 2px rgba(0,0,0,.95), 0 0 6px rgba(0,0,0,.7)}
+  .hero .cta-row{display:flex;gap:22px;justify-content:center;flex-wrap:wrap}
+  .hero .maploc{display:inline-flex;align-items:center;gap:9px;margin-top:34px;color:#fff;
+      font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+      text-shadow:0 1px 2px rgba(0,0,0,.7),0 1px 8px rgba(0,0,0,.5);transition:color .35s ease}
+  .hero .maploc:hover{color:var(--gold-soft)}
+  .hero .maploc .maploc-txt{border-bottom:1px solid rgba(255,255,255,.45);padding-bottom:2px;transition:border-color .35s}
+  .hero .maploc:hover .maploc-txt{border-color:var(--gold-soft)}
+  .hero .maploc .pin{width:22px;height:22px;fill:var(--gold);flex:0 0 auto;transform-origin:50% 100%;
+      filter:drop-shadow(0 2px 3px rgba(0,0,0,.55));animation:pinJump 1.3s ease-in-out infinite}
+  .hero .maploc:hover .pin{fill:#fff}
+  .hero .maploc .arr{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto;transition:transform .35s}
+  .hero .maploc:hover .arr{transform:translateX(4px)}
+  @keyframes pinJump{0%,55%,100%{transform:translateY(0) scale(1)}
+      18%{transform:translateY(-9px) scale(1.12)}
+      36%{transform:translateY(0) scale(.94,1.06)}
+      45%{transform:translateY(-3px) scale(1)}}
+  @media(prefers-reduced-motion:reduce){.hero .maploc .pin{animation:none}}
+  .badges{position:absolute;left:0;right:0;bottom:34px;z-index:2}
+  .badges .wrap{display:flex;justify-content:center}
+  .reviews{display:inline-flex;align-items:center;gap:16px;color:#fff;transition:.35s ease}
+  .reviews:hover{transform:translateY(-2px)}
+  .reviews .st{color:var(--gold-soft);font-size:21px;letter-spacing:.16em;line-height:1;text-shadow:0 1px 3px rgba(0,0,0,.7),0 2px 10px rgba(0,0,0,.55)}
+  .reviews b{font-family:var(--serif);font-size:30px;font-weight:600;line-height:1;text-shadow:0 1px 3px rgba(0,0,0,.75),0 2px 12px rgba(0,0,0,.6)}
+  .reviews .rv-div{width:1px;height:32px;background:rgba(255,255,255,.5);box-shadow:0 0 6px rgba(0,0,0,.5)}
+  .reviews .rv-txt{font-family:var(--sans);font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+    color:#fff;line-height:1.55;text-align:left;text-shadow:0 1px 2px rgba(0,0,0,.85),0 2px 10px rgba(0,0,0,.6)}
+  .reviews .rv-txt b{font-family:var(--sans);font-size:11.5px;font-weight:700;color:var(--gold-soft);text-shadow:0 1px 3px rgba(0,0,0,.8)}
+  .reviews .rv-short{display:none}
+  @media(max-width:560px){
+    .badges{bottom:92px}
+    .reviews{gap:13px;padding:11px 22px}
+    .reviews .st{font-size:18px}.reviews b{font-size:26px}
+    .reviews .rv-full{display:none}
+    .reviews .rv-short{display:inline;font-size:11px;line-height:1.45}
+    .reviews .rv-short b{font-size:11px}
+  }
+
+  /* SEGUNDO EXÁ: foto como cuadro a la izquierda, texto a la derecha sobre fondo claro */
+  .estate{background:var(--paper);padding:104px 0}
+  .estate .wrap{display:grid;grid-template-columns:1.12fr .88fr;gap:60px;align-items:center}
+  .estate .frame{padding:22px;background:#fcfaf5;border:13px solid #b6925a;
+      border-image:linear-gradient(135deg,#eed59e 0%,#b89358 33%,#916c31 52%,#ddc189 77%,#a3804a 100%) 1;
+      box-shadow:0 48px 76px -30px rgba(22,33,46,.5),0 14px 30px rgba(22,33,46,.16)}
+  .estate .pic{overflow:hidden;box-shadow:0 0 0 1px rgba(56,38,14,.45)}
+  .estate .pic img{width:100%;height:100%;object-fit:cover;display:block;transform-origin:58% 42%;
+      animation:estateZoom 13s ease-in-out infinite alternate}
+  @keyframes estateZoom{from{transform:scale(1)}to{transform:scale(1.4)}}
+  @media(prefers-reduced-motion:reduce){.estate .pic img{animation:none}}
+  .estate .copy{color:var(--ink);text-align:left}
+  .estate .eyebrow{display:inline-flex;gap:13px;align-items:center;margin-bottom:22px;color:var(--gold);
+      font-weight:700;letter-spacing:.3em;font-size:12.5px;text-transform:uppercase}
+  .estate .eyebrow span{width:32px;height:1px;background:var(--gold)}
+  .estate h2{font-family:var(--serif);font-weight:500;font-size:clamp(34px,3.6vw,58px);line-height:1.06;margin-bottom:22px;color:var(--navy)}
+  .estate h2 i{font-style:italic;color:var(--gold)}
+  .estate p.lead{font-size:18px;font-weight:400;color:var(--ink-soft);max-width:470px;margin-bottom:28px;line-height:1.6}
+  .estate .chips{display:flex;flex-wrap:wrap;gap:11px;margin-bottom:34px}
+  .estate .chips span{display:inline-flex;align-items:center;gap:9px;font-family:var(--sans);font-size:11.5px;font-weight:600;
+      letter-spacing:.14em;text-transform:uppercase;color:var(--ink);padding:9px 16px;border:1px solid var(--line);border-radius:40px}
+  .estate .chips span::before{content:'';width:7px;height:7px;background:var(--gold);transform:rotate(45deg);flex:0 0 auto}
+  @media(max-width:860px){.estate{padding:64px 0}.estate .wrap{grid-template-columns:1fr;gap:32px}.estate p.lead{max-width:none}.estate .frame{padding:14px;border-width:9px}}
+
+  section.block{padding:120px 0}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:74px;align-items:center}
+  .split .ph{aspect-ratio:4/5;overflow:hidden;background:var(--cream)}
+  .split .ph img{width:100%;height:100%;object-fit:cover;transition:1.6s ease}.split .ph:hover img{transform:scale(1.05)}
+  .split h2{font-size:clamp(32px,4vw,56px);margin-bottom:22px}.split p{margin-bottom:18px;max-width:520px}
+  .split .meta{margin-top:30px;display:flex;gap:42px;flex-wrap:wrap}
+  .split .meta .n{font-family:var(--serif);font-size:40px;line-height:1;color:var(--navy)}
+  .split .meta .d{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--grey);margin-top:8px}
+
+  .band{position:relative;min-height:86vh;display:flex;align-items:center;overflow:hidden;background:#1a232f}
+  .band .bg{position:absolute;inset:0;z-index:0}.band .bg img{width:100%;height:100%;object-fit:cover}
+  .band .ov{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(12,16,22,.74),rgba(12,16,22,.3) 60%,rgba(12,16,22,.15))}
+  .band .inner{position:relative;z-index:2;color:#fff;max-width:600px}
+  .band .eyebrow{color:var(--gold-soft);display:flex;gap:14px;align-items:center;margin-bottom:22px}.band .eyebrow span{width:30px;height:1px;background:var(--gold)}
+  .band h2{font-size:clamp(34px,4.6vw,62px);color:#fff;margin-bottom:22px}.band p{color:rgba(255,255,255,.9);max-width:480px;margin-bottom:14px}
+  .band .pts{list-style:none;margin:18px 0 32px;display:grid;gap:11px}
+  .band .pts li{font-size:15px;color:rgba(255,255,255,.9);padding-left:24px;position:relative}
+  .band .pts li::before{content:'';position:absolute;left:0;top:9px;width:9px;height:9px;border:1px solid var(--gold-soft);transform:rotate(45deg)}
+
+  .espacios{background:var(--cream)}
+  .espacios .head{text-align:center;margin-bottom:60px}.espacios .head .eyebrow{display:inline-flex;gap:14px;align-items:center;margin-bottom:20px}.espacios .head .eyebrow span{width:30px;height:1px;background:var(--gold)}
+  .espacios h2{font-size:clamp(32px,4vw,54px)}
+  .egrid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:14px}
+  .egrid .cell{overflow:hidden}.egrid .cell.big{grid-column:span 2;grid-row:span 2}
+  .egrid .cell img{width:100%;height:100%;object-fit:cover;transition:1.4s ease}.egrid .cell:hover img{transform:scale(1.06)}
+
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .duo .card .ph{aspect-ratio:3/2;overflow:hidden;margin-bottom:22px}.duo .card .ph img{width:100%;height:100%;object-fit:cover;transition:1.4s ease}.duo .card:hover .ph img{transform:scale(1.05)}
+  .duo .card h3{font-size:28px;margin-bottom:12px}
+
+  .rating{text-align:center;padding:110px 0;background:var(--paper)}
+  .rating .big{font-family:var(--serif);font-size:clamp(56px,8vw,104px);line-height:1;color:var(--navy)}
+  .rating .stars{color:var(--gold);font-size:18px;letter-spacing:.18em;margin:12px 0}
+  .rating .sub{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey)}
+  .rating .sub b{color:var(--gold);font-weight:600}
+
+  .cta{background:var(--navy);color:#fff;text-align:center;padding:120px 0}
+  .cta .eyebrow{color:var(--gold-soft);display:inline-flex;gap:14px;align-items:center;margin-bottom:24px}.cta .eyebrow span{width:30px;height:1px;background:var(--gold)}
+  .cta h2{font-size:clamp(36px,5vw,68px);color:#fff;margin-bottom:18px}.cta p{color:rgba(255,255,255,.85);max-width:540px;margin:0 auto 38px}
+  .cta .ph{font-family:var(--serif);font-size:24px;margin-top:22px;color:var(--gold-soft)}
+
+  footer{background:var(--navy-2);color:rgba(255,255,255,.72);padding:84px 0 36px}
+  .fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,.12)}
+  footer .n{font-family:var(--serif);font-size:23px;color:#fff;margin-bottom:14px}
+  footer h4{font-family:var(--sans);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:16px}
+  footer p,footer a{font-size:14px;color:rgba(255,255,255,.72);display:block;margin-bottom:9px}footer a:hover{color:#fff}
+  .fbot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:26px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+
+  @media(max-width:980px){.split,.duo{grid-template-columns:1fr;gap:36px}.egrid{grid-template-columns:repeat(2,1fr)}.egrid .cell.big{grid-column:span 2;grid-row:span 1}.fgrid{grid-template-columns:1fr 1fr}}
+  @media(max-width:900px){nav,.nav-cta{display:none}.burger{display:flex}.wrap{padding:0 22px}}
+
+  /* floating round WhatsApp button — bottom-right, always within reach while scrolling */
+  .wa-fab{position:fixed;right:18px;bottom:18px;z-index:9200;width:58px;height:58px;border-radius:50%;
+    background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 26px rgba(0,0,0,.28), 0 2px 6px rgba(0,0,0,.18);transition:transform .3s ease, background .3s ease}
+  .wa-fab svg{width:30px;height:30px;fill:currentColor}
+  .wa-fab:hover{background:#1eb958;transform:scale(1.06)}
+  .wa-fab::before{content:"";position:absolute;inset:0;border-radius:50%;background:#25d366;z-index:-1;
+    animation:waPulse 2.4s ease-out infinite}
+  @keyframes waPulse{0%{transform:scale(1);opacity:.55}70%,100%{transform:scale(1.7);opacity:0}}
+  @media(prefers-reduced-motion:reduce){.wa-fab::before{animation:none}}
+  @media(max-width:900px){.wa-fab{width:54px;height:54px;right:15px;bottom:15px}.wa-fab svg{width:28px;height:28px}}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap bar">
+    <a class="brand" href="#top"><span class="n">Palacio de la Concepción</span><span class="s">Gijón <i>·</i> Asturias <i>·</i> 1903</span></a>
+    <nav><ul>
+      <li><a href="#palacio">El Palacio</a></li>
+      <li><a href="#bodas">Bodas</a></li>
+      <li><a href="#espacios">Espacios</a></li>
+      <li><a href="#gastronomia">Gastronomía</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul></nav>
+    <a class="nav-cta" href="#contacto">Reservar fecha</a>
+    <button class="burger" id="burger" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#palacio">El Palacio</a>
+  <a href="#bodas">Bodas</a>
+  <a href="#espacios">Espacios</a>
+  <a href="#gastronomia">Gastronomía</a>
+  <a href="#contacto">Contacto</a>
+  <a class="mm-cta" href="#contacto">Reservar fecha</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="bg" id="heroBg">
+    <div class="slide active">
+      <video autoplay muted playsinline preload="auto" poster="assets/site/portones-real.jpg">
+        <source src="assets/site/portones-real.mov" />
+      </video>
+    </div>
+    <div class="slide">
+      <video muted playsinline preload="auto" poster="assets/site/castillo.jpg">
+        <source src="assets/site/castillo.mov" />
+      </video>
+    </div>
+    <div class="slide">
+      <video muted playsinline preload="auto" poster="assets/site/fachada.jpg">
+        <source src="assets/site/globos.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+  <div class="scrim"></div>
+  <div class="wrap"><div class="inner">
+    <div class="eyebrow"><span></span>Bodas &amp; eventos · Gijón<span></span></div>
+    <h1>
+      <span class="l1">Casaos en un</span>
+      <span class="l2">château</span>
+      <span class="l3">de 1903</span>
+    </h1>
+    <p class="lead">Un palacio de estilo francés sobre Gijón, con cinco hectáreas de jardines victorianos y el Cantábrico al fondo.</p>
+    <div class="cta-row">
+      <a class="btn" href="#contacto">Solicitar fecha</a>
+      <a class="btn ghost" href="#bodas">Descubrir el palacio</a>
+    </div>
+    <a class="maploc" href="https://www.google.com/maps/search/?api=1&amp;query=Palacio+de+la+Concepci%C3%B3n+Camino+de+Quintueles+50+Gij%C3%B3n+Asturias" target="_blank" rel="noopener" aria-label="Ver en Google Maps cómo llegar al Palacio de la Concepción en Gijón"><svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg><span class="maploc-txt">Cómo llegar · Gijón</span><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+  </div></div>
+  <div class="badges"><div class="wrap">
+    <a class="reviews" href="#opiniones" aria-label="Opiniones: 5 sobre 5, el 100% de las parejas nos valora con 5 estrellas">
+      <span class="st">★★★★★</span>
+      <b>5,0</b>
+      <span class="rv-div"></span>
+      <span class="rv-txt rv-full">El <b>100%</b> de las parejas<br>nos valora con 5 estrellas</span>
+      <span class="rv-txt rv-short">El <b>100%</b> en 5 estrellas</span>
+    </a>
+  </div></div>
+</section>
+
+<!-- SEGUNDO EXÁ — foto como cuadro a la izquierda, texto a la derecha -->
+<section class="estate"><div class="wrap">
+  <div class="frame reveal"><div class="pic"><img src="assets/site/aerea.jpg" alt="El Palacio de la Concepción al fondo de su avenida de árboles, entre cinco hectáreas de jardines sobre Gijón" /></div></div>
+  <div class="copy reveal">
+    <div class="eyebrow"><span></span>El escenario</div>
+    <h2>El palacio entero,<br>solo para <i>vosotros</i>.</h2>
+    <p class="lead">Una única boda al día en un château de 1903, entre cinco hectáreas de jardines victorianos y con Gijón y el Cantábrico al fondo.</p>
+    <div class="chips">
+      <span>Una sola boda al día</span>
+      <span>5 ha de jardines</span>
+      <span>Vistas al Cantábrico</span>
+    </div>
+    <a class="btn" href="#contacto">Reservar visita privada</a>
+  </div>
+</div></section>
+
+<!-- EL PALACIO -->
+<section class="block" id="palacio"><div class="wrap split">
+  <div class="ph reveal"><img src="assets/site/detalle.jpg" alt="Fachada del Palacio de la Concepción" /></div>
+  <div class="reveal">
+    <div class="lbl"><span></span><span class="eyebrow">El Palacio</span></div>
+    <h2>Un château francés<br>sobre Gijón</h2>
+    <p>Construido en 1903 según los cánones de los grandes châteaux franceses, el Palacio de la Concepción corona una colina sobre Gijón, rodeado de más de cinco hectáreas de jardines victorianos con el Cantábrico al fondo.</p>
+    <p>Salones, terraza, carpa y jardines: un único escenario para celebrar a lo grande, con la gastronomía de Deloya al frente.</p>
+    <div class="meta">
+      <div><div class="n">1903</div><div class="d">Château francés</div></div>
+      <div><div class="n">5 ha</div><div class="d">Jardines victorianos</div></div>
+      <div><div class="n">350</div><div class="d">Invitados máx.</div></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- BODAS -->
+<section class="band" id="bodas">
+  <div class="bg"><img src="assets/site/ceremonia2.jpg" alt="Boda en el Palacio de la Concepción" /></div>
+  <div class="ov"></div>
+  <div class="wrap"><div class="inner reveal">
+    <div class="eyebrow"><span></span>Bodas</div>
+    <h2>Vuestro gran día,<br>a la altura del palacio</h2>
+    <p>De la ceremonia en los jardines al banquete en los salones: un escenario de cuento y un equipo que cuida cada detalle.</p>
+    <ul class="pts">
+      <li>Ceremonia civil en los jardines victorianos</li>
+      <li>Banquete en salones y carpa para hasta 350 invitados</li>
+      <li>Cóctel en la terraza con vistas a Gijón y al mar</li>
+      <li>Gastronomía de autor de Deloya</li>
+    </ul>
+    <a class="btn" href="#contacto">Pedir presupuesto de boda</a>
+  </div></div>
+</section>
+
+<!-- ESPACIOS -->
+<section class="block espacios" id="espacios"><div class="wrap">
+  <div class="head reveal"><div class="eyebrow"><span></span>Espacios<span></span></div><h2>Cada rincón, una postal</h2></div>
+  <div class="egrid">
+    <div class="cell big reveal"><img src="assets/site/entrada.jpg" alt="Entrada y jardines" /></div>
+    <div class="cell reveal"><img src="assets/site/jardin.jpg" alt="Jardines victorianos" /></div>
+    <div class="cell reveal"><img src="assets/site/cocktail1.jpg" alt="Zona de cóctel" /></div>
+    <div class="cell reveal"><img src="assets/site/palacio2.jpg" alt="Palacio entre rosas" /></div>
+    <div class="cell reveal"><img src="assets/site/fachada2.jpg" alt="Fachada" /></div>
+  </div>
+</div></section>
+
+<!-- GASTRONOMIA -->
+<section class="block" id="gastronomia"><div class="wrap duo">
+  <div class="card reveal"><div class="ph"><img src="assets/site/montaje.jpg" alt="Salón de banquete montado" /></div><h3>Banquete en los salones</h3><p>Salones señoriales montados al detalle para una celebración inolvidable, con capacidad para grandes bodas.</p></div>
+  <div class="card reveal"><div class="ph"><img src="assets/site/mesa-salon.jpg" alt="Mesa de gala" /></div><h3>Gastronomía de autor</h3><p>La cocina de Deloya (chef Javier Loya): producto, mar y tierra de Asturias en un menú a vuestra medida.</p></div>
+</div></section>
+
+<!-- RATING -->
+<section class="rating" id="opiniones"><div class="wrap reveal">
+  <div class="eyebrow" style="display:inline-flex;gap:14px;align-items:center;margin-bottom:20px"><span style="width:30px;height:1px;background:var(--gold)"></span>Opiniones<span style="width:30px;height:1px;background:var(--gold)"></span></div>
+  <div class="big">5,0</div>
+  <div class="stars">★★★★★</div>
+  <div class="sub">El <b>100%</b> de las parejas nos valora con <b>5 estrellas</b></div>
+</div></section>
+
+<!-- CTA -->
+<section class="cta" id="contacto"><div class="wrap reveal">
+  <div class="eyebrow"><span></span>Vuestra fecha<span></span></div>
+  <h2>Reservad vuestra boda</h2>
+  <p>Contadnos vuestra idea y visitad el palacio y sus jardines. Visitas con cita previa.</p>
+  <a class="btn" style="background:#fff;color:var(--navy);border-color:#fff" href="#contacto">Solicitar disponibilidad</a>
+  <div class="ph">Camino de Quintueles, 50 · Gijón</div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><div class="n">Palacio de la Concepción</div><p>Bodas y eventos en un château de 1903 sobre Gijón, entre jardines victorianos y vistas al Cantábrico.</p></div>
+    <div><h4>Dónde</h4><p>Camino de Quintueles, 50<br>33203 Gijón<br>Asturias</p></div>
+    <div><h4>Contacto</h4><a href="#">Pedir información</a><a href="#">Visitas con cita</a></div>
+    <div><h4>Síguenos</h4><a href="#">Instagram</a><a href="#">Facebook</a></div>
+  </div>
+  <div class="fbot"><span>© 2026 Palacio de la Concepción · Gijón</span><span>Concepto de diseño · Propuesta</span></div>
+</div></footer>
+
+<script>
+  const hdr=document.getElementById('hdr');
+  const onScroll=()=>hdr.classList.toggle('solid', window.scrollY>60);
+  window.addEventListener('scroll',onScroll); onScroll();
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.14});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*0.08)+'s';io.observe(el);});
+  (function(){
+    const burger=document.getElementById('burger'), menu=document.getElementById('mobileMenu');
+    if(!burger||!menu)return;
+    const toggle=(open)=>{ const o=open!==undefined?open:!menu.classList.contains('open');
+      menu.classList.toggle('open',o); burger.classList.toggle('open',o);
+      document.body.classList.toggle('menu-open',o); burger.setAttribute('aria-expanded',o); };
+    burger.addEventListener('click',()=>toggle());
+    menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>toggle(false)));
+  })();
+  (function(){const s=[...document.querySelectorAll('#heroBg .slide')];if(s.length<3)return;
+    const vids=s.map(x=>x.querySelector('video'));
+    function activate(k){ s.forEach((sl,i)=>sl.classList.toggle('active',i===k));
+      const v=vids[k]; try{v.currentTime=0;v.play();}catch(e){} }
+    // puertas (entrada) una vez → luego alterna palacio completo ⇄ globos
+    const loop=[1,2]; let li=-1;
+    function next(){ li=(li+1)%loop.length; activate(loop[li]); }
+    // arranque: puertas
+    try{vids[0].currentTime=0;vids[0].play();}catch(e){}
+    let started=false; const startLoop=()=>{ if(started)return; started=true; next(); };
+    vids[0].addEventListener('ended', startLoop);
+    setTimeout(startLoop, 4800);              // por si 'ended' tarda
+    vids[1].addEventListener('ended', next);  // palacio → globos
+    vids[2].addEventListener('ended', next);  // globos → palacio
+  })();
+</script>
+<!-- FLOATING WHATSAPP — заменить номер 34600000000 на настоящий телефон клиента -->
+<a class="wa-fab" href="https://wa.me/34600000000?text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20bodas%20en%20el%20Palacio%20de%20la%20Concepci%C3%B3n" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.86-2.03-.96-.27-.1-.47-.15-.67.15-.2.3-.76.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.07 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.12-.27-.19-.57-.34Zm-5.42 7.4h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.38 9.38 0 0 1 14.57-11.6 9.32 9.32 0 0 1 2.75 6.64 9.39 9.39 0 0 1-9.4 9.37Zm7.99-17.36A11.16 11.16 0 0 0 12.04.84a11.18 11.18 0 0 0-9.71 16.74L.84 23l5.55-1.46a11.16 11.16 0 0 0 5.34 1.36h.01a11.19 11.19 0 0 0 7.92-19.09Z"/></svg></a>
+</body>
+</html>
