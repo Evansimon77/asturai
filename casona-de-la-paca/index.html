@@ -309,10 +309,20 @@
 
 <!-- HERO -->
 <section class="hero" id="top">
-  <img class="poster" src="assets/casa-roja.jpg" alt="" aria-hidden="true" />
-  <video autoplay muted loop playsinline preload="auto" poster="assets/casa-roja.jpg">
-    <source src="assets/casa-hero-topaz-rt2.mp4" type="video/mp4" />
+  <img class="poster" src="assets/casa-roja-sm.jpg" alt="" aria-hidden="true" />
+  <video autoplay muted loop playsinline preload="auto" poster="assets/casa-roja-sm.jpg">
+    <source id="heroSrc" src="assets/casa-hero-topaz-rt2.mp4" type="video/mp4" />
   </video>
+  <script>
+    /* On phones load a lightweight hero video so the palms start moving within ~1s
+       instead of freezing on the poster while a 5 MB file buffers. */
+    (function(){
+      if(window.matchMedia&&window.matchMedia('(max-width:900px)').matches){
+        var s=document.getElementById('heroSrc');
+        if(s){s.src='assets/casa-hero-mobile.mp4'; s.parentElement.load();}
+      }
+    })();
+  </script>
   <div class="scrim"></div>
   <div class="wrap">
     <div class="inner">
