@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<base href="/nildiana-cedeno/" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dra. Nildiana Cedeño — Medicina Estética en Asturias</title>
+<meta name="description" content="Medicina estética avanzada en Asturias con la Dra. Nildiana Cedeño: resultados naturales, trato cercano y tratamientos faciales a medida." />
+<!-- Vista previa al compartir el enlace (WhatsApp, Instagram, Telegram, Facebook) -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://asturai.com/nildiana-cedeno/" />
+<meta property="og:title" content="Dra. Nildiana Cedeño — Medicina Estética en Asturias" />
+<meta property="og:description" content="Medicina estética avanzada en Asturias: resultados naturales y trato cercano. Pide tu valoración." />
+<meta property="og:image" content="https://asturai.com/nildiana-cedeno/assets/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="es_ES" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Dra. Nildiana Cedeño — Medicina Estética en Asturias" />
+<meta name="twitter:description" content="Medicina estética avanzada en Asturias: resultados naturales y trato cercano." />
+<meta name="twitter:image" content="https://asturai.com/nildiana-cedeno/assets/og.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0d0d0d;          /* near-black */
+    --ink-soft:#2a2a2a;
+    --paper:#ffffff;
+    --bone:#f6f5f2;         /* off-white */
+    --grey:#8a8780;         /* warm grey text */
+    --line:#e6e3dd;         /* hairline */
+    --gold:#b29463;         /* whisper of champagne, used sparingly */
+    --serif:'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --sans:'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--paper);font-weight:300;-webkit-font-smoothing:antialiased;line-height:1.6}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 40px}
+  .eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;font-weight:500;color:var(--grey)}
+  h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  .btn{display:inline-block;font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:500;
+       padding:16px 30px;border:1px solid var(--ink);background:var(--ink);color:#fff;transition:.35s ease}
+  .btn:hover{background:transparent;color:var(--ink)}
+  .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+  .btn.ghost:hover{background:#fff;color:var(--ink);border-color:#fff}
+
+  /* ---------- NAV ---------- */
+  header{position:fixed;top:0;left:0;right:0;z-index:9500;transition:.4s ease}
+  header .bar{display:flex;align-items:center;justify-content:space-between;height:84px;border-bottom:1px solid transparent;transition:.4s ease;
+    text-shadow:0 1px 3px rgba(0,0,0,.5), 0 1px 14px rgba(0,0,0,.38)}
+  .brand{font-family:var(--serif);font-size:22px;letter-spacing:.18em;text-transform:uppercase;color:#fff;font-weight:600;transition:.4s}
+  .brand small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.34em;color:rgba(255,255,255,.82);margin-top:3px;font-weight:600}
+  nav ul{display:flex;gap:38px;list-style:none}
+  nav a{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.94);transition:.3s}
+  nav a:hover{color:#fff}
+  .nav-cta{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#fff;border:1px solid rgba(255,255,255,.55);padding:12px 22px;transition:.35s}
+  .nav-cta:hover{background:#fff;color:var(--ink)}
+  /* scrolled state */
+  header.solid{background:var(--paper)}
+  header.solid .bar{text-shadow:none}
+  /* social icons in the header — visible on the first screen, next to the CTA */
+  .bar-right{display:flex;align-items:center;gap:22px}
+  .hdr-social{color:#fff}
+  .hdr-social a{width:34px;height:34px;border-color:rgba(255,255,255,.5)}
+  .hdr-social svg{width:15px;height:15px}
+  header.solid .hdr-social{color:var(--ink)}
+  header.solid .hdr-social a{border-color:rgba(13,13,13,.35)}
+  @media(max-width:900px){header .hdr-social{display:none}}
+  header.solid .bar{height:70px;border-bottom:1px solid var(--line)}
+  header.solid .brand{color:var(--ink)}
+  header.solid .brand small{color:var(--grey)}
+  header.solid nav a{color:var(--ink-soft)}
+  header.solid .nav-cta{color:var(--ink);border-color:var(--ink)}
+  header.solid .nav-cta:hover{background:var(--ink);color:#fff}
+
+  /* ---------- MOBILE · hamburger + drawer ---------- */
+  .burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;border:0;background:none;cursor:pointer;padding:0;position:relative;z-index:9600}
+  .burger span{display:block;width:24px;height:2px;background:#fff;margin:0 auto;transition:transform .35s ease,opacity .25s ease,background .35s ease}
+  header.solid .burger span{background:var(--ink)}
+  body.menu-open .burger span{background:var(--ink)}
+  body.menu-open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  body.menu-open .burger span:nth-child(2){opacity:0}
+  body.menu-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .mobile-menu{position:fixed;inset:0;z-index:9550;background:var(--bone);display:flex;flex-direction:column;justify-content:center;align-items:center;
+    opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .45s ease,transform .45s ease,visibility .45s;pointer-events:none}
+  body.menu-open .mobile-menu{opacity:1;visibility:visible;transform:none;pointer-events:auto}
+  body.menu-open header{z-index:9600}
+  body.menu-open header .bar{text-shadow:none}
+  body.menu-open .brand{color:var(--ink)}
+  body.menu-open .brand small{color:var(--grey)}
+  .mobile-menu a.mlink{font-family:var(--serif);font-size:30px;letter-spacing:.03em;color:var(--ink);padding:13px 0;font-weight:500}
+  .mobile-menu a.mlink:hover{color:var(--gold)}
+  .mobile-menu .m-cta{margin-top:24px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#fff;background:var(--ink);border:1px solid var(--ink);padding:16px 42px}
+  .mobile-menu .m-social{margin-top:36px;color:var(--ink)}
+  .mobile-menu .m-social a{border-color:rgba(13,13,13,.3)}
+  @media(max-width:900px){.burger{display:flex}}
+
+  /* ---------- HERO (immersive portrait · photo fully visible · harmonious floating awards + logos) ---------- */
+  .hero{position:relative;height:calc(100vh - 48px);min-height:600px;overflow:hidden;display:flex;align-items:center;background:#0a0908}
+  .hero .img{position:absolute;inset:0;overflow:hidden}
+  /* slideshow: cross-fade + slow Ken-Burns zoom */
+  .hero .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.1s ease}
+  .hero .slide.active{opacity:1}
+  .hero .slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    filter:contrast(1.03) saturate(1.03);transform:scale(1.04)}
+  /* slides 1 & 2 — full-bleed, framed + gentle zoom; rest state = end frame so leaving never snaps */
+  /* slide 1 — gentle zoom-OUT: ends on the full frame, headroom above the crown, bottom never cropped */
+  .hero .slide.s1 img{object-position:60% 6%;transform-origin:50% 0%;transform:scale(1.0)}
+  .hero .slide.s1.active img{animation:ken1out 4.6s ease-out forwards}
+  @keyframes ken1out{from{transform:scale(1.15)}to{transform:scale(1.0)}}
+  /* slide 2 — gentle zoom-in that ENDS with her crown touching the top edge, hips still in frame */
+  .hero .slide.s2 img{object-position:50% 67%;transform:scale(1.10);transform-origin:50% 50%;filter:contrast(1.05) saturate(1.06) brightness(1.04)}
+  .hero .slide.s2.active img{animation:ken2 3s ease-out forwards}
+  @keyframes ken2{from{transform:scale(1.0)}to{transform:scale(1.10)}}
+  /* slides 3–5 (portrait photos) — shown WHOLE, never cropped; soft blurred fill behind the edges */
+  .hero .slide.s3,.hero .slide.s4{overflow:hidden}
+  .hero .slide.s3 img,.hero .slide.s4 img{object-fit:contain;object-position:62% center;
+    transform:none;z-index:1;filter:none}
+  /* slides 3–4 keep the WHOLE photo but breathe with a gentle Ken-Burns — head & hands never cropped */
+  .hero .slide.s3 img{transform-origin:50% 0%}              /* crown pinned to the top */
+  .hero .slide.s3.active img{animation:ken3 5.4s ease-out forwards}
+  @keyframes ken3{from{transform:scale(1.07)}to{transform:scale(1.0)}}   /* zoom-OUT: ends on the whole photo */
+  .hero .slide.s4 img{transform-origin:50% 50%}
+  .hero .slide.s4.active img{animation:ken4 5.4s ease-out forwards}
+  @keyframes ken4{from{transform:scale(1.0)}to{transform:scale(1.07)}}   /* zoom-IN (interior, no faces) */
+  .hero .slide.s3.active::before,.hero .slide.s4.active::before{animation:kenBlur 6.4s ease-out forwards}
+  @keyframes kenBlur{from{transform:scale(1.04)}to{transform:scale(1.14)}}
+  .hero .slide.s3::before,.hero .slide.s4::before{content:"";position:absolute;inset:-60px;z-index:0;
+    background-size:cover;background-position:center;filter:blur(40px) brightness(.6) saturate(1.08)}
+  .hero .slide.s3::before{background-image:url(assets/nildiana-hero.jpg)}
+  .hero .slide.s4::before{background-image:url(assets/interior.png)}
+  @media(prefers-reduced-motion:reduce){.hero .slide.active img{animation:none}}
+  .hero .veil{position:absolute;inset:0;z-index:1;
+    background:linear-gradient(90deg, rgba(10,9,8,.92) 0%, rgba(10,9,8,.74) 26%, rgba(10,9,8,.42) 46%, rgba(10,9,8,.08) 66%, rgba(10,9,8,0) 100%)}
+  /* faint monogram watermark — quiet depth behind everything */
+  .hero .floatmark{position:absolute;z-index:1;font-family:var(--serif);font-weight:500;line-height:1;pointer-events:none;user-select:none;
+    font-size:clamp(220px,32vw,420px);top:50%;left:-1.5%;transform:translateY(-50%);color:rgba(255,255,255,.05)}
+  /* the matching monogram on the right — N · C, her initials (Nildiana Cedeño) */
+  .hero .floatmark.fm-c{left:auto;right:calc(-1.5% + 7px)}
+  @media(max-width:1024px){.hero .floatmark.fm-c{display:none}}
+  /* ===== CREDENTIALS — desktop: 4 awards drift down the LEFT, 3 certificates down the RIGHT (like the floating logos); click any to enlarge ===== */
+  .hero .creds{position:absolute;inset:0;z-index:4;pointer-events:none;
+    animation:credEnter 1.1s .3s both ease-out;
+    -webkit-mask:linear-gradient(180deg,transparent 0,#000 7%,#000 93%,transparent 100%);
+    mask:linear-gradient(180deg,transparent 0,#000 7%,#000 93%,transparent 100%)}
+  /* while one award is enlarged, the mask is dropped so the big one is never clipped */
+  .hero .creds.has-zoom{-webkit-mask:none;mask:none}
+  @keyframes credEnter{from{opacity:0}to{opacity:1}}
+  .hero .creds .cred-cap{display:none}
+  .cred-side{display:contents}
+  /* each piece: an absolutely-placed lane element that slowly drifts top→bottom */
+  .award-tile{position:absolute;top:0;width:84px;pointer-events:auto;cursor:pointer;
+    animation:driftAward 25s linear infinite;transition:opacity .45s ease}
+  .tile-inner{position:relative;display:flex;align-items:center;justify-content:center;
+    width:100%;aspect-ratio:1/1;border-radius:14px;overflow:hidden;
+    background:linear-gradient(150deg,rgba(30,25,20,.66),rgba(12,10,9,.78));
+    border:1px solid rgba(212,178,120,.32);
+    box-shadow:0 10px 26px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.06);
+    transition:transform .55s cubic-bezier(.2,.85,.25,1),border-color .4s,box-shadow .4s}
+  .award-tile img{width:76%;height:76%;object-fit:contain;display:block;filter:drop-shadow(0 3px 7px rgba(0,0,0,.5))}
+  .award-tile.cert img{width:86%;height:86%;border-radius:3px}
+  /* the sweeping sheen lives on the mobile ribbon only */
+  .award-tile::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(115deg,transparent 40%,rgba(240,214,168,.5) 50%,transparent 60%);
+    transform:translateX(-140%);display:none}
+  /* translateY only — the soft fade in/out at top & bottom comes from the container mask, so tile opacity
+     stays free for the enlarge focus mode below */
+  @keyframes driftAward{from{transform:translateY(-140px)}to{transform:translateY(94vh)}}
+  /* LEFT lane — 4 awards, staggered so they follow one another down the edge */
+  /* two columns, well apart; the two tiles sharing a column run exactly half a cycle apart, so they keep a
+     constant gap and can never collide — a magnet-like repulsion that holds them at distance */
+  .cred-l .award-tile:nth-child(1){left:3%}
+  .cred-l .award-tile:nth-child(2){left:14.5%;width:80px;animation-delay:-6.25s}
+  .cred-l .award-tile:nth-child(3){left:3%;width:82px;animation-delay:-12.5s}
+  .cred-l .award-tile:nth-child(4){left:14.5%;width:76px;animation-delay:-18.75s}
+  /* RIGHT lane — 3 certificates, drifting down the far-right edge (clear of her face) */
+  .cred-r .award-tile{left:auto;animation-duration:28s}
+  .cred-r .award-tile:nth-child(1){right:3%}
+  .cred-r .award-tile:nth-child(2){right:14.5%;width:78px;animation-delay:-9.33s}
+  .cred-r .award-tile:nth-child(3){right:3%;width:80px;animation-delay:-14s}
+  /* hover: the frame warms up so it reads as clickable */
+  .award-tile:hover .tile-inner{border-color:rgba(240,214,168,.72);
+    box-shadow:0 14px 30px rgba(0,0,0,.55),0 0 18px rgba(240,214,168,.42)}
+  /* CLICK → enlarge: freeze this one and zoom it up; it grows inward so it stays on screen */
+  .award-tile.zoom{animation-play-state:paused;z-index:60}
+  .award-tile.zoom .tile-inner{transform:scale(2.5);border-color:rgba(240,214,168,.9);
+    box-shadow:0 28px 64px rgba(0,0,0,.62),0 0 34px rgba(240,214,168,.5)}
+  .cred-l .award-tile.zoom .tile-inner{transform-origin:left center}
+  .cred-r .award-tile.zoom .tile-inner{transform-origin:right center}
+  /* focus mode: while one award is enlarged, every other one fades away and freezes, so the big one
+     stands alone and nothing can drift across it */
+  .hero .creds.has-zoom .award-tile:not(.zoom){opacity:0;animation-play-state:paused;pointer-events:none}
+  @media(prefers-reduced-motion:reduce){.award-tile{animation:none}}
+  /* mobile / tablet: the same tiles become a slow auto-scrolling proof ribbon pinned to the hero bottom */
+  .hero .creds-rail{display:none}
+  @media(max-width:1024px){
+    .hero .creds{display:none}
+    .hero .creds-rail{display:block;position:absolute;left:0;right:0;bottom:40px;z-index:4;
+      padding:30px 0 14px;background:linear-gradient(transparent,rgba(8,7,6,.82) 58%);
+      -webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+      mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);overflow:hidden}
+    /* "Mejor Clínica de Europa" badge — centered, sitting just above the "Avalada por" caption */
+    .creds-rail .rail-badge{text-align:center;margin-bottom:23px}
+    .creds-rail .rail-cap{font-family:var(--sans);font-size:9px;letter-spacing:.26em;text-transform:uppercase;
+      color:rgba(255,255,255,.82);font-weight:600;text-align:center;margin-bottom:11px;
+      display:flex;align-items:center;justify-content:center;gap:9px}
+    .creds-rail .rail-cap span{width:18px;height:1px;background:var(--gold)}
+    .creds-track{display:flex;gap:11px;width:max-content;animation:railScroll 30s linear infinite;padding-left:11px}
+    .creds-rail:active .creds-track{animation-play-state:paused}
+    /* rail tiles carry their own frame (the desktop frame lives on .tile-inner, which the ribbon doesn't use) */
+    .creds-track .award-tile{position:relative;top:auto;display:flex;align-items:center;justify-content:center;
+      width:52px;flex:0 0 52px;aspect-ratio:1/1;overflow:hidden;border-radius:11px;animation:none;cursor:default;
+      background:linear-gradient(150deg,rgba(30,25,20,.66),rgba(12,10,9,.78));
+      border:1px solid rgba(212,178,120,.32);box-shadow:0 6px 16px rgba(0,0,0,.5)}
+    .creds-track .award-tile::after{display:block;animation:railShine 9s ease-in-out infinite}
+    @keyframes railShine{0%,16%{transform:translateX(-140%)}30%,100%{transform:translateX(140%)}}
+    @keyframes railScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    @media(prefers-reduced-motion:reduce){.creds-track{animation:none}}
+  }
+  /* clinic logos: sparse, subtle, slow drift over the photo side only (never over the text) */
+  .hero .flo{position:absolute;z-index:2;pointer-events:none;user-select:none;filter:invert(1);top:-9%;opacity:0}
+  .hero .flo.f1{width:64px;right:6%;animation:drift 20s linear infinite}
+  .hero .flo.f2{width:46px;right:14%;animation:drift 25s linear infinite;animation-delay:-10s}
+  .hero .flo.f3{width:54px;right:3%;animation:drift 22s linear infinite;animation-delay:-15s}
+  @keyframes drift{0%{opacity:0;transform:translateY(0) rotate(-4deg)}14%{opacity:.16}80%{opacity:.12}100%{opacity:0;transform:translateY(118vh) rotate(6deg)}}
+  @media(max-width:760px){.hero .flo{display:none}}
+
+  /* ---------- INTRO: generated glowing-logo video ---------- */
+  /* intro — logo self-draws in light, then floods to solid; menu stays on top from the first frame */
+  #intro{position:fixed;inset:0;z-index:9000;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding-top:10vh;background:#0a0908;cursor:pointer;animation:introHide .8s 3.9s forwards}
+  #intro .skip{position:absolute;bottom:28px;right:34px;font-family:var(--sans);font-size:10px;letter-spacing:.28em;
+    text-transform:uppercase;color:rgba(255,255,255,.5)}
+  #introMark{width:clamp(257px,35.3vw,495px);height:auto;overflow:visible}
+  #introMark .draw path{fill:none;stroke:#fff;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;
+    stroke-dasharray:100;stroke-dashoffset:100;filter:drop-shadow(0 0 10px rgba(255,255,255,.55));
+    animation:introDraw 1.5s ease-in-out forwards, introUndraw .55s ease 1.55s forwards}
+  #introMark .draw path:nth-child(2){animation-delay:.16s,1.71s}
+  #introMark .draw path:nth-child(3){animation-delay:.32s,1.87s}
+  #introMark .fill{opacity:0;animation:introFill .85s ease 1.4s forwards}
+  #introMark .fill path{fill:#fff;filter:drop-shadow(0 0 18px rgba(255,255,255,.4))}
+  #introWord{margin-top:34px;font-family:var(--serif);color:#fff;font-weight:500;
+    font-size:clamp(15px,1.7vw,22px);letter-spacing:.42em;text-transform:uppercase;text-indent:.42em;
+    text-align:center;opacity:0;animation:introWord .9s ease 2.1s forwards}
+  #introWord small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.34em;
+    text-indent:.34em;color:rgba(255,255,255,.62);margin-top:11px;font-weight:400}
+  @keyframes introDraw{to{stroke-dashoffset:0}}
+  @keyframes introUndraw{to{opacity:0}}
+  @keyframes introFill{from{opacity:0}to{opacity:1}}
+  @keyframes introWord{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+  @keyframes introHide{from{opacity:1;visibility:visible}to{opacity:0;visibility:hidden}}
+  @media(prefers-reduced-motion:reduce){
+    #introMark .draw path{animation:none;stroke-dashoffset:0;opacity:0}
+    #introMark .fill{animation:none;opacity:1}
+    #introWord{animation:none;opacity:1}
+    #intro{animation:introHide .6s 1.2s forwards}
+  }
+  #intro.gone{display:none}
+  .hero .wrap{position:relative;z-index:3}
+  .hero .inner{max-width:560px;color:#fff;transform:translateY(20%);
+    text-shadow:0 0 1px rgba(0,0,0,.74), 0 0 2px rgba(0,0,0,.55), 0 1px 2px rgba(0,0,0,.74), 0 2px 24px rgba(0,0,0,.6)}
+  .hero .eyebrow{color:rgba(255,255,255,.9);margin-bottom:30px;display:flex;align-items:center;gap:14px}
+  .hero .eyebrow span{width:34px;height:1px;background:var(--gold)}
+  .hero-badge{margin-top:24px}
+  .hero .eb-hl{display:inline-block;white-space:nowrap;color:#eccfa0;font-weight:700;font-size:11px;letter-spacing:.16em;
+    text-transform:uppercase;background:rgba(10,9,8,.5);border:1px solid rgba(212,178,120,.7);border-radius:999px;padding:6px 16px;
+    text-shadow:0 1px 2px rgba(0,0,0,.85);box-shadow:0 4px 14px rgba(0,0,0,.3)}
+  .hero h1{font-size:clamp(38px,4.4vw,62px);color:#fff;line-height:1.06;letter-spacing:-.015em;margin-bottom:26px}
+  .hero h1 .gold{font-style:italic}
+  /* gold accents */
+  .gold{color:var(--gold)}
+  /* floating letters — words stay unbreakable, letters animate */
+  .hero h1 .word{display:inline-block;white-space:nowrap}
+  .hero h1 .ltr{display:inline-block;opacity:0;transform:translateY(40px) rotate(3deg);
+    animation:floatIn .9s cubic-bezier(.2,.85,.25,1) forwards}
+  @keyframes floatIn{to{opacity:1;transform:none}}
+  .hero .lead{font-size:17px;font-weight:400;color:rgba(255,255,255,.94);max-width:470px;margin-bottom:40px;line-height:1.62}
+  .hero .cta-row{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+  .hero .btn{background:#fff;color:var(--ink);border-color:#fff;text-shadow:none}
+  .hero .btn:hover{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+  .hero .cta-note{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.95);font-weight:600}
+  /* floating round WhatsApp button — bottom-right, always within reach while scrolling */
+  .wa-fab{position:fixed;right:18px;bottom:18px;z-index:9200;width:58px;height:58px;border-radius:50%;
+    background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 26px rgba(0,0,0,.28), 0 2px 6px rgba(0,0,0,.18);transition:transform .3s ease, background .3s ease}
+  .wa-fab svg{width:30px;height:30px;fill:currentColor}
+  .wa-fab:hover{background:#1eb958;transform:scale(1.06)}
+  /* gentle attention pulse */
+  .wa-fab::before{content:"";position:absolute;inset:0;border-radius:50%;background:#25d366;z-index:-1;
+    animation:waPulse 2.4s ease-out infinite}
+  @keyframes waPulse{0%{transform:scale(1);opacity:.55}70%,100%{transform:scale(1.7);opacity:0}}
+  @media(prefers-reduced-motion:reduce){.wa-fab::before{animation:none}}
+  @media(max-width:900px){
+    /* halve the primary button so it no longer dominates the small screen */
+    .hero .btn{font-size:10px;letter-spacing:.16em;padding:9px 16px}
+    .wa-fab{width:54px;height:54px;right:15px;bottom:15px}
+    .wa-fab svg{width:28px;height:28px}
+    /* lift content up so the centered "Mejor Clínica de Europa" badge has room to sit higher above "Avalada por" */
+    .hero .inner{transform:translateY(-6%)}
+    .hero .lead{margin-bottom:26px}
+    .hero-badge{display:none}
+  }
+  .scrollcue{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:5;color:rgba(255,255,255,.95);font-weight:600;
+    text-shadow:0 0 1px rgba(0,0,0,.7), 0 1px 2px rgba(0,0,0,.7), 0 2px 14px rgba(0,0,0,.5);
+    font-size:10px;letter-spacing:.3em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:10px}
+  .scrollcue i{width:1px;height:46px;background:linear-gradient(rgba(255,255,255,.7),rgba(255,255,255,0));animation:cue 2s infinite}
+  @keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}50.1%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+  @media(max-width:860px){.scrollcue{display:none}}
+
+  /* ---------- TRUST STRIP ---------- */
+  .trust{background:var(--ink);color:#fff;padding:13px 0}
+  .trust .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
+  .trust .item{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.8);font-weight:400}
+  .trust .item b{color:#fff;font-weight:600}
+  .trust .star{color:var(--gold)}
+  .trust .trustmap{display:inline-flex;align-items:center;gap:5px;color:var(--gold);text-decoration:none;
+    border-bottom:1px solid rgba(212,178,120,.55);padding-bottom:2px;transition:color .3s ease,border-color .3s ease}
+  .trust .trustmap:hover{color:#e8cf9a;border-color:#e8cf9a}
+  .trust .trustmap .pin{width:12px;height:12px;fill:currentColor;flex:0 0 auto;transform-origin:50% 100%;animation:pinPulse 2.4s ease-in-out infinite}
+  @keyframes pinPulse{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-2px) scale(1.12)}}
+  @media(prefers-reduced-motion:reduce){.trust .trustmap .pin{animation:none}}
+
+  /* ---------- SECTIONS ---------- */
+  section.block{padding:130px 0}
+  /* varied rhythm: quote breathes wide, galleries sit closer, fears stay calm */
+  section.block.philo-block{padding:170px 0 150px}
+  section.block.results{padding:118px 0 110px}
+  section.block.galeria{padding:96px 0 122px}
+  section.block.faq{padding:150px 0 120px}
+  .reveal{opacity:0;transform:translateY(34px);transition:1s cubic-bezier(.16,.8,.24,1)}
+  .reveal.in{opacity:1;transform:none}
+  .lbl{display:flex;align-items:center;gap:14px;margin-bottom:30px}
+  .lbl span:empty{width:34px;height:1px;background:var(--gold);flex:none}
+
+  /* philosophy — light editorial: portrait + a clear promise and proof */
+  .filosofia{background:var(--bone);padding:clamp(80px,11vh,130px) 0}
+  .fwrap{display:grid;grid-template-columns:0.82fr 1fr;gap:clamp(38px,5.5vw,84px);align-items:center;
+    max-width:1180px;margin:0 auto;padding:0 32px}
+  .filo-photo{position:relative}
+  .filo-frame{overflow:hidden;border-radius:3px}            /* clips the zoom; the seal stays outside */
+  .filo-photo img{width:100%;height:clamp(420px,56vh,580px);object-fit:cover;object-position:55% 35%;
+    border-radius:3px;display:block}
+  /* the portrait visibly breathes — Ken-Burns zoom + drift, face anchored so head & hand never crop */
+  .filo-frame img{transform-origin:50% 32%;animation:filoKB 9s ease-in-out infinite alternate}
+  @keyframes filoKB{from{transform:scale(1.0) translateX(0)}to{transform:scale(1.11) translateX(-1.6%)}}
+  @media(prefers-reduced-motion:reduce){.filo-frame img{animation:none}}
+  .filo-photo .seal{position:absolute;right:-18px;bottom:22px;width:104px;height:auto;min-height:0;object-fit:contain;
+    filter:drop-shadow(0 14px 30px rgba(0,0,0,.22))}
+  .filo-text .eyebrow{color:var(--gold);margin-bottom:24px;display:flex;align-items:center;gap:14px;
+    font-size:12px;letter-spacing:.26em;text-transform:uppercase}
+  .filo-text .eyebrow span{width:34px;height:1px;background:var(--gold)}
+  .filo-text h2{font-family:var(--serif);font-size:clamp(30px,3.4vw,50px);color:var(--ink);
+    line-height:1.1;letter-spacing:-.01em;margin-bottom:24px}
+  .filo-text h2 .gold{color:var(--gold);font-style:italic}
+  .filo-text .intro{color:var(--ink-soft);font-size:16.5px;line-height:1.72;max-width:50ch;margin-bottom:38px}
+  .filo-values{display:grid;gap:20px;margin-bottom:38px}
+  .filo-values .v{display:flex;gap:16px;align-items:baseline}
+  .filo-values .v .mk{flex:none;width:26px;height:1px;background:var(--gold);transform:translateY(-6px)}
+  .filo-values .v h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-bottom:5px}
+  .filo-values .v p{margin:0;font-size:14.5px;color:var(--grey);line-height:1.5}
+  .filo-sign{font-family:var(--serif);font-size:19px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+  .filo-sign small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.28em;
+    color:var(--grey);margin-top:7px;text-transform:uppercase;font-weight:500}
+  @media(max-width:880px){
+    .fwrap{grid-template-columns:1fr;gap:36px}
+    .filo-photo img{height:46vh;min-height:340px}
+    .filo-photo .seal{width:96px;right:14px;bottom:14px}
+  }
+
+  /* treatments */
+  .treat{background:var(--bone)}
+  .treat .head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-bottom:64px}
+  .treat h2{font-size:clamp(34px,4.4vw,60px)}
+  .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .col{padding:8px 34px;border-left:1px solid var(--line)}
+  .col:first-child{padding-left:0;border-left:0}
+  .col h3{font-size:24px;margin-bottom:8px}
+  .col .k{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:26px;display:block}
+  .col ul{list-style:none}
+  .col li{padding:15px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink-soft);display:flex;justify-content:space-between;align-items:center;transition:.3s;cursor:default}
+  .col li:hover{padding-left:8px;color:var(--ink)}
+  .col li::after{content:'›';color:var(--grey);opacity:0;transition:.3s}
+  .col li:hover::after{opacity:1}
+
+  /* doctor */
+  .doc{display:grid;grid-template-columns:0.9fr 1.1fr;gap:80px;align-items:center}
+  .doc .ph{position:relative;aspect-ratio:4/5;overflow:hidden;background:#111}
+  .doc .ph img{width:100%;height:100%;object-fit:cover;object-position:58% 64%;filter:grayscale(.12) contrast(1.03);transition:1.4s ease}
+  .doc .ph:hover img{transform:scale(1.04)}
+  .doc .ph .badge{position:absolute;left:24px;bottom:24px;background:rgba(255,255,255,.95);padding:16px 20px;max-width:240px}
+  .doc .ph .badge .t{font-family:var(--serif);font-size:30px;line-height:1;color:var(--ink)}
+  .doc .ph .badge .s{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--grey);margin-top:6px}
+  .doc h2{font-size:clamp(32px,4vw,54px);margin-bottom:26px}
+  .doc p{color:var(--ink-soft);margin-bottom:20px;font-size:16px;max-width:520px}
+  .doc .stats{display:flex;gap:48px;margin-top:40px;flex-wrap:wrap}
+  .doc .stats .n{font-family:var(--serif);font-size:46px;line-height:1;color:var(--ink)}
+  .doc .stats .d{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-top:8px}
+
+  /* treatments gallery */
+  .galeria .top{text-align:center;margin-bottom:60px}
+  .galeria .lbl{justify-content:center}
+  .galeria h2{font-size:clamp(28px,3.8vw,48px)}
+  .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .gal{margin:0}
+  .gal .ph{position:relative;overflow:hidden;background:#eceae5;aspect-ratio:3/4}
+  .gal .ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(0) contrast(1.02);transition:transform 1.2s ease, filter 1.2s ease}
+  .gal:hover .ph img{transform:scale(1.05);filter:grayscale(1) contrast(1.04)}
+  .gal figcaption{margin-top:18px;font-family:var(--serif);font-size:22px;line-height:1.1;color:var(--ink);text-align:center}
+
+  /* results — before/after slider */
+  .results{background:var(--bone)}
+  .results .top{text-align:center;margin-bottom:54px}
+  .results .lbl{justify-content:center}
+  .results h2{font-size:clamp(30px,4vw,52px)}
+  .ba{position:relative;max-width:560px;margin:0 auto;aspect-ratio:4/5;overflow:hidden;background:#e6e3dd;
+    box-shadow:0 30px 80px rgba(0,0,0,.18);touch-action:none}
+  .ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+  .ba-after{filter:saturate(1.06) contrast(1.02) brightness(1.03)}
+  .ba-before{filter:grayscale(.55) contrast(.92) brightness(.96);clip-path:inset(0 50% 0 0)}
+  .ba-divider{position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;transform:translateX(-1px);pointer-events:none;box-shadow:0 0 12px rgba(0,0,0,.35)}
+  .ba-grip{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;
+    background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center}
+  .ba-grip::before{content:'‹ ›';font-size:13px;letter-spacing:1px;color:var(--ink)}
+  .ba-range{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
+  .ba-tag{position:absolute;bottom:18px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#fff;
+    background:rgba(10,9,8,.55);padding:7px 13px;pointer-events:none}
+  .ba-tag.l{left:18px}
+  .ba-tag.r{right:18px}
+  .ba-note{text-align:center;margin-top:24px;font-size:12.5px;letter-spacing:.04em;color:var(--grey)}
+
+  /* opinions */
+  .ops .lbl{justify-content:center}
+  .ops .top{text-align:center;margin-bottom:64px}
+  .ops h2{font-size:clamp(32px,4vw,54px)}
+  .ops .rate{margin-top:18px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--grey)}
+  .ops .rate b{color:var(--ink)}
+  .ops .rate .star{color:var(--gold);letter-spacing:.1em}
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+  .q{padding:38px 32px;border:1px solid var(--line);background:#fff}
+  .q .stars{color:var(--gold);font-size:13px;letter-spacing:.14em;margin-bottom:18px}
+  .q p{font-family:var(--serif);font-size:20px;font-style:italic;line-height:1.4;color:var(--ink);margin-bottom:22px}
+  .q .who{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey)}
+
+  /* CTA band */
+  .cta{background:var(--bone);text-align:center;padding:120px 0}
+  .cta .eyebrow{justify-content:center;display:flex;gap:14px;align-items:center;margin-bottom:26px}
+  .cta .eyebrow span{width:34px;height:1px;background:var(--gold)}
+  .cta h2{font-size:clamp(36px,5vw,68px);margin-bottom:18px}
+  .cta p{color:var(--ink-soft);max-width:520px;margin:0 auto 40px;font-size:17px}
+  .cta .ph{font-family:var(--serif);font-size:22px;margin-top:30px;color:var(--grey)}
+  .cta p b{font-weight:600;color:var(--ink)}
+  .cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .btn.wa{background:#1f8f5f;border-color:#1f8f5f}
+  .btn.wa:hover{background:transparent;color:#1f8f5f}
+  .btn.line{background:transparent;color:var(--ink)}
+  .btn.line:hover{background:var(--ink);color:#fff}
+
+  /* fears / FAQ */
+  .faq .top{text-align:center;margin-bottom:60px}
+  .faq .lbl{justify-content:center}
+  .faq h2{font-size:clamp(30px,4vw,52px)}
+  .faq-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .fitem{background:var(--paper);padding:42px 44px}
+  .fitem h3{font-size:24px;margin-bottom:14px}
+  .fitem p{color:var(--ink-soft);font-size:15.5px;max-width:46ch}
+
+  /* stay in touch */
+  .keep{background:var(--ink);color:#fff;padding:88px 0}
+  .keep-in{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .keep-in h3{font-family:var(--serif);font-size:clamp(26px,3vw,40px);color:#fff;margin-bottom:14px}
+  .keep-in p{color:rgba(255,255,255,.7);font-size:15.5px;max-width:48ch}
+  .keep-form{display:flex;gap:14px;flex-wrap:wrap}
+  .keep-form input{flex:1;min-width:220px;background:transparent;border:1px solid rgba(255,255,255,.3);
+    color:#fff;padding:16px 20px;font-family:var(--sans);font-size:14px;font-weight:300}
+  .keep-form input::placeholder{color:rgba(255,255,255,.45)}
+  .keep-form input:focus{outline:none;border-color:var(--gold)}
+  .keep-form .btn{border-color:#fff;background:#fff;color:var(--ink)}
+  .keep-form .btn:hover{background:transparent;color:#fff}
+  @media(max-width:900px){.faq-grid{grid-template-columns:1fr}.keep-in{grid-template-columns:1fr;gap:28px}}
+
+  /* footer */
+  footer{background:var(--ink);color:rgba(255,255,255,.75);padding:90px 0 40px}
+  .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,.12)}
+  footer .brand{color:#fff;margin-bottom:18px}
+  footer h4{font-family:var(--sans);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:20px;font-weight:500}
+  footer p,footer a{font-size:14px;color:rgba(255,255,255,.75);display:block;margin-bottom:10px}
+  footer a:hover{color:#fff}
+  /* city blocks → tappable "open in maps" buttons */
+  .maplink{display:block;margin:0;color:inherit;cursor:pointer;transition:transform .35s ease}
+  .maplink:hover{transform:translateY(-2px)}
+  .maplink h4{transition:color .3s ease}
+  .maplink:hover h4{color:rgba(255,255,255,.8)}
+  .maplink p{margin-bottom:14px}
+  .maphint{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--gold);opacity:.85;margin-bottom:0;transition:opacity .3s ease,gap .3s ease}
+  .maplink:hover .maphint{opacity:1;gap:11px}
+  .maphint svg{width:15px;height:9px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .fbot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:30px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  /* social icons — round, thin, inherit colour from context */
+  .social{display:inline-flex;gap:12px}
+  .social a{width:42px;height:42px;margin:0;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+    border:1px solid currentColor;color:inherit;opacity:.65;transition:.3s ease}
+  .social a:hover{opacity:1;transform:translateY(-2px)}
+  .social svg{width:17px;height:17px;display:block;fill:currentColor}
+  footer .social{margin-top:24px;color:rgba(255,255,255,.8)}
+  /* social invite inside the contact (light) section */
+  .cta-social{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:36px;color:var(--ink-soft)}
+  .cta-social .lbl{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--grey)}
+  .cta-social .social a{opacity:.55}
+  .cta-social .social a:hover{opacity:1;background:var(--ink);color:#fff;border-color:var(--ink)}
+
+  @media(max-width:900px){
+    nav,.nav-cta{display:none}
+    .cols,.quotes{grid-template-columns:1fr}
+    .col{border-left:0;padding:0;border-top:1px solid var(--line);padding-top:24px;margin-top:24px}
+    .col:first-child{border-top:0;margin-top:0;padding-top:0}
+    .doc{grid-template-columns:1fr;gap:40px}
+    .gal-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .wrap{padding:0 24px}
+    .fgrid{grid-template-columns:1fr 1fr;gap:30px 24px}
+    .fgrid>div:first-child{grid-column:1/-1}
+  }
+</style>
+</head>
+<body>
+
+<!-- INTRO (logo reveal, like the reference) -->
+<div id="intro">
+  <svg id="introMark" viewBox="0 0 300 300" aria-hidden="true">
+    <g class="draw">
+      <path pathLength="100" transform="translate(0,0)" d="M0 0 C23.464 2.346 23.464 2.346 32.5 4.625 C33.546 4.884 34.592 5.144 35.67 5.411 C68.179 13.821 96.931 31.887 121 55 C121.555 55.531 122.111 56.061 122.683 56.608 C144.817 78.168 157.97 106.931 167 136 C174.345 159.497 183.962 179.14 200 198 C200.705 198.906 201.41 199.812 202.137 200.746 C204 203 204 203 206 204 C206 204.66 206 205.32 206 206 C206.584 206.259 207.168 206.518 207.77 206.785 C210.166 208.09 211.737 209.535 213.688 211.438 C237.781 233.165 268.53 241.503 300 245 C300 258.86 300 272.72 300 287 C250.644 283.967 201.941 264.856 168.469 227.148 C166.264 224.468 164.131 221.74 162 219 C161.359 218.26 160.719 217.52 160.059 216.758 C155.595 211.546 152.02 205.967 148.562 200.062 C148.144 199.355 147.726 198.647 147.295 197.918 C138.606 182.728 132.284 166.932 126.938 150.312 C114.005 110.119 92.135 77.396 53.956 57.784 C36.724 49.256 18.779 45.829 0 42 C0 28.14 0 14.28 0 0 Z"/>
+      <path pathLength="100" transform="translate(300,1)" d="M0 0 C0 13.53 0 27.06 0 41 C-4.95 41.99 -9.9 42.98 -15 44 C-29.698 49.146 -40.717 59.374 -48 73 C-48.397 73.714 -48.794 74.428 -49.203 75.164 C-56.169 89.045 -56.456 105.103 -52.312 119.812 C-46.475 136.661 -36.044 148.656 -19.988 156.465 C-14.361 158.951 -8.94 160.671 -2.863 161.641 C-1 162 -1 162 0 163 C0.089 165.957 0.115 168.891 0.098 171.848 C0.096 172.734 0.095 173.621 0.093 174.534 C0.088 177.377 0.075 180.22 0.062 183.062 C0.057 184.985 0.053 186.908 0.049 188.83 C0.038 193.553 0.021 198.277 0 203 C-25.778 203.497 -47.674 192.467 -66 175 C-85.098 156.33 -96.973 130.726 -97.312 103.875 C-97.171 73.205 -84.414 46.487 -62.922 24.914 C-50.601 13.369 -35.647 5.668 -19.312 1.625 C-18.648 1.457 -17.984 1.289 -17.3 1.116 C-11.241 -0.254 -6.569 0 0 0 Z"/>
+      <path pathLength="100" transform="translate(0,89)" d="M0 0 C14.01 1.168 14.01 1.168 20.938 3.625 C21.702 3.889 22.466 4.154 23.254 4.426 C33.934 8.253 43.368 13.61 52 21 C52.799 21.655 53.598 22.31 54.422 22.984 C65.575 32.475 73.252 44.155 80 57 C80.472 57.878 80.944 58.756 81.43 59.66 C91.919 80.737 93.769 106.313 86.547 128.707 C80.73 145.264 72.675 159.767 61 173 C60.45 173.634 59.899 174.268 59.332 174.922 C46.421 188.821 25.707 199.168 7 202 C4.69 202 2.38 202 0 202 C0 188.47 0 174.94 0 161 C4.29 159.35 8.58 157.7 13 156 C19.922 152.576 24.796 149.604 30 144 C30.66 144 31.32 144 32 144 C32.272 143.424 32.544 142.848 32.824 142.254 C34.003 139.995 35.341 138.015 36.812 135.938 C46.331 121.637 49.686 105.964 47 89 C43.729 73.995 35.716 60.884 22.812 52.25 C15.66 47.981 7.896 44.632 0 42 C0 28.14 0 14.28 0 0 Z"/>
+    </g>
+    <g class="fill">
+      <path transform="translate(0,0)" d="M0 0 C23.464 2.346 23.464 2.346 32.5 4.625 C33.546 4.884 34.592 5.144 35.67 5.411 C68.179 13.821 96.931 31.887 121 55 C121.555 55.531 122.111 56.061 122.683 56.608 C144.817 78.168 157.97 106.931 167 136 C174.345 159.497 183.962 179.14 200 198 C200.705 198.906 201.41 199.812 202.137 200.746 C204 203 204 203 206 204 C206 204.66 206 205.32 206 206 C206.584 206.259 207.168 206.518 207.77 206.785 C210.166 208.09 211.737 209.535 213.688 211.438 C237.781 233.165 268.53 241.503 300 245 C300 258.86 300 272.72 300 287 C250.644 283.967 201.941 264.856 168.469 227.148 C166.264 224.468 164.131 221.74 162 219 C161.359 218.26 160.719 217.52 160.059 216.758 C155.595 211.546 152.02 205.967 148.562 200.062 C148.144 199.355 147.726 198.647 147.295 197.918 C138.606 182.728 132.284 166.932 126.938 150.312 C114.005 110.119 92.135 77.396 53.956 57.784 C36.724 49.256 18.779 45.829 0 42 C0 28.14 0 14.28 0 0 Z"/>
+      <path transform="translate(300,1)" d="M0 0 C0 13.53 0 27.06 0 41 C-4.95 41.99 -9.9 42.98 -15 44 C-29.698 49.146 -40.717 59.374 -48 73 C-48.397 73.714 -48.794 74.428 -49.203 75.164 C-56.169 89.045 -56.456 105.103 -52.312 119.812 C-46.475 136.661 -36.044 148.656 -19.988 156.465 C-14.361 158.951 -8.94 160.671 -2.863 161.641 C-1 162 -1 162 0 163 C0.089 165.957 0.115 168.891 0.098 171.848 C0.096 172.734 0.095 173.621 0.093 174.534 C0.088 177.377 0.075 180.22 0.062 183.062 C0.057 184.985 0.053 186.908 0.049 188.83 C0.038 193.553 0.021 198.277 0 203 C-25.778 203.497 -47.674 192.467 -66 175 C-85.098 156.33 -96.973 130.726 -97.312 103.875 C-97.171 73.205 -84.414 46.487 -62.922 24.914 C-50.601 13.369 -35.647 5.668 -19.312 1.625 C-18.648 1.457 -17.984 1.289 -17.3 1.116 C-11.241 -0.254 -6.569 0 0 0 Z"/>
+      <path transform="translate(0,89)" d="M0 0 C14.01 1.168 14.01 1.168 20.938 3.625 C21.702 3.889 22.466 4.154 23.254 4.426 C33.934 8.253 43.368 13.61 52 21 C52.799 21.655 53.598 22.31 54.422 22.984 C65.575 32.475 73.252 44.155 80 57 C80.472 57.878 80.944 58.756 81.43 59.66 C91.919 80.737 93.769 106.313 86.547 128.707 C80.73 145.264 72.675 159.767 61 173 C60.45 173.634 59.899 174.268 59.332 174.922 C46.421 188.821 25.707 199.168 7 202 C4.69 202 2.38 202 0 202 C0 188.47 0 174.94 0 161 C4.29 159.35 8.58 157.7 13 156 C19.922 152.576 24.796 149.604 30 144 C30.66 144 31.32 144 32 144 C32.272 143.424 32.544 142.848 32.824 142.254 C34.003 139.995 35.341 138.015 36.812 135.938 C46.331 121.637 49.686 105.964 47 89 C43.729 73.995 35.716 60.884 22.812 52.25 C15.66 47.981 7.896 44.632 0 42 C0 28.14 0 14.28 0 0 Z"/>
+    </g>
+  </svg>
+  <div id="introWord">Nildiana Cedeño<small>Medicina Estética · Asturias</small></div>
+  <span class="skip">Saltar</span>
+</div>
+
+<header id="hdr">
+  <div class="wrap bar">
+    <a class="brand" href="#">Nildiana Cedeño<small>Medicina Estética · Asturias</small></a>
+    <nav>
+      <ul>
+        <li><a href="tratamientos.html">Tratamientos</a></li>
+        <li><a href="#doctora">La Doctora</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#opiniones">Opiniones</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="bar-right">
+      <div class="social hdr-social">
+        <a href="https://wa.me/34649641293" target="_blank" rel="noopener" aria-label="WhatsApp de la Dra. Nildiana Cedeño"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.86-2.03-.96-.27-.1-.47-.15-.67.15-.2.3-.76.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.07 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.12-.27-.19-.57-.34Zm-5.42 7.4h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.38 9.38 0 0 1 14.57-11.6 9.32 9.32 0 0 1 2.75 6.64 9.39 9.39 0 0 1-9.4 9.37Zm7.99-17.36A11.16 11.16 0 0 0 12.04.84a11.18 11.18 0 0 0-9.71 16.74L.84 23l5.55-1.46a11.16 11.16 0 0 0 5.34 1.36h.01a11.19 11.19 0 0 0 7.92-19.09Z"/></svg></a>
+        <a href="https://www.instagram.com/dranildianacedeno/" target="_blank" rel="noopener" aria-label="Instagram de la Dra. Nildiana Cedeño"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.43.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.43-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2Zm0 1.8c-3.15 0-3.52.01-4.76.07-.9.04-1.39.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.32-.28.81-.32 1.71C3.21 8.48 3.2 8.85 3.2 12s.01 3.52.07 4.76c.04.9.19 1.39.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.13.81.28 1.71.32 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.9-.04 1.39-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.32.28-.81.32-1.71.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.04-.9-.19-1.39-.32-1.71a2.86 2.86 0 0 0-.69-1.06 2.86 2.86 0 0 0-1.06-.69c-.32-.13-.81-.28-1.71-.32C15.52 4.01 15.15 4 12 4Zm0 3.06A4.94 4.94 0 1 1 7.06 12 4.94 4.94 0 0 1 12 7.06Zm0 1.8A3.14 3.14 0 1 0 15.14 12 3.14 3.14 0 0 0 12 8.86Zm5.13-3.2a1.15 1.15 0 1 1-1.15 1.15 1.15 1.15 0 0 1 1.15-1.15Z"/></svg></a>
+        <a href="https://www.facebook.com/dranildianacedeno" target="_blank" rel="noopener" aria-label="Facebook de la Dra. Nildiana Cedeño"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94Z"/></svg></a>
+      </div>
+      <a class="nav-cta" href="#contacto">Pedir cita</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<nav class="mobile-menu" id="mobileMenu" aria-label="Menú móvil">
+  <a class="mlink" href="tratamientos.html">Tratamientos</a>
+  <a class="mlink" href="#doctora">La Doctora</a>
+  <a class="mlink" href="#resultados">Resultados</a>
+  <a class="mlink" href="#opiniones">Opiniones</a>
+  <a class="mlink" href="#contacto">Contacto</a>
+  <a class="m-cta" href="#contacto">Pedir cita</a>
+  <div class="social m-social">
+    <a href="https://wa.me/34649641293" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.86-2.03-.96-.27-.1-.47-.15-.67.15-.2.3-.76.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.07 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.12-.27-.19-.57-.34Zm-5.42 7.4h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.38 9.38 0 0 1 14.57-11.6 9.32 9.32 0 0 1 2.75 6.64 9.39 9.39 0 0 1-9.4 9.37Zm7.99-17.36A11.16 11.16 0 0 0 12.04.84a11.18 11.18 0 0 0-9.71 16.74L.84 23l5.55-1.46a11.16 11.16 0 0 0 5.34 1.36h.01a11.19 11.19 0 0 0 7.92-19.09Z"/></svg></a>
+    <a href="https://www.instagram.com/dranildianacedeno/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.43.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.43-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2Zm0 1.8c-3.15 0-3.52.01-4.76.07-.9.04-1.39.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.32-.28.81-.32 1.71C3.21 8.48 3.2 8.85 3.2 12s.01 3.52.07 4.76c.04.9.19 1.39.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.13.81.28 1.71.32 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.9-.04 1.39-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.32.28-.81.32-1.71.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.04-.9-.19-1.39-.32-1.71a2.86 2.86 0 0 0-.69-1.06 2.86 2.86 0 0 0-1.06-.69c-.32-.13-.81-.28-1.71-.32C15.52 4.01 15.15 4 12 4Zm0 3.06A4.94 4.94 0 1 1 7.06 12 4.94 4.94 0 0 1 12 7.06Zm0 1.8A3.14 3.14 0 1 0 15.14 12 3.14 3.14 0 0 0 12 8.86Zm5.13-3.2a1.15 1.15 0 1 1-1.15 1.15 1.15 1.15 0 0 1 1.15-1.15Z"/></svg></a>
+    <a href="https://www.facebook.com/dranildianacedeno" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94Z"/></svg></a>
+  </div>
+</nav>
+
+<!-- FLOATING WHATSAPP -->
+<a class="wa-fab" href="https://wa.me/34649641293?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20una%20valoraci%C3%B3n" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.86-2.03-.96-.27-.1-.47-.15-.67.15-.2.3-.76.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.07 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.12-.27-.19-.57-.34Zm-5.42 7.4h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.38 9.38 0 0 1 14.57-11.6 9.32 9.32 0 0 1 2.75 6.64 9.39 9.39 0 0 1-9.4 9.37Zm7.99-17.36A11.16 11.16 0 0 0 12.04.84a11.18 11.18 0 0 0-9.71 16.74L.84 23l5.55-1.46a11.16 11.16 0 0 0 5.34 1.36h.01a11.19 11.19 0 0 0 7.92-19.09Z"/></svg></a>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="img">
+    <div class="slide s1 active"><img src="assets/nildiana-hero-studio.jpg" alt="Dra. Nildiana Cedeño" /></div>
+    <div class="slide s2"><img src="assets/nildiana-awards.jpg" alt="Dra. Nildiana Cedeño · Premio Europeo de Medicina 2025" /></div>
+    <div class="slide s3"><img src="assets/nildiana-hero.jpg" alt="Dra. Nildiana Cedeño durante un tratamiento" /></div>
+    <div class="slide s4"><img src="assets/interior.png" alt="Interior de la clínica Dra. Nildiana Cedeño" /></div>
+  </div>
+  <div class="veil"></div>
+  <div class="floatmark">N</div>
+  <div class="floatmark fm-c">C</div>
+  <img class="flo f1" src="assets/isotipo.png" alt="" />
+  <img class="flo f2" src="assets/isotipo.png" alt="" />
+  <img class="flo f3" src="assets/isotipo.png" alt="" />
+  <!-- CREDENTIALS · desktop: awards drift down the left, certificates down the right · click to enlarge -->
+  <div class="creds" aria-label="Premios y certificaciones">
+    <div class="cred-side cred-l">
+      <div class="award-tile" tabindex="0" title="The European Awards · Mejor Clínica de Europa 2025"><div class="tile-inner"><img src="assets/awards/aw1.png" alt="The European Awards · Mejor Clínica de Europa 2025" /></div></div>
+      <div class="award-tile" tabindex="0" title="Medicina y Cirugía Estética Siglo XXI · 2023"><div class="tile-inner"><img src="assets/awards/aw6.png" alt="Medicina y Cirugía Estética Siglo XXI 2023" /></div></div>
+      <div class="award-tile" tabindex="0" title="Mejor Clínica Facial · Bienestar y Calidad de Vida 2024"><div class="tile-inner"><img src="assets/awards/aw7.png" alt="Mejor Clínica Facial · Bienestar y Calidad de Vida 2024" /></div></div>
+      <div class="award-tile" tabindex="0" title="Premios Dr. Fleming a la Excelencia Sanitaria"><div class="tile-inner"><img src="assets/awards/aw3.png" alt="Premios Dr. Fleming a la Excelencia Sanitaria" /></div></div>
+    </div>
+    <div class="cred-side cred-r">
+      <div class="award-tile cert" tabindex="0" title="Premio Europeo de Tecnología e Innovación en Medicina"><div class="tile-inner"><img src="assets/awards/aw2.png" alt="Premio Europeo de Tecnología e Innovación en Medicina" /></div></div>
+      <div class="award-tile cert" tabindex="0" title="Premio Estetoscopio de Oro a la Innovación en Medicina"><div class="tile-inner"><img src="assets/awards/aw4.png" alt="Premio Estetoscopio de Oro a la Innovación" /></div></div>
+      <div class="award-tile cert" tabindex="0" title="Soc. Española de Medicina Estética · Colegiada Nº 1682"><div class="tile-inner"><img src="assets/awards/aw5-cut.png" alt="Sociedad Española de Medicina Estética · Nº 1682" /></div></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="inner">
+      <div class="eyebrow"><span></span>Premio Europeo 2025</div>
+      <h1 id="heroTitle">Belleza <span class="gold">natural</span>,<br>resultado de la ciencia</h1>
+      <p class="lead">Medicina estética avanzada para realzar tu belleza sin que se note el procedimiento. Nunca un rostro «operado»: solo tú, descansada y natural.</p>
+      <div class="cta-row">
+        <a class="btn" href="#contacto">Reservar valoración</a>
+        <span class="cta-note">Gratuita · sin compromiso</span>
+      </div>
+      <div class="hero-badge"><b class="eb-hl">★ Mejor Clínica de Europa</b></div>
+    </div>
+  </div>
+  <!-- CREDENTIALS WALL · mobile/tablet auto-scrolling ribbon (tiles duplicated for a seamless loop) -->
+  <div class="creds-rail" aria-label="Premios y certificaciones">
+    <div class="rail-badge"><b class="eb-hl">★ Mejor Clínica de Europa</b></div>
+    <div class="creds-track">
+      <div class="award-tile"><img src="assets/awards/aw1.png" alt="The European Awards · Mejor Clínica de Europa 2025" /></div>
+      <div class="award-tile"><img src="assets/awards/aw6.png" alt="Medicina y Cirugía Estética Siglo XXI 2023" /></div>
+      <div class="award-tile"><img src="assets/awards/aw7.png" alt="Mejor Clínica Facial · Bienestar y Calidad de Vida 2024" /></div>
+      <div class="award-tile cert"><img src="assets/awards/aw3.png" alt="Premios Dr. Fleming a la Excelencia Sanitaria" /></div>
+      <div class="award-tile cert"><img src="assets/awards/aw2.png" alt="Premio Europeo de Tecnología e Innovación en Medicina" /></div>
+      <div class="award-tile cert"><img src="assets/awards/aw4.png" alt="Premio Estetoscopio de Oro a la Innovación" /></div>
+      <div class="award-tile cert"><img src="assets/awards/aw5-cut.png" alt="Sociedad Española de Medicina Estética · Nº 1682" /></div>
+      <div class="award-tile" aria-hidden="true"><img src="assets/awards/aw1.png" alt="" /></div>
+      <div class="award-tile" aria-hidden="true"><img src="assets/awards/aw6.png" alt="" /></div>
+      <div class="award-tile" aria-hidden="true"><img src="assets/awards/aw7.png" alt="" /></div>
+      <div class="award-tile cert" aria-hidden="true"><img src="assets/awards/aw3.png" alt="" /></div>
+      <div class="award-tile cert" aria-hidden="true"><img src="assets/awards/aw2.png" alt="" /></div>
+      <div class="award-tile cert" aria-hidden="true"><img src="assets/awards/aw4.png" alt="" /></div>
+      <div class="award-tile cert" aria-hidden="true"><img src="assets/awards/aw5-cut.png" alt="" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust">
+  <div class="wrap">
+    <div class="item"><span class="star">★ 4,8</span> · 400 reseñas en Google</div>
+    <div class="item"><b>10</b> años de experiencia</div>
+    <div class="item"><b>Premio Europeo</b> de Medicina 2025</div>
+    <div class="item">Resultados <b>naturales</b></div>
+    <div class="item"><a class="trustmap" href="https://www.google.com/maps/search/?api=1&query=Cl%C3%ADnica+Dra+Nildiana+Cede%C3%B1o+Francisco+Orejas+Sierra+1+33401+Avil%C3%A9s+Asturias" target="_blank" rel="noopener" aria-label="Ver en Google Maps la clínica de Avilés"><svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>Avilés</a> · <a class="trustmap" href="https://www.google.com/maps/search/?api=1&query=Cl%C3%ADnica+Dra+Nildiana+Cede%C3%B1o+Ingeniero+Marquina+11+33004+Oviedo+Asturias" target="_blank" rel="noopener" aria-label="Ver en Google Maps la clínica de Oviedo"><svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>Oviedo</a></div>
+  </div>
+</div>
+
+<!-- PHILOSOPHY -->
+<section class="filosofia" id="filosofia">
+  <div class="fwrap">
+    <div class="filo-photo reveal">
+      <div class="filo-frame"><img src="assets/nildiana-portrait.jpg" alt="Dra. Nildiana Cedeño" /></div>
+      <img class="seal" src="assets/awards/aw1.png" alt="Premio Europeo de Medicina 2025" />
+    </div>
+    <div class="filo-text reveal">
+      <div class="eyebrow"><span></span>Nuestra filosofía</div>
+      <h2>Realzar lo que <span class="gold">ya eres</span>,<br>nunca cambiarte.</h2>
+      <p class="intro">Cada rostro es único, así que no aplicamos fórmulas. Estudiamos tus rasgos y diseñamos un plan a tu medida, con técnica avanzada y la mano de una doctora premiada. El objetivo no es que parezcas otra: es que sigas siendo tú, descansada y radiante.</p>
+      <div class="filo-values">
+        <div class="v"><span class="mk"></span><div><h4>Resultados naturales</h4><p>Mejoras que se sienten, sin que se noten.</p></div></div>
+        <div class="v"><span class="mk"></span><div><h4>Trato cercano</h4><p>Una doctora que te escucha, sin prisas y sin presión.</p></div></div>
+        <div class="v"><span class="mk"></span><div><h4>Medicina premiada</h4><p>Premio Europeo de Medicina 2025 · Mejor clínica de Europa.</p></div></div>
+      </div>
+      <div class="filo-sign">Dra. Nildiana Cedeño<small>Medicina Estética · Asturias</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS (before / after) -->
+<section class="block results" id="resultados">
+  <div class="wrap">
+    <div class="top reveal">
+      <div class="lbl"><span></span><span class="eyebrow">Resultados</span><span></span></div>
+      <h2>El cambio que se siente,<br>sin que se note</h2>
+    </div>
+    <div class="ba reveal">
+      <img class="ba-after" src="assets/treat/c-arrugas.png" alt="Después del tratamiento" />
+      <img class="ba-before" src="assets/treat/c-arrugas.png" alt="Antes del tratamiento" />
+      <div class="ba-divider"><span class="ba-grip"></span></div>
+      <span class="ba-tag l">Antes</span>
+      <span class="ba-tag r">Después</span>
+      <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Comparar antes y después" />
+    </div>
+    <p class="ba-note reveal">Arrastra para comparar. Imágenes demostrativas: aquí irán casos reales de la clínica.</p>
+  </div>
+</section>
+
+<!-- TREATMENTS GALLERY -->
+<section class="block galeria">
+  <div class="wrap">
+    <div class="top reveal">
+      <div class="lbl"><span></span><span class="eyebrow">Tratamientos</span><span></span></div>
+      <h2>Lo que tratamos<br>en nuestro centro</h2>
+    </div>
+    <div class="gal-grid">
+      <figure class="gal reveal"><div class="ph"><img src="assets/treat/c-neuromoduladores.png" alt="Neuromoduladores" /></div><figcaption>Neuromoduladores</figcaption></figure>
+      <figure class="gal reveal"><div class="ph"><img src="assets/treat/c-ojeras.png" alt="Ojeras" /></div><figcaption>Ojeras</figcaption></figure>
+      <figure class="gal reveal"><div class="ph"><img src="assets/treat/c-labios.png" alt="Labios" /></div><figcaption>Labios</figcaption></figure>
+      <figure class="gal reveal"><div class="ph"><img src="assets/treat/c-rinomodelacion.png" alt="Rinomodelación" /></div><figcaption>Rinomodelación</figcaption></figure>
+      <figure class="gal reveal"><div class="ph"><img src="assets/treat/c-arrugas.png" alt="Arrugas" /></div><figcaption>Arrugas</figcaption></figure>
+      <figure class="gal reveal"><div class="ph"><img src="assets/treat/c-flacidez.png" alt="Flacidez" /></div><figcaption>Flacidez</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENTS -->
+<section class="block treat" id="tratamientos">
+  <div class="wrap">
+    <div class="head reveal">
+      <div>
+        <div class="lbl"><span></span><span class="eyebrow">Tratamientos</span></div>
+        <h2>Un tratamiento<br>para cada necesidad</h2>
+      </div>
+      <a class="btn" href="#contacto">Consultar mi caso</a>
+    </div>
+    <div class="cols">
+      <div class="col reveal">
+        <span class="k">Rostro</span>
+        <h3>Facial</h3>
+        <ul>
+          <li>Neuromoduladores (Bótox)</li>
+          <li>Rinomodelación</li>
+          <li>Labios y ojeras</li>
+          <li>Hilos tensores</li>
+          <li>Flacidez y óvalo facial</li>
+          <li>Revitalización · Peeling</li>
+        </ul>
+      </div>
+      <div class="col reveal">
+        <span class="k">Cuerpo</span>
+        <h3>Corporal</h3>
+        <ul>
+          <li>Mesoterapia corporal</li>
+          <li>Reafirmación de la piel</li>
+          <li>Tratamiento de celulitis</li>
+          <li>Hiperhidrosis axilar</li>
+          <li>Remodelado corporal</li>
+          <li>Bienestar y salud</li>
+        </ul>
+      </div>
+      <div class="col reveal">
+        <span class="k">Tecnología</span>
+        <h3>Aparatología</h3>
+        <ul>
+          <li>Liftera — lifting sin cirugía</li>
+          <li>Aerolase — láser facial</li>
+          <li>Venus Legacy</li>
+          <li>Peeling químico médico</li>
+          <li>Diagnóstico personalizado</li>
+          <li>Protocolos a medida</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTOR -->
+<section class="block" id="doctora">
+  <div class="wrap doc">
+    <div class="ph reveal">
+      <img src="assets/nildiana-clinica.jpg" alt="Dra. Nildiana Cedeño en su clínica" />
+      <div class="badge">
+        <div class="t">Dra. Cedeño</div>
+        <div class="s">Medicina Estética</div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="lbl"><span></span><span class="eyebrow">La Doctora</span></div>
+      <h2>Una década dedicada<br>a la belleza natural</h2>
+      <p>Con más de 10 años de experiencia exclusivamente en medicina estética, la Dra. Nildiana Cedeño ha construido una clínica reconocida en toda Asturias por una filosofía clara: resultados que se sienten, no que se notan.</p>
+      <p>Cada tratamiento parte de un diagnóstico individual y un trato cercano, porque no hay dos rostros iguales. Esta dedicación le ha valido el reconocimiento <em>European Awards in Medicine 2025</em> a la mejor clínica de medicina estética de Europa.</p>
+      <div class="stats">
+        <div><div class="n">+10</div><div class="d">Años de experiencia</div></div>
+        <div><div class="n">400</div><div class="d">Reseñas · 4,8 ★</div></div>
+        <div><div class="n">2</div><div class="d">Sedes · Avilés y Oviedo</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPINIONS -->
+<section class="block ops" id="opiniones">
+  <div class="wrap">
+    <div class="top reveal">
+      <div class="lbl"><span></span><span class="eyebrow">Opiniones</span><span></span></div>
+      <h2>Lo que dicen nuestras pacientes</h2>
+      <div class="rate"><span class="star">★★★★★</span> &nbsp;<b>4,8 / 5</b> &nbsp;·&nbsp; 400 reseñas verificadas en Google</div>
+    </div>
+    <div class="quotes">
+      <div class="q reveal">
+        <div class="stars">★★★★★</div>
+        <p>“Resultado totalmente natural. Nadie nota que me he hecho nada, solo me ven mejor. Profesionalidad absoluta.”</p>
+        <div class="who">Marta G. · Avilés</div>
+      </div>
+      <div class="q reveal">
+        <div class="stars">★★★★★</div>
+        <p>“La Dra. Cedeño te escucha y no te vende de más. Confianza total desde la primera consulta.”</p>
+        <div class="who">Lucía R. · Oviedo</div>
+      </div>
+      <div class="q reveal">
+        <div class="stars">★★★★★</div>
+        <p>“Trato cercano, instalaciones impecables y unos resultados que superaron mis expectativas.”</p>
+        <div class="who">Elena M. · Gijón</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEARS / FAQ -->
+<section class="block faq" id="dudas">
+  <div class="wrap">
+    <div class="top reveal">
+      <div class="lbl"><span></span><span class="eyebrow">Antes de decidirte</span><span></span></div>
+      <h2>Las dudas que todas tenemos</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="fitem reveal">
+        <h3>¿Se va a notar?</h3>
+        <p>No. Toda nuestra filosofía es que nadie sepa que te has hecho algo, solo que te ven mejor. Buscamos el gesto natural, nunca el rostro «operado».</p>
+      </div>
+      <div class="fitem reveal">
+        <h3>¿Duele?</h3>
+        <p>Son tratamientos mínimamente molestos. Usamos anestesia y técnicas suaves para que la sesión sea cómoda y puedas volver a tu día con normalidad.</p>
+      </div>
+      <div class="fitem reveal">
+        <h3>¿Me van a vender de más?</h3>
+        <p>Nunca. En la valoración te decimos con honestidad qué te conviene, y qué no necesitas. Si un tratamiento no aporta, te lo diremos.</p>
+      </div>
+      <div class="fitem reveal">
+        <h3>¿Es seguro?</h3>
+        <p>Cada plan parte de un diagnóstico médico individual, realizado por la propia Dra. Cedeño, con más de 10 años dedicados en exclusiva a la medicina estética.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contacto">
+  <div class="wrap reveal">
+    <div class="eyebrow"><span></span>Tu primera cita<span></span></div>
+    <h2>Reserva tu <span class="gold">valoración</span></h2>
+    <p>Cuéntanos qué te gustaría mejorar y diseñaremos un plan a tu medida. La primera valoración es <b>gratuita y sin compromiso</b>.</p>
+    <div class="cta-actions">
+      <a class="btn wa" href="https://wa.me/34649641293?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20una%20valoraci%C3%B3n" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      <a class="btn line" href="tel:+34649641293">Llamar a la clínica</a>
+    </div>
+    <div class="ph">+34 649 64 12 93 · Avilés y Oviedo</div>
+    <div class="cta-social">
+      <span class="lbl">Síguenos</span>
+      <div class="social">
+        <a href="https://wa.me/34649641293" target="_blank" rel="noopener" aria-label="WhatsApp de la Dra. Nildiana Cedeño"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.86-2.03-.96-.27-.1-.47-.15-.67.15-.2.3-.76.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.07 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.12-.27-.19-.57-.34Zm-5.42 7.4h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.38 9.38 0 0 1 14.57-11.6 9.32 9.32 0 0 1 2.75 6.64 9.39 9.39 0 0 1-9.4 9.37Zm7.99-17.36A11.16 11.16 0 0 0 12.04.84a11.18 11.18 0 0 0-9.71 16.74L.84 23l5.55-1.46a11.16 11.16 0 0 0 5.34 1.36h.01a11.19 11.19 0 0 0 7.92-19.09Z"/></svg></a>
+        <a href="https://www.instagram.com/dranildianacedeno/" target="_blank" rel="noopener" aria-label="Instagram de la Dra. Nildiana Cedeño"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.43.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.43-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2Zm0 1.8c-3.15 0-3.52.01-4.76.07-.9.04-1.39.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.32-.28.81-.32 1.71C3.21 8.48 3.2 8.85 3.2 12s.01 3.52.07 4.76c.04.9.19 1.39.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.13.81.28 1.71.32 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.9-.04 1.39-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.32.28-.81.32-1.71.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.04-.9-.19-1.39-.32-1.71a2.86 2.86 0 0 0-.69-1.06 2.86 2.86 0 0 0-1.06-.69c-.32-.13-.81-.28-1.71-.32C15.52 4.01 15.15 4 12 4Zm0 3.06A4.94 4.94 0 1 1 7.06 12 4.94 4.94 0 0 1 12 7.06Zm0 1.8A3.14 3.14 0 1 0 15.14 12 3.14 3.14 0 0 0 12 8.86Zm5.13-3.2a1.15 1.15 0 1 1-1.15 1.15 1.15 1.15 0 0 1 1.15-1.15Z"/></svg></a>
+        <a href="https://www.facebook.com/dranildianacedeno" target="_blank" rel="noopener" aria-label="Facebook de la Dra. Nildiana Cedeño"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94Z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAY IN TOUCH -->
+<section class="keep">
+  <div class="wrap reveal">
+    <div class="keep-in">
+      <div>
+        <h3>¿Aún te lo estás pensando?</h3>
+        <p>Sin prisa. Déjanos tu correo y te enviaremos consejos de cuidado y novedades, sin saturar tu bandeja. Cuando quieras dar el paso, aquí estaremos.</p>
+      </div>
+      <form class="keep-form" onsubmit="return false">
+        <input type="email" placeholder="Tu correo electrónico" aria-label="Tu correo electrónico" />
+        <button type="submit" class="btn">Recibir consejos</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="brand">Nildiana Cedeño</div>
+        <p>Medicina estética con resultados naturales en Asturias. Premio europeo 2025.</p>
+        <div class="social">
+          <a href="https://wa.me/34649641293" target="_blank" rel="noopener" aria-label="WhatsApp de la Dra. Nildiana Cedeño"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.86-2.03-.96-.27-.1-.47-.15-.67.15-.2.3-.76.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.07 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.12-.27-.19-.57-.34Zm-5.42 7.4h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.38 9.38 0 0 1 14.57-11.6 9.32 9.32 0 0 1 2.75 6.64 9.39 9.39 0 0 1-9.4 9.37Zm7.99-17.36A11.16 11.16 0 0 0 12.04.84a11.18 11.18 0 0 0-9.71 16.74L.84 23l5.55-1.46a11.16 11.16 0 0 0 5.34 1.36h.01a11.19 11.19 0 0 0 7.92-19.09Z"/></svg></a>
+        <a href="https://www.instagram.com/dranildianacedeno/" target="_blank" rel="noopener" aria-label="Instagram de la Dra. Nildiana Cedeño"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.43.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.43-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2Zm0 1.8c-3.15 0-3.52.01-4.76.07-.9.04-1.39.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.32-.28.81-.32 1.71C3.21 8.48 3.2 8.85 3.2 12s.01 3.52.07 4.76c.04.9.19 1.39.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.13.81.28 1.71.32 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.9-.04 1.39-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.32.28-.81.32-1.71.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.04-.9-.19-1.39-.32-1.71a2.86 2.86 0 0 0-.69-1.06 2.86 2.86 0 0 0-1.06-.69c-.32-.13-.81-.28-1.71-.32C15.52 4.01 15.15 4 12 4Zm0 3.06A4.94 4.94 0 1 1 7.06 12 4.94 4.94 0 0 1 12 7.06Zm0 1.8A3.14 3.14 0 1 0 15.14 12 3.14 3.14 0 0 0 12 8.86Zm5.13-3.2a1.15 1.15 0 1 1-1.15 1.15 1.15 1.15 0 0 1 1.15-1.15Z"/></svg></a>
+          <a href="https://www.facebook.com/dranildianacedeno" target="_blank" rel="noopener" aria-label="Facebook de la Dra. Nildiana Cedeño"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94Z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Cl%C3%ADnica+Dra+Nildiana+Cede%C3%B1o+Francisco+Orejas+Sierra+1+33401+Avil%C3%A9s+Asturias" target="_blank" rel="noopener" aria-label="Ver en Google Maps la clínica de Avilés">
+          <h4>Avilés</h4>
+          <p>Francisco Orejas Sierra, 1<br>bajo derecha, 33401</p>
+          <span class="maphint">Ver en el mapa<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+        </a>
+      </div>
+      <div>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Cl%C3%ADnica+Dra+Nildiana+Cede%C3%B1o+Ingeniero+Marquina+11+33004+Oviedo+Asturias" target="_blank" rel="noopener" aria-label="Ver en Google Maps la clínica de Oviedo">
+          <h4>Oviedo</h4>
+          <p>C. Ing. Marquina, 11<br>B, PB, 33004</p>
+          <span class="maphint">Ver en el mapa<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+        </a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <a href="tel:+34649641293">+34 649 64 12 93</a>
+        <a href="mailto:dranildianacedeno@gmail.com">dranildianacedeno@gmail.com</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 Clínica Dra. Nildiana Cedeño</span>
+      <span>Concepto de diseño · Propuesta</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // floating letters — split hero title into animated letters (preserves gold + line breaks)
+  function splitHeroTitle(){
+    const title=document.getElementById('heroTitle');
+    if(!title || title.dataset.split) return;
+    title.dataset.split='1';
+    const frag=document.createDocumentFragment();
+    let i=0;
+    const walk=(node,gold)=>{
+      node.childNodes.forEach(ch=>{
+        if(ch.nodeType===3){ // text node → one span per letter
+          ch.textContent.split(/(\s+)/).forEach(part=>{
+            if(part==='') return;
+            if(/^\s+$/.test(part)){ frag.appendChild(document.createTextNode(' ')); return; }
+            const word=document.createElement('span'); word.className='word';
+            [...part].forEach(c=>{
+              const s=document.createElement('span');
+              s.className='ltr'+(gold?' gold':'');
+              s.textContent=c;
+              s.style.animationDelay=(i*0.04)+'s'; i++;
+              word.appendChild(s);
+            });
+            frag.appendChild(word);
+          });
+        } else if(ch.tagName==='BR'){ frag.appendChild(document.createElement('br')); }
+        else { walk(ch, gold || (ch.classList && ch.classList.contains('gold'))); }
+      });
+    };
+    walk(title,false);
+    title.innerHTML=''; title.appendChild(frag);
+  }
+
+  // intro: logo self-draws in light then fills, plays on each load, skippable (click / scroll / key)
+  (function(){
+    const intro=document.getElementById('intro');
+    if(!intro){ splitHeroTitle(); return; }
+    setTimeout(splitHeroTitle, 2100);            // ready the hero headline before the curtain lifts
+    const done=()=>{ splitHeroTitle(); intro.classList.add('gone'); };
+    const timer=setTimeout(done, 4750);          // matches CSS introHide (fade starts 3.9s + 0.8s)
+    const skip=()=>{ clearTimeout(timer); splitHeroTitle();
+      intro.style.animation='introHide .5s forwards';
+      setTimeout(()=>intro.classList.add('gone'), 520); };
+    intro.addEventListener('click', skip);
+    window.addEventListener('scroll', skip, {passive:true, once:true});
+    window.addEventListener('keydown', skip, {once:true});
+  })();
+
+  // hero slideshow — gentle cross-fade; first slide held 50% longer than the rest
+  (function(){
+    const slides=[...document.querySelectorAll('.hero .slide')];
+    if(slides.length<2) return;
+    const base=3200;
+    const hold=i=> i===0 ? base*1.5 : base;   // slide 1: 4800ms, others: 3200ms
+    let idx=0;
+    const next=()=>setTimeout(()=>{
+      slides[idx].classList.remove('active');
+      idx=(idx+1)%slides.length;
+      slides[idx].classList.add('active');
+      next();
+    }, hold(idx));
+    next();
+  })();
+
+  // before/after comparison sliders
+  document.querySelectorAll('.ba').forEach(ba=>{
+    const range=ba.querySelector('.ba-range');
+    const before=ba.querySelector('.ba-before');
+    const divider=ba.querySelector('.ba-divider');
+    if(!range||!before||!divider) return;
+    const set=v=>{ before.style.clipPath='inset(0 '+(100-v)+'% 0 0)'; divider.style.left=v+'%'; };
+    range.addEventListener('input',e=>set(e.target.value));
+    set(50);
+  });
+
+  // mobile hamburger menu
+  (function(){
+    const burger=document.getElementById('burger');
+    const menu=document.getElementById('mobileMenu');
+    if(!burger||!menu) return;
+    const toggle=(open)=>{
+      const on = open===undefined ? !document.body.classList.contains('menu-open') : open;
+      document.body.classList.toggle('menu-open', on);
+      burger.setAttribute('aria-expanded', on?'true':'false');
+    };
+    burger.addEventListener('click',()=>toggle());
+    menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>toggle(false)));
+    document.addEventListener('keydown',e=>{ if(e.key==='Escape') toggle(false); });
+  })();
+
+  // hero credentials — click an award/certificate to enlarge it (desktop)
+  (function(){
+    const creds=document.querySelector('.hero .creds');
+    const tiles=document.querySelectorAll('.hero .creds .award-tile');
+    if(!tiles.length) return;
+    const clear=()=>{tiles.forEach(t=>t.classList.remove('zoom'));creds&&creds.classList.remove('has-zoom');};
+    tiles.forEach(t=>t.addEventListener('click',e=>{
+      e.stopPropagation();
+      const open=t.classList.contains('zoom');
+      clear();
+      if(!open){ t.classList.add('zoom'); creds&&creds.classList.add('has-zoom'); }
+    }));
+    document.addEventListener('click',clear);
+    document.addEventListener('keydown',e=>{ if(e.key==='Escape') clear(); });
+  })();
+
+  // nav background on scroll
+  const hdr=document.getElementById('hdr');
+  const onScroll=()=>{ hdr.classList.toggle('solid', window.scrollY>60); };
+  window.addEventListener('scroll',onScroll); onScroll();
+
+  // subtle reveal on scroll (restrained, luxury)
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.16});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{ el.style.transitionDelay=(i%3*0.08)+'s'; io.observe(el); });
+
+  // philosophy manifesto — split quote into words, focus them in on scroll
+  (function(){
+    const sec=document.querySelector('.filosofia');
+    const q=document.getElementById('filoQuote');
+    if(!sec||!q) return;
+    if(!q.dataset.split){
+      q.dataset.split='1';
+      const frag=document.createDocumentFragment();
+      let i=0, last=null;
+      const punct=/^[,.;:!?)»"']+$/;
+      const addWord=(text,gold)=>{
+        if(last && punct.test(text)){ last.textContent+=text; return; } // keep punctuation tight to its word
+        const s=document.createElement('span');
+        s.className='w'+(gold?' gold':'');
+        s.textContent=text;
+        s.style.transitionDelay=(i*0.05)+'s'; i++;
+        frag.appendChild(s); frag.appendChild(document.createTextNode(' '));
+        last=s;
+      };
+      q.childNodes.forEach(node=>{
+        if(node.nodeType===3){ node.textContent.split(/\s+/).forEach(w=>{ if(w) addWord(w,false); }); }
+        else { node.textContent.split(/\s+/).forEach(w=>{ if(w) addWord(w,true); }); }
+      });
+      q.innerHTML=''; q.appendChild(frag);
+    }
+    const obs=new IntersectionObserver((es)=>{
+      es.forEach(e=>{ if(e.isIntersecting){ sec.classList.add('show'); obs.disconnect(); } });
+    },{threshold:.35});
+    obs.observe(sec);
+  })();
+
+  // (hero image kept static so the doctor's head is never cropped)
+</script>
+</body>
+</html>
