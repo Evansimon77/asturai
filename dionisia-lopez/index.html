@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base href="/dionisia-lopez/">
+<title>Quesería Dionisia López · Queso de Cabrales artesano · Sotres, Picos de Europa</title>
+<!-- social preview (WhatsApp/redes) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Quesería Dionisia López · Queso de Cabrales artesano">
+<meta property="og:description" content="Queso de Cabrales D.O.P. artesano, con leche cruda y maduración en cueva natural en Sotres, Picos de Europa. Venta directa y visitas a la quesería.">
+<meta property="og:image" content="https://asturai.com/dionisia-lopez/assets/og.jpg">
+<meta property="og:url" content="https://asturai.com/dionisia-lopez/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%235a2630'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23b1813a' text-anchor='middle'>D</text></svg>">
+
+<meta name="description" content="Queso de Cabrales D.O.P. artesano, elaborado con leche cruda y madurado en cueva natural en Sotres, Picos de Europa. Venta directa y visitas a la quesería. Primer Premio Queso de Cabrales 2012.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#211d1b;
+  --paper:#f5efe2;
+  --cream:#faf6ec;
+  --gold:#b1813a;
+  --gold-d:#8c6526;
+  --wine:#5a2630;
+  --wine-d:#43161f;
+  --green:#2b3b2f;
+  --line:rgba(33,29,27,.14);
+  --shadow:0 18px 50px -22px rgba(33,29,27,.45);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+/* Lenis smooth scroll — required styles; Lenis takes over when active, native smooth is the no-JS fallback */
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}
+.lenis.lenis-stopped{overflow:hidden}
+.lenis.lenis-smooth iframe{pointer-events:none}
+body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.08;letter-spacing:.4px}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,92vw);margin:0 auto}
+.lbl{display:flex;align-items:center;gap:12px;font-family:'Jost',sans-serif;font-weight:500;font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-d)}
+.lbl span:first-child{width:34px;height:1px;background:var(--gold);flex:0 0 auto}
+.eyebrow-c{justify-content:center}
+
+/* ---------- header ---------- */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:60;padding:20px 0;transition:.45s ease}
+.hdr .row{display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:#fff;letter-spacing:.5px;line-height:1;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+.brand small{display:block;font-family:'Jost',sans-serif;font-size:.58rem;letter-spacing:.34em;text-transform:uppercase;font-weight:400;opacity:.85;margin-top:4px}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:rgba(255,255,255,.9);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;text-shadow:0 1px 10px rgba(0,0,0,.5);transition:.25s}
+.nav a:hover{color:#fff}
+.nav .btn{padding:11px 24px;border:1px solid rgba(255,255,255,.6);border-radius:0;text-shadow:none;font-size:.66rem;letter-spacing:.2em;color:#fff}
+.nav .btn:hover{background:#fff;color:var(--wine);border-color:#fff}
+/* sandwich (burger) menu — same pattern as the other projects */
+.burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;background:none;border:0;cursor:pointer;padding:0;z-index:70}
+.burger span{display:block;width:25px;height:2px;background:#fff;margin:0 auto;border-radius:2px;transition:.3s}
+.hdr.solid .burger span,.burger.open span{background:var(--wine)}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+body.menu-open .brand{color:var(--wine);text-shadow:none}
+.mobile-menu{position:fixed;inset:0;z-index:65;background:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;opacity:0;visibility:hidden;transition:opacity .4s ease,visibility .4s ease}
+.mobile-menu.open{opacity:1;visibility:visible}
+.mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--ink);padding:10px 0;opacity:0;transform:translateY(12px);transition:.5s ease}
+.mobile-menu.open a{opacity:1;transform:none}
+.mobile-menu.open a:nth-child(1){transition-delay:.06s}
+.mobile-menu.open a:nth-child(2){transition-delay:.11s}
+.mobile-menu.open a:nth-child(3){transition-delay:.16s}
+.mobile-menu.open a:nth-child(4){transition-delay:.21s}
+.mobile-menu.open a:nth-child(5){transition-delay:.26s}
+.mobile-menu.open a:nth-child(6){transition-delay:.32s}
+.mobile-menu .mm-cta{margin-top:22px;font-family:'Jost',sans-serif;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;border:1px solid var(--wine);color:var(--wine);padding:14px 30px}
+.hdr.solid{background:rgba(245,239,226,.96);padding:13px 0;box-shadow:0 8px 30px -18px rgba(33,29,27,.5);backdrop-filter:blur(6px)}
+.hdr.solid .brand{color:var(--wine);text-shadow:none}
+.hdr.solid .nav a{color:var(--ink);text-shadow:none}
+.hdr.solid .nav a:hover{color:var(--gold-d)}
+.hdr.solid .nav .btn{border-color:var(--wine);color:var(--wine)}
+.hdr.solid .nav .btn:hover{background:var(--wine);color:#fff}
+@media(max-width:860px){ .nav{display:none} .burger{display:flex} }
+@media(min-width:861px){ .mobile-menu{display:none} }
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;
+  background:radial-gradient(128% 116% at 76% 40%,#36211f 0%,#1a0f10 52%,#0b0708 100%)}
+.hero .bg{position:absolute;inset:0;z-index:0;will-change:transform}
+/* real fog footage (Higgsfield), shown ONLY during a slide change — like Casona de la Paca's hero video, where the mist itself is the transition. Screen blend = black turns transparent, only the mist shows. Hidden at rest so the slide stays sharp. */
+.hero .fog-vid{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;mix-blend-mode:screen;opacity:0;pointer-events:none;will-change:opacity}
+.hero.swapping .fog-vid{animation:fogVid 2.6s ease-out}
+@keyframes fogVid{0%{opacity:0}38%{opacity:.95}60%{opacity:.95}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.hero.swapping .fog-vid{animation:none}}
+/* transition: slides cross-fade + slow ease-out "receding" zoom via transform-transition (interpolates from current scale, so no jump when a slide returns); living fog video (.fog-vid) + a dense mist burst (.fog) on each swap make the photos dissolve THROUGH fog, like Casona de la Paca */
+.hero .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.6s ease;will-change:opacity}
+.hero .slide.active{opacity:1}
+.hero .slide img{width:100%;height:100%;object-fit:cover;transform:scale(1.09);transition:transform 7s ease-out}
+.hero .slide.active img{transform:scale(1.0)}
+.hero .slide .im-cut{object-position:50% 46%}
+/* slide 1 = living video (cow + Picos), full-bleed like Casona de la Paca's hero clip */
+.hero .slide .hero-clip{width:100%;height:100%;object-fit:cover;object-position:62% 70%}
+@media(prefers-reduced-motion:reduce){.hero .slide img,.hero .slide.s1 .main{transition:none;transform:none}}
+/* density helper under the fog video — adds body so the swap is hidden inside the mist. Only during a swap. */
+.hero .fog{position:absolute;inset:-16%;z-index:1;opacity:0;pointer-events:none;
+  background:radial-gradient(56% 52% at 26% 32%,rgba(224,218,208,.86),transparent 74%),
+    radial-gradient(60% 56% at 74% 64%,rgba(210,206,198,.82),transparent 76%),
+    radial-gradient(86% 78% at 50% 50%,rgba(230,224,214,.74),transparent 82%);
+  filter:blur(24px);will-change:opacity,transform}
+.hero.swapping .fog{animation:fogRoll 2.6s ease-out}
+@keyframes fogRoll{0%{opacity:0;transform:scale(1) translateX(-4%)}
+  40%{opacity:1;transform:scale(1.16) translateX(0)}
+  60%{opacity:1;transform:scale(1.24) translateX(1%)}
+  100%{opacity:0;transform:scale(1.36) translateX(4%)}}
+@media(prefers-reduced-motion:reduce){.hero .fog{display:none}.hero .slide{transition:opacity 1s ease;filter:none;transform:none}}
+.hero .scrim{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(100deg,rgba(20,12,13,.88) 0%,rgba(20,12,13,.6) 38%,rgba(20,12,13,.14) 66%,rgba(20,12,13,0) 100%);}
+.hero .scrim:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(28,18,20,.6),transparent 32%)}
+/* ----- slide 1 = dark editorial stage: the FULL photo of many aging wheels + the cut Cabrales blended into the same scene, no frames ----- */
+.hero .slide.s1{display:block}
+.hero .slide.s1 img{position:absolute;object-fit:contain;max-width:none}
+.hero .slide.s1 .main{top:0;bottom:0;right:0;height:100%;width:min(56vw,720px);object-position:100% 50%;transform:scale(1.06);transition:transform 7s ease-out;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 28%);mask-image:linear-gradient(90deg,transparent 0,#000 28%)}
+.hero .slide.s1.active .main{transform:scale(1.0)}
+@media(max-width:980px){
+  .hero .slide.s1 .main{top:0;bottom:auto;left:0;right:0;width:100%;height:58%;object-position:50% 38%;
+    -webkit-mask-image:linear-gradient(0deg,transparent 0,#000 30%);mask-image:linear-gradient(0deg,transparent 0,#000 30%)}
+}
+.hero .inner{position:relative;z-index:2;color:#fff;padding-top:90px}
+.hero h1{font-size:clamp(2.5rem,5.2vw,4.2rem);color:#fff;max-width:16ch;text-shadow:0 3px 26px rgba(0,0,0,.45)}
+.hero .lead{font-size:clamp(1.02rem,1.5vw,1.18rem);font-weight:300;max-width:46ch;margin:20px 0 0;opacity:.95;text-shadow:0 2px 16px rgba(0,0,0,.5)}
+.hero .lbl{color:#f0d9a8;margin-bottom:24px}
+/* award medal + cheese seal, above the eyebrow line */
+.hero-marks{display:flex;align-items:center;gap:18px;margin-bottom:22px}
+.hero-marks .mark{width:auto;display:block;filter:drop-shadow(0 7px 16px rgba(0,0,0,.5))}
+.hero-marks .mk-seal{height:82px}
+.hero-marks .mk-award{height:80px}
+@media(max-width:600px){.hero-marks{gap:14px;margin-bottom:18px}.hero-marks .mk-seal{height:64px}.hero-marks .mk-award{height:62px}}
+.hero .lbl span:first-child{background:#e9c77f}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap}
+.btn-main{display:inline-flex;align-items:center;gap:10px;padding:16px 32px;border-radius:0;font-weight:500;font-size:.92rem;letter-spacing:.04em;transition:.3s;cursor:pointer}
+.btn-gold{background:var(--gold);color:#fff;box-shadow:0 14px 34px -14px rgba(177,129,58,.8)}
+.btn-gold:hover{background:var(--gold-d);transform:translateY(-2px)}
+.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.55);backdrop-filter:blur(3px)}
+.btn-ghost:hover{background:#fff;color:var(--wine);transform:translateY(-2px)}
+/* hero location button — exactly like Palacio de la Concepción: jumping pin + underlined uppercase text + arrow */
+.maploc{display:inline-flex;align-items:center;gap:9px;margin:24px 0 30px;color:#fff;
+  font-family:'Jost',sans-serif;font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  text-shadow:0 1px 2px rgba(0,0,0,.7),0 1px 8px rgba(0,0,0,.5);transition:color .35s ease}
+.maploc:hover{color:#f0d9a8}
+.maploc .maploc-txt{border-bottom:1px solid rgba(255,255,255,.45);padding-bottom:2px;transition:border-color .35s}
+.maploc:hover .maploc-txt{border-color:#f0d9a8}
+.maploc .pin{width:22px;height:22px;fill:var(--gold);flex:0 0 auto;transform-origin:50% 100%;
+  filter:drop-shadow(0 2px 3px rgba(0,0,0,.55));animation:pinJump 1.3s ease-in-out infinite}
+.maploc:hover .pin{fill:#fff}
+.maploc .arr{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto;transition:transform .35s}
+.maploc:hover .arr{transform:translateX(4px)}
+@keyframes pinJump{0%,55%,100%{transform:translateY(0) scale(1)}
+  18%{transform:translateY(-9px) scale(1.12)}
+  36%{transform:translateY(0) scale(.94,1.06)}
+  45%{transform:translateY(-3px) scale(1)}}
+@media(prefers-reduced-motion:reduce){.maploc .pin{animation:none}}
+/* trust line under buttons, clearly separated */
+.hero .trust{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;color:#f3e7d6;font-size:.74rem;
+  letter-spacing:.14em;text-transform:uppercase;opacity:.92}
+.hero .trust span{display:inline-flex;align-items:center}
+.hero .trust span+span:before{content:"";width:5px;height:5px;border-radius:50%;background:#c9954a;margin-right:14px}
+
+/* ---------- section base ---------- */
+section{position:relative}
+.pad{padding:clamp(70px,10vw,128px) 0}
+.kicker{font-size:clamp(1.9rem,3.6vw,3rem);margin:16px 0 0}
+.lede{font-size:1.06rem;color:#5c534d;max-width:60ch}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+/* parallax — JS drifts these on scroll (background slower than foreground); off when reduced motion */
+[data-px]{will-change:transform}
+@media(prefers-reduced-motion:reduce){[data-px]{transform:none!important}}
+
+/* ---------- split ---------- */
+.split{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(34px,5vw,76px);align-items:center}
+.split.rev .txt{order:2}
+.split .media{position:relative}
+.split .media .kbw{border-radius:6px;overflow:hidden;box-shadow:var(--shadow)}
+.split .media img{width:100%;height:100%;max-height:560px;object-fit:cover;border-radius:6px;display:block}
+/* "living" photos — slow ken-burns zoom in/out so every image feels alive */
+@keyframes kbIn{from{transform:scale(1.02)}to{transform:scale(1.14) translate(-1.8%,-1.4%)}}
+@keyframes kbOut{from{transform:scale(1.14) translate(1.8%,1.2%)}to{transform:scale(1.02)}}
+.kb{animation:kbIn 16s ease-in-out infinite alternate;will-change:transform;backface-visibility:hidden}
+.kb.kb2{animation-name:kbOut;animation-duration:19s}
+.kb.kb3{animation-duration:14s;animation-delay:-5s}
+@media(prefers-reduced-motion:reduce){.kb{animation:none}}
+.split .media .tag{position:absolute;background:var(--cream);color:var(--wine);padding:14px 20px;border-radius:5px;box-shadow:var(--shadow);font-family:'Cormorant Garamond',serif}
+.split .media .tag b{display:block;font-size:1.7rem;font-weight:600;line-height:1}
+.split .media .tag span{font-family:'Jost',sans-serif;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-d)}
+.split .media .tag.br{right:-22px;bottom:-22px;text-align:right}
+.split p+p{margin-top:16px}
+.sign{margin-top:26px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.45rem;color:var(--wine)}
+.sign small{display:block;font-family:'Jost',sans-serif;font-style:normal;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-d);margin-top:6px}
+@media(max-width:860px){.split{grid-template-columns:1fr}.split.rev .txt{order:0}.split .media .tag.br{right:14px;bottom:-18px}}
+
+/* ---------- quote band ---------- */
+.quote{background:var(--wine);color:#f3e7d6;text-align:center}
+.quote .wrap{max-width:880px}
+.quote p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1.32}
+.quote .lbl{color:#e9c77f;justify-content:center;margin-bottom:24px}
+.quote .lbl span:first-child{background:#c9954a}
+
+/* ---------- steps ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:54px}
+.step{position:relative;padding-top:26px;border-top:2px solid var(--line)}
+.step .n{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold-d);font-weight:600;letter-spacing:.1em}
+.step h3{font-size:1.5rem;margin:8px 0 8px}
+.step p{font-size:.96rem;color:#5c534d}
+@media(max-width:760px){.steps{grid-template-columns:1fr;gap:8px}.step{padding:22px 0;border-top:1px solid var(--line)}}
+
+/* ---------- cave band (full bleed dark, HER real cave photo) ---------- */
+.cave{position:relative;color:#fff;overflow:hidden}
+.cave .bg{position:absolute;inset:0;z-index:0}
+/* parallax layer: the PHOTO drifts, while the dark gradient (.bg:after) stays put so text contrast never changes */
+.cave .bg .px-layer{position:absolute;left:0;right:0;top:-12%;height:124%;will-change:transform}
+.cave .bg img{width:100%;height:100%;object-fit:cover}
+.cave .bg:after{content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(15,12,12,.9) 0%,rgba(15,12,12,.66) 46%,rgba(15,12,12,.3) 100%)}
+.cave .inner{position:relative;z-index:2;max-width:600px}
+.cave h2{color:#fff;font-size:clamp(2rem,4vw,3.1rem)}
+.cave .lbl{color:#e9c77f;margin-bottom:20px}
+.cave .lbl span:first-child{background:#c9954a}
+.cave p{margin-top:18px;opacity:.94;font-weight:300;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+.cave .facts{display:flex;gap:40px;margin-top:36px;flex-wrap:wrap}
+.cave .facts b{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;color:#f0d9a8;display:block;line-height:1}
+.cave .facts span{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85}
+
+/* ---------- products ---------- */
+.prods{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:56px}
+.pcard{background:var(--cream);border-radius:7px;overflow:hidden;box-shadow:0 14px 40px -26px rgba(33,29,27,.5);transition:.4s}
+.pcard:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.pcard .ph{aspect-ratio:4/3;overflow:hidden;background:#161311}
+.pcard .ph img{width:100%;height:100%;object-fit:cover;transition:.7s}
+.pcard:hover .ph img{transform:scale(1.06)}
+.pcard .body{padding:26px 24px 30px}
+.pcard .k{font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-d)}
+.pcard h3{font-size:1.62rem;margin:8px 0 10px}
+.pcard p{font-size:.94rem;color:#5c534d}
+@media(max-width:820px){.prods{grid-template-columns:1fr;max-width:430px;margin-inline:auto}}
+
+/* ---------- order CTA (wine panel) ---------- */
+.order{background:linear-gradient(135deg,var(--wine) 0%,var(--wine-d) 100%);color:#f3e7d6;border-radius:10px;padding:clamp(40px,6vw,72px);text-align:center;box-shadow:var(--shadow)}
+.order h2{color:#fff;font-size:clamp(2rem,4vw,3rem);max-width:18ch;margin-inline:auto}
+.order p{margin:18px auto 0;max-width:52ch;opacity:.92;font-weight:300}
+.order .lbl{color:#e9c77f;justify-content:center;margin-bottom:22px}
+.order .lbl span:first-child{background:#c9954a}
+.order .cta-row{justify-content:center;margin-top:34px}
+.order .btn-ghost{border-color:rgba(255,255,255,.6)}
+.order .btn-ghost:hover{background:#fff;color:var(--wine)}
+.order .nums{margin-top:26px;font-size:.92rem;letter-spacing:.05em;opacity:.9}
+.order .nums a{border-bottom:1px solid rgba(240,217,168,.5)}
+
+/* ---------- visit (green panel) ---------- */
+.visit{background:var(--green);color:#ede6d6;overflow:hidden;position:relative}
+.visit .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:center}
+.visit h2{color:#fff;font-size:clamp(2rem,4vw,3rem)}
+.visit .lbl{color:#e9c77f;margin-bottom:18px}
+.visit .lbl span:first-child{background:#c9954a}
+.visit p{margin-top:16px;opacity:.92;font-weight:300}
+.visit ul{list-style:none;margin-top:26px;display:grid;gap:14px}
+.visit li{display:flex;gap:14px;align-items:flex-start;font-size:.97rem}
+.visit li svg{flex:0 0 auto;margin-top:3px}
+.visit .media .kbw{border-radius:7px;overflow:hidden;box-shadow:var(--shadow)}
+.visit .media img{width:100%;height:100%;max-height:520px;object-fit:cover;border-radius:7px;display:block}
+.visit .pueblo{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);padding:10px 18px;border-radius:40px;font-size:.82rem;letter-spacing:.04em}
+.visit .pueblo b{color:#f0d9a8}
+@media(max-width:860px){.visit .grid{grid-template-columns:1fr}.visit .media{order:-1}}
+
+/* ---------- location ---------- */
+.loc .grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:10px;overflow:hidden;box-shadow:var(--shadow)}
+.loc .info{background:var(--cream);padding:clamp(34px,4vw,56px)}
+.loc .info h2{font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:8px}
+.loc .rows{margin-top:26px;display:grid;gap:20px}
+.loc .r{display:flex;gap:16px;align-items:flex-start}
+.loc .r svg{flex:0 0 auto;margin-top:2px;color:var(--gold-d)}
+.loc .r b{font-family:'Jost';font-weight:600;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-d);display:block;margin-bottom:3px}
+.loc .r a,.loc .r span{font-size:1rem;color:var(--ink)}
+.loc .r a{display:block}
+.loc .map{min-height:420px;background:#ddd}
+.loc .map iframe{width:100%;height:100%;border:0;display:block;min-height:420px}
+@media(max-width:860px){.loc .grid{grid-template-columns:1fr}}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:#cdbfae;padding:60px 0 38px}
+footer .top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:30px}
+footer .brand{color:#fff}
+footer .brand small{color:var(--gold)}
+footer .fnav{display:flex;gap:26px;flex-wrap:wrap;font-size:.86rem}
+footer .fnav a:hover{color:var(--gold)}
+footer .bot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:24px;font-size:.76rem;opacity:.7}
+.concept{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+
+/* ---------- floating contact ---------- */
+.wa-fab{position:fixed;right:22px;bottom:22px;z-index:80;width:60px;height:60px;border-radius:50%;
+  background:#25D366;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 12px 30px -8px rgba(37,211,102,.7);transition:.3s;animation:pop 5s ease-in-out infinite}
+.wa-fab:hover{transform:scale(1.08)}
+.wa-fab svg{width:32px;height:32px}
+@keyframes pop{0%,90%,100%{transform:scale(1)}94%{transform:scale(1.1)}}
+.wa-fab .tip{position:absolute;right:72px;background:var(--ink);color:#fff;padding:8px 14px;border-radius:8px;font-size:.8rem;white-space:nowrap;opacity:0;pointer-events:none;transition:.3s;box-shadow:var(--shadow)}
+.wa-fab:hover .tip{opacity:1}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr" id="hdr">
+  <div class="wrap row">
+    <a href="#" class="brand">Dionisia López<small>Quesería · Sotres</small></a>
+    <nav class="nav">
+      <a href="#quesera">La quesería</a>
+      <a href="#elaboracion">Elaboración</a>
+      <a href="#cueva">La cueva</a>
+      <a href="#quesos">El queso</a>
+      <a href="#visita">Visítanos</a>
+      <a href="#contacto" class="btn">Encargar queso</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menú" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#quesera">La quesería</a>
+  <a href="#elaboracion">Elaboración</a>
+  <a href="#cueva">La cueva</a>
+  <a href="#quesos">El queso</a>
+  <a href="#visita">Visítanos</a>
+  <a class="mm-cta" href="#contacto">Encargar queso</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="bg">
+    <div class="slide active s-vid">
+      <video class="hero-clip" autoplay muted loop playsinline preload="auto" poster="assets/site/vacas.jpg"><source src="assets/site/vacas.mp4" type="video/mp4"></video>
+    </div>
+    <div class="slide"><img src="assets/site/cueva-hero.jpg" alt="Cueva natural de maduración del Queso de Cabrales, con sus quesos sobre tablas de madera a la luz de un farol"></div>
+    <div class="slide"><img class="im-cut" src="assets/site/cabrales-azul.jpg" alt="Cuña de Queso de Cabrales D.O.P. con su veta azul, listo para la mesa"></div>
+    <video class="fog-vid" autoplay muted loop playsinline preload="auto"><source src="assets/site/fog2.mp4" type="video/mp4"></video>
+  </div>
+  <div class="scrim"></div>
+  <div class="fog"></div>
+  <div class="wrap inner">
+    <div class="hero-marks">
+      <img class="mark mk-seal" src="assets/site/seal.png" alt="Sello de la Quesería Dionisia López · Cabrales D.O.P. de Sotres">
+      <img class="mark mk-award" src="assets/site/award.png" alt="Primer Premio Queso de Cabrales 2012">
+    </div>
+    <div class="lbl"><span></span><span>Quesería Dionisia López · D.O.P. Cabrales</span></div>
+    <h1>El auténtico Queso de Cabrales, hecho a mano</h1>
+    <p class="lead">Leche cruda, elaboración artesana y maduración en cueva natural. En Sotres, el pueblo más alto de los Picos de Europa.</p>
+    <a href="#ubicacion" class="maploc" aria-label="Ver en el mapa cómo llegar a la quesería en Sotres, Cabrales">
+      <svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+      <span class="maploc-txt">Cómo llegar · Sotres</span>
+      <svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+    </a>
+    <div class="cta-row">
+      <a href="#contacto" class="btn-main btn-gold">Encargar queso
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#visita" class="btn-main btn-ghost">Visitar la quesería</a>
+    </div>
+    <div class="trust"><span>D.O.P. Cabrales</span><span>Primer Premio 2012</span><span>Venta directa &amp; envíos</span></div>
+  </div>
+</section>
+
+<!-- ============ QUOTE ============ -->
+<section class="quote pad">
+  <div class="wrap">
+    <div class="lbl"><span></span><span>Desde Sotres</span><span></span></div>
+    <p>«Aquí el queso se hace despacio: leche de nuestra tierra, las manos de siempre y una cueva que hace el resto. No hay atajos en el Cabrales.»</p>
+  </div>
+</section>
+
+<!-- ============ LA QUESERÍA ============ -->
+<section class="pad" id="quesera">
+  <div class="wrap split reveal">
+    <div class="txt">
+      <div class="lbl"><span></span><span>La quesería</span></div>
+      <h2 class="kicker">Una familia quesera en lo más alto de Asturias</h2>
+      <p class="lede" style="margin-top:22px">En Sotres, a más de 1.000 metros entre las cumbres de los Picos de Europa, la <b>Quesería Dionisia López</b> elabora Queso de Cabrales como se ha hecho durante generaciones: con leche cruda de la zona, cuajado lento y maduración en cueva de montaña.</p>
+      <p class="lede">Cada queso lleva el trabajo de toda una familia y el sabor inconfundible de una tierra única en el mundo. Un Cabrales con nombre y apellido, no de fábrica.</p>
+      <div class="sign">Quesería Dionisia López
+        <small>Sotres · Concejo de Cabrales</small>
+      </div>
+    </div>
+    <div class="media" data-px="0.06">
+      <div class="kbw"><img class="kb" src="assets/site/quesera.jpg" alt="Cuidando las vacas de leche en los pastos de Sotres, Picos de Europa"></div>
+      <div class="tag br"><b>1.000 m</b><span>Sotres, Picos de Europa</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ELABORACIÓN ============ -->
+<section class="pad" id="elaboracion" style="background:var(--cream)">
+  <div class="wrap split rev reveal">
+    <div class="txt">
+      <div class="lbl"><span></span><span>Elaboración</span></div>
+      <h2 class="kicker">De la leche cruda al molde, sin prisa</h2>
+      <p class="lede" style="margin-top:22px">Trabajamos la leche cruda recién ordeñada en la propia quesería. Se cuaja, se corta y se llena el molde a mano, pieza a pieza. Después, cada queso reposa, se sala y escurre antes de bajar a la cueva.</p>
+      <div class="steps">
+        <div class="step"><div class="n">01</div><h3>Leche cruda</h3><p>Mezcla de vaca, cabra y oveja de la zona, sin pasteurizar, para conservar todo el sabor.</p></div>
+        <div class="step"><div class="n">02</div><h3>Cuajado y molde</h3><p>Cuajado lento y llenado del molde a mano, uno a uno, sin maquinaria de serie.</p></div>
+        <div class="step"><div class="n">03</div><h3>A la cueva</h3><p>Tras salar y escurrir, el queso baja a madurar a la cueva natural de montaña.</p></div>
+      </div>
+    </div>
+    <div class="media" data-px="0.06">
+      <div class="kbw"><img class="kb kb2" src="assets/site/taller.jpg" alt="Elaboración del Cabrales: leche cruda y moldes en la quesería"></div>
+      <div class="tag br"><b>A mano</b><span>Pieza a pieza</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LA CUEVA (HER real cave photo) ============ -->
+<section class="cave" id="cueva">
+  <div class="bg"><div class="px-layer" data-px="0.09"><img class="kb kb3" src="assets/site/cueva.jpg" alt="Cueva natural de maduración del Cabrales"></div></div>
+  <div class="wrap pad inner">
+    <div class="lbl"><span></span><span>La cueva</span></div>
+    <h2>El secreto está bajo la montaña</h2>
+    <p>Lo que hace único al Cabrales no se compra: es la <b>cueva natural</b>. En su oscuridad húmeda y fría, el aire de la montaña deja crecer el característico veteado azul-verdoso del queso, despacio, durante meses.</p>
+    <p>Bajamos cada pieza a la cueva y la cuidamos a mano, volteándola y vigilándola hasta su punto justo. Ninguna cámara industrial puede imitar lo que hace esta montaña.</p>
+    <div class="facts">
+      <div><b>≈ 90%</b><span>Humedad natural</span></div>
+      <div><b>Meses</b><span>de maduración en cueva</span></div>
+      <div><b>Azul natural</b><span>sin añadidos</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EL QUESO ============ -->
+<section class="pad" id="quesos">
+  <div class="wrap" style="text-align:center">
+    <div class="lbl eyebrow-c"><span></span><span>El queso</span><span></span></div>
+    <h2 class="kicker">Cabrales de Sotres, listo para tu mesa</h2>
+    <p class="lede" style="margin:16px auto 0">Queso con Denominación de Origen Protegida, vendido directamente desde la quesería. Sin intermediarios: del productor a tu casa.</p>
+  </div>
+  <div class="wrap prods reveal">
+    <div class="pcard">
+      <div class="ph"><img class="kb" src="assets/site/prod-masymas.jpg" alt="Pieza de Queso de Cabrales D.O.P. con su etiqueta"></div>
+      <div class="body">
+        <div class="k">Pieza entera</div>
+        <h3>Queso de Cabrales D.O.P.</h3>
+        <p>La pieza completa, envuelta y certificada con la D.O.P. Cabrales. Intenso, cremoso y con el veteado azul natural de la cueva.</p>
+      </div>
+    </div>
+    <div class="pcard">
+      <div class="ph"><img class="kb kb2" src="assets/site/cabrales-azul.jpg" alt="Interior del queso de Cabrales, veteado azul"></div>
+      <div class="body">
+        <div class="k">Al corte</div>
+        <h3>Sabor intenso, vetas azules</h3>
+        <p>Por dentro, una pasta untuosa surcada de vetas azul-verdosas: potente y persistente, perfecta para tabla, sidra o salsas.</p>
+      </div>
+    </div>
+    <div class="pcard">
+      <div class="ph"><img class="kb kb3" src="assets/site/cuajada.jpg" alt="Queso fresco recién cuajado en el molde"></div>
+      <div class="body">
+        <div class="k">Artesano</div>
+        <h3>Hecho aquí, a mano</h3>
+        <p>De la leche cruda al molde en la propia quesería. Producción limitada y cuidada, no de cadena industrial.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ORDER CTA ============ -->
+<section class="pad" id="contacto" style="background:var(--paper);padding-top:0">
+  <div class="wrap">
+    <div class="order reveal">
+      <div class="lbl eyebrow-c"><span></span><span>Venta directa</span><span></span></div>
+      <h2>Encarga tu queso de Cabrales directamente</h2>
+      <p>Escríbenos o llámanos y te preparamos tu pieza. Envío a toda España con transporte refrigerado para que llegue en su punto. Pregúntanos también por encargos para tienda, restaurante o regalo.</p>
+      <div class="cta-row">
+        <a href="https://wa.me/34678020107?text=Hola%2C%20me%20gustar%C3%ADa%20encargar%20queso%20de%20Cabrales" class="btn-main btn-gold" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+        <a href="tel:+34678020107" class="btn-main btn-ghost">Llamar ahora</a>
+      </div>
+      <div class="nums">
+        Tel. <a href="tel:+34985945031">985 94 50 31</a> · <a href="tel:+34678020107">678 02 01 07</a> · <a href="tel:+34673456597">673 45 65 97</a><br>
+        <a href="mailto:dionisialopezsanchez@hotmail.com">dionisialopezsanchez@hotmail.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISIT ============ -->
+<section class="visit pad" id="visita">
+  <div class="wrap grid">
+    <div class="txt">
+      <div class="lbl"><span></span><span>Visítanos</span></div>
+      <h2>Ven a conocer Sotres y la quesería</h2>
+      <p>Sotres es el pueblo más alto de Asturias y una de las puertas de los Picos de Europa: senderismo, el mítico Naranjo de Bulnes y la verdadera ruta del queso. Acércate a la quesería, conoce cómo se hace el Cabrales y llévate el tuyo recién sacado de la cueva.</p>
+      <ul>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e9c77f" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Compra de queso directamente en el pueblo, recién madurado.</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e9c77f" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Descubre el oficio quesero tradicional de los Picos de Europa.</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e9c77f" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Punto de partida para rutas, miradores y naturaleza.</li>
+      </ul>
+      <div class="pueblo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#f0d9a8"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1L12 16.6 5.7 21l2.3-7.1-6-4.5h7.6z"/></svg>
+        Sotres · <b>Pueblo Ejemplar de Asturias 2024</b>
+      </div>
+    </div>
+    <div class="media" data-px="0.05">
+      <div class="kbw"><img class="kb" src="assets/site/sotres-pano.jpg" alt="Sotres, en los Picos de Europa"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section class="pad loc" id="ubicacion">
+  <div class="wrap">
+    <div class="lbl"><span></span><span>Dónde estamos</span></div>
+    <h2 class="kicker" style="margin-bottom:30px">En Sotres, concejo de Cabrales</h2>
+    <div class="grid">
+      <div class="info">
+        <h2>Quesería Dionisia López</h2>
+        <p style="color:#5c534d">Venta de Queso de Cabrales D.O.P. · Producción artesana</p>
+        <div class="rows">
+          <div class="r">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><b>Dirección</b><span>Lugar Sotres, 116 · 33554 Sotres (Cabrales), Asturias</span></div>
+          </div>
+          <div class="r">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.2-1.1a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg>
+            <div><b>Teléfono</b>
+              <a href="tel:+34985945031">985 94 50 31</a>
+              <a href="tel:+34678020107">678 02 01 07</a>
+              <a href="tel:+34673456597">673 45 65 97</a>
+            </div>
+          </div>
+          <div class="r">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+            <div><b>Correo</b><a href="mailto:dionisialopezsanchez@hotmail.com">dionisialopezsanchez@hotmail.com</a></div>
+          </div>
+        </div>
+        <a href="https://wa.me/34678020107?text=Hola%2C%20me%20gustar%C3%ADa%20encargar%20queso%20de%20Cabrales" class="btn-main btn-gold" style="margin-top:30px" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      </div>
+      <div class="map">
+        <iframe src="https://www.google.com/maps?q=Queser%C3%ADa%20Dionisia%20L%C3%B3pez%20Sotres%20Cabrales&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa Quesería Dionisia López, Sotres"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a href="#" class="brand">Dionisia López<small>Quesería · Sotres · D.O.P. Cabrales</small></a>
+      <nav class="fnav">
+        <a href="#quesera">La quesería</a>
+        <a href="#elaboracion">Elaboración</a>
+        <a href="#cueva">La cueva</a>
+        <a href="#quesos">El queso</a>
+        <a href="#visita">Visítanos</a>
+        <a href="#contacto">Encargar</a>
+      </nav>
+    </div>
+    <div class="bot">
+      <span>© Quesería Dionisia López · Sotres (Cabrales), Asturias · Queso de Cabrales D.O.P.</span>
+      <span class="concept">Concepto de diseño · Propuesta</span>
+    </div>
+  </div>
+</footer>
+
+<!-- floating WhatsApp -->
+<a class="wa-fab" href="https://wa.me/34678020107?text=Hola%2C%20me%20gustar%C3%ADa%20encargar%20queso%20de%20Cabrales" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <span class="tip">Encarga tu queso</span>
+  <svg viewBox="0 0 32 32" fill="#fff"><path d="M16 .4C7.4.4.5 7.3.5 15.9c0 2.8.7 5.5 2.1 7.9L.3 31.6l8-2.1c2.3 1.3 4.9 1.9 7.6 1.9 8.6 0 15.5-6.9 15.5-15.5S24.6.4 16 .4zm0 28.3c-2.4 0-4.7-.6-6.7-1.8l-.5-.3-4.8 1.3 1.3-4.7-.3-.5a12.7 12.7 0 01-2-6.8C2.3 8.4 8.4 2.3 16 2.3S29.7 8.4 29.7 16 23.6 28.7 16 28.7zm7.5-9.5c-.4-.2-2.4-1.2-2.8-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.3 1.6-.2.3-.5.3-.9.1-.4-.2-1.7-.6-3.3-2-1.2-1.1-2-2.4-2.3-2.8-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.3-.4.4-.7.1-.3 0-.5 0-.7-.1-.2-.9-2.2-1.2-3-.3-.8-.6-.7-.9-.7h-.8c-.3 0-.7.1-1 .5-.4.4-1.4 1.3-1.4 3.3s1.4 3.8 1.6 4.1c.2.3 2.8 4.3 6.8 6 .9.4 1.7.6 2.3.8 1 .3 1.8.3 2.5.2.8-.1 2.4-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.2-.3-.3-.7-.5z"/></svg>
+</a>
+
+<script src="assets/js/lenis.min.js"></script>
+<script>
+// header solidify
+const hdr=document.getElementById('hdr');
+let lenis=null; // Lenis smooth-scroll instance, created below if the library loaded
+addEventListener('scroll',()=>{hdr.classList.toggle('solid',scrollY>60)});
+// sandwich (burger) mobile menu — same pattern as the other projects
+const burger=document.getElementById('burger');
+const mm=document.getElementById('mobileMenu');
+if(burger&&mm){
+  const setMenu=(open)=>{
+    burger.classList.toggle('open',open);
+    mm.classList.toggle('open',open);
+    burger.setAttribute('aria-expanded',open?'true':'false');
+    mm.setAttribute('aria-hidden',open?'false':'true');
+    document.body.classList.toggle('menu-open',open);
+    document.body.style.overflow=open?'hidden':'';
+    if(lenis){open?lenis.stop():lenis.start();}
+  };
+  burger.addEventListener('click',()=>setMenu(!mm.classList.contains('open')));
+  mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false);});
+}
+// hero slideshow — 3 slides (cow video → aging cave → cheese cut), cross-fade + receding zoom, fog roll on each swap.
+const hero=document.querySelector('.hero');
+const slides=[...document.querySelectorAll('.hero .slide')];
+const clear=[2500,3200,3000];   // dwell per slide before the fog rolls in: cow video, cave (let the wow breathe), cheese cut
+const FOG_DUR=2600, PEAK=1050;  // fog length; swap the slide at the fog's peak so the change is hidden inside the mist
+let si=0;
+// The cow clip is a one-shot FORWARD clip (~7s, not loop-friendly: start≠end). To avoid any visible loop
+// artefact (hard-cut jump / crossfade ghost / reverse), we never let its loop-point show: each time the cow
+// slide becomes active it is reset to frame 0 WHILE hidden by the dense fog, and it's longer than the cow is
+// ever on screen — so the cow always plays clean forward and its end is never seen.
+function kickVideos(){document.querySelectorAll('.hero video').forEach(v=>{try{const p=v.play();if(p&&p.catch)p.catch(()=>{});}catch(e){}});}
+kickVideos();
+function showSlide(){
+  // slide `si` is active and sharp — after its clear time, roll the fog in and swap underneath it
+  setTimeout(()=>{
+    hero.classList.remove('swapping');void hero.offsetWidth;hero.classList.add('swapping');
+    setTimeout(()=>{
+      slides[si].classList.remove('active');
+      si=(si+1)%slides.length;
+      slides[si].classList.add('active');
+      // if the cow-video slide is the one we just revealed, restart it from frame 0 now — it's hidden under
+      // the dense fog at this instant, so the reset is invisible and the cow always plays clean from the start
+      const vid=slides[si].querySelector('video.hero-clip');
+      if(vid){try{vid.currentTime=0;const p=vid.play();if(p&&p.catch)p.catch(()=>{});}catch(e){}}
+      setTimeout(showSlide,FOG_DUR-PEAK); // let the fog finish clearing, then begin the next slide's sharp time
+    },PEAK);
+  },clear[si]);
+}
+showSlide();
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.16});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// ===== Lenis smooth scroll + parallax =====
+const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const heroBg=document.querySelector('.hero .bg');
+const pxEls=[...document.querySelectorAll('[data-px]')];
+function applyParallax(){
+  // hero background drifts slower than the page (gap-free: the exposed top edge is already scrolled off-screen)
+  if(heroBg) heroBg.style.transform='translate3d(0,'+(scrollY*0.16).toFixed(1)+'px,0)';
+  const mid=innerHeight/2;
+  for(const el of pxEls){
+    const sp=parseFloat(el.dataset.px)||0;
+    const r=el.getBoundingClientRect();
+    const off=(r.top+r.height/2)-mid;            // how far the element's centre is from the screen centre
+    el.style.transform='translate3d(0,'+(-off*sp).toFixed(1)+'px,0)';  // background moves opposite & slower
+  }
+}
+if(!reduceMotion){
+  if(window.Lenis){
+    lenis=new Lenis({duration:1.1, easing:t=>Math.min(1,1.001-Math.pow(2,-10*t)), smoothWheel:true, touchMultiplier:1.6});
+    window.lenis=lenis;
+    // anchor links scroll smoothly through Lenis, offset for the fixed header
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const href=a.getAttribute('href');
+        if(href.length>1){const t=document.querySelector(href); if(t){e.preventDefault(); lenis.scrollTo(t,{offset:-70});}}
+      });
+    });
+    function raf(time){ lenis.raf(time); applyParallax(); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+  }else{
+    // no Lenis (offline / load fail): parallax still runs on native scroll, native smooth-scroll handles anchors
+    addEventListener('scroll',()=>requestAnimationFrame(applyParallax),{passive:true});
+  }
+  applyParallax();
+}
+</script>
+</body>
+</html>
