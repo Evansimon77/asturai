@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>AsturAi — AI Solutions Architect &amp; Developer · Automation &amp; Systems Engineer · remote worldwide</title>
-<meta name="description" content="AsturAi builds done-for-you AI and automation systems for businesses anywhere — AI assistants, WhatsApp &amp; Telegram bots, property valuation, CRM integration, AI video and websites. Evan D. Simon: AI solutions architect &amp; developer, automation &amp; systems engineer — freelance, based in Asturias, Spain, working fully remotely across Europe, the Americas and worldwide." />
+<title>AsturAi — Done-for-you AI for real-estate businesses · automation &amp; systems, remote worldwide</title>
+<meta name="description" content="AsturAi builds done-for-you AI for real-estate businesses — and any business losing hours to busywork: AI assistants, WhatsApp &amp; Telegram bots, property valuation, CRM integration, AI video and websites. Evan D. Simon: AI solutions architect &amp; developer, automation &amp; systems engineer — freelance, based in Asturias, Spain, working fully remotely across Europe, the Americas and worldwide." />
 <meta name="keywords" content="AI solutions architect, AI developer, automation engineer, systems engineer, freelance AI developer, remote AI developer, hire AI developer, AI consultant, AI assistant developer, WhatsApp AI bot, Telegram bot developer, workflow automation, system integration, property valuation tool, CRM integration, AI video reels, AI search visibility, done-for-you AI, AI for business Spain Europe Americas worldwide" />
 <meta name="author" content="Evan D. Simon — AsturAi" />
 <link rel="canonical" href="https://asturai.com/" />
@@ -13,7 +13,7 @@
 <!-- Open Graph / social -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="AsturAi" />
-<meta property="og:title" content="AsturAi — AI Solutions Architect &amp; Developer · Automation &amp; Systems Engineer · remote worldwide" />
+<meta property="og:title" content="AsturAi — Done-for-you AI for real-estate businesses · remote, worldwide" />
 <meta property="og:description" content="AI assistants, WhatsApp &amp; Telegram bots, property valuation, CRM integration, AI video and websites — built for you and kept running. Freelance, fully remote: based in Asturias, working worldwide." />
 <meta property="og:url" content="https://asturai.com/" />
 <meta property="og:locale" content="en_GB" />
@@ -23,7 +23,7 @@
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="AsturAi — done-for-you AI systems for business" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="AsturAi — Done-for-you AI systems for business" />
+<meta name="twitter:title" content="AsturAi — Done-for-you AI for real-estate businesses" />
 <meta name="twitter:description" content="AI assistants, bots, valuation tools, AI video and websites — built for you and kept running. Freelance, fully remote — worldwide." />
 <meta name="twitter:image" content="https://asturai.com/assets/og-cover.jpg" />
 
@@ -246,6 +246,17 @@ h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:.98;letter-spacing
   background:linear-gradient(180deg,var(--gold),transparent);animation:cue 2.4s var(--ease) infinite}
 @keyframes cue{0%{transform:scaleY(0);transform-origin:top}40%{transform:scaleY(1);transform-origin:top}
   60%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+/* hero brand scene: octopus emerging from deep water (reuses brand art, no photo) */
+.hero-scene{background:radial-gradient(125% 110% at 72% 26%,#12365c 0%,#0c2645 40%,#08152a 72%,#060d1a 100%)}
+.hero-octo{position:absolute;z-index:1;right:clamp(-60px,-2vw,0px);top:50%;
+  width:min(60vw,780px);height:auto;pointer-events:none;
+  filter:saturate(.94) drop-shadow(0 40px 80px rgba(0,0,0,.55));
+  -webkit-mask-image:radial-gradient(115% 120% at 62% 46%,#000 58%,transparent 100%);
+          mask-image:radial-gradient(115% 120% at 62% 46%,#000 58%,transparent 100%);
+  animation:octofloat 7.5s ease-in-out infinite alternate}
+@keyframes octofloat{from{transform:translateY(-54%)}to{transform:translateY(-48%)}}
+@media(max-width:760px){.hero-octo{width:128vw;right:-34vw;top:40%;opacity:.42}}
+@media(prefers-reduced-motion:reduce){.hero-octo{animation:none;transform:translateY(-50%)}}
 
 /* ============ STRIP (marquee trust band) ============ */
 .strip{position:relative;z-index:5;background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:20px 0}
@@ -281,6 +292,13 @@ h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:.98;letter-spacing
 .svc p{color:var(--cream-dim);font-size:.96rem;line-height:1.6}
 .svc::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:linear-gradient(90deg,var(--gold),transparent);transition:width .6s var(--ease)}
 .svc:hover::after{width:100%}
+/* family grouping */
+.svc-group{margin-bottom:clamp(44px,5.5vh,76px)}
+.svc-group:last-child{margin-bottom:0}
+.svc-fam{display:flex;align-items:baseline;gap:14px 24px;flex-wrap:wrap;margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.svc-fam .ft{font-family:var(--serif);font-weight:300;font-size:clamp(1.45rem,2.7vw,2.1rem);line-height:1;letter-spacing:-.012em;color:var(--cream)}
+.svc-fam .fd{font-family:var(--sans);font-weight:300;font-size:clamp(.86rem,1.2vw,.96rem);color:var(--cream-dim);margin-left:auto;max-width:46ch}
+@media(max-width:680px){.svc-fam .fd{margin-left:0;flex-basis:100%}}
 @media(max-width:980px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.svc-grid{grid-template-columns:1fr}.svc{min-height:auto}}
 
@@ -467,7 +485,7 @@ body.intro-lock{overflow:hidden}
       <button data-lang="en" aria-label="English">EN</button>
       <button data-lang="es" aria-label="Español">ES</button>
     </div>
-    <a href="#contact" class="nav-cta"><span data-i18n="nav.cta">Talk to me</span></a>
+    <a href="#contact" class="nav-cta"><span data-i18n="nav.cta">Free first look</span></a>
   </div>
 </header>
 
@@ -475,20 +493,19 @@ body.intro-lock{overflow:hidden}
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="hero">
-  <div class="scene-img" id="heroImg" aria-hidden="true">
-    <img src="/assets/office-stand.jpg" alt="" fetchpriority="high" width="1920" height="1280" />
-  </div>
+  <div class="scene-img hero-scene" id="heroImg" aria-hidden="true"></div>
+  <img class="hero-octo" src="/assets/descent/octopus.webp" alt="" fetchpriority="high" width="1100" height="854" aria-hidden="true" />
   <div class="scrim deep"></div>
   <div class="scrim bottom"></div>
   <div class="leak" aria-hidden="true"></div>
   <div class="vig"></div>
   <div class="hero-inner">
-    <div class="hero-eyebrow"><span class="eyebrow" data-i18n="hero.eyebrow">AI Solutions Architect &amp; Developer · Automation &amp; Systems Engineer</span></div>
+    <div class="hero-eyebrow"><span class="eyebrow" data-i18n="hero.eyebrow">Done-for-you AI for real estate</span></div>
     <h1 data-hero-title data-i18n="hero.title">Put the boring work of your business on <span class='gold'>autopilot</span>.</h1>
     <div class="hero-bottom">
-      <p class="hero-lead reveal" data-i18n="hero.lead">I'm Evan — an AI solutions architect and developer who designs, builds and runs done-for-you AI and automation systems for businesses anywhere.</p>
+      <p class="hero-lead reveal" data-i18n="hero.lead">Done-for-you AI for real-estate businesses — and any business losing hours to busywork. I build it, run it and keep it working for you. Fully remote, worldwide.</p>
       <div class="hero-ctas reveal">
-        <a href="#contact" class="btn btn-gold" data-i18n="hero.cta1">Talk to me</a>
+        <a href="#contact" class="btn btn-gold" data-i18n="hero.cta1">Free first look</a>
         <a href="#work" class="btn btn-ghost" data-i18n="hero.cta2">See my work</a>
       </div>
     </div>
@@ -516,15 +533,9 @@ body.intro-lock{overflow:hidden}
   </div>
   <div class="wrap">
     <div class="svc-grid">
-      <article class="svc reveal"><div class="num">01</div><h3 data-i18n="s1t">AI back-office systems</h3><p data-i18n="s1p">A tailored AI system that quietly runs the repetitive admin of your business.</p></article>
-      <article class="svc reveal"><div class="num">02</div><h3 data-i18n="s2t">AI assistants that know your business</h3><p data-i18n="s2p">Chat and hands-free voice assistants in Spanish, English and Russian.</p></article>
-      <article class="svc reveal"><div class="num">03</div><h3 data-i18n="s3t">Private "ask your documents" AI</h3><p data-i18n="s3p">Ask questions about your own files and get answers with the exact page.</p></article>
-      <article class="svc reveal"><div class="num">04</div><h3 data-i18n="s4t">WhatsApp &amp; Telegram bots</h3><p data-i18n="s4p">AI bots that read, route, match, moderate and book — on your real number.</p></article>
-      <article class="svc reveal"><div class="num">05</div><h3 data-i18n="s5t">Property valuation tools</h3><p data-i18n="s5p">Honest market-value tools built on Spain's official Catastro registry.</p></article>
-      <article class="svc reveal"><div class="num">06</div><h3 data-i18n="s6t">CRM, email &amp; calendar integration</h3><p data-i18n="s6p">I connect the tools you already use so records fill themselves in.</p></article>
-      <article class="svc reveal"><div class="num">07</div><h3 data-i18n="s7t">Get found by AI search</h3><p data-i18n="s7p">I check whether ChatGPT, Gemini and Claude recommend your business.</p></article>
-      <article class="svc reveal"><div class="num">08</div><h3 data-i18n="s8t">AI video &amp; social reels</h3><p data-i18n="s8p">A handful of photos become polished vertical reels in three languages.</p></article>
-      <article class="svc reveal"><div class="num">09</div><h3 data-i18n="s9t">Websites &amp; brand identity</h3><p data-i18n="s9p">High-craft bilingual websites with no templates, plus full brand identities.</p></article>
+      <article class="svc reveal"><div class="num">01</div><h3 data-i18n="services.fam1">Assistants and bots</h3><p data-i18n="services.fam1p">AI that talks, reads and replies for you — chat &amp; voice assistants that know your business, private "ask-your-documents" AI, and WhatsApp &amp; Telegram bots on your real number.</p></article>
+      <article class="svc reveal"><div class="num">02</div><h3 data-i18n="services.fam2">Automation and data</h3><p data-i18n="services.fam2p">The busywork and records, handled in the background — AI back-office systems, CRM, email &amp; calendar integration, and honest property valuation.</p></article>
+      <article class="svc reveal"><div class="num">03</div><h3 data-i18n="services.fam3">Visibility and media</h3><p data-i18n="services.fam3p">Get found, get seen, look the part — AI-search visibility, multilingual video reels, and high-craft websites &amp; brand identity.</p></article>
     </div>
   </div>
 </section>
@@ -661,6 +672,18 @@ body.intro-lock{overflow:hidden}
         </div>
       </article>
 
+      <!-- 9 Barbería L'Arena — live client website -->
+      <article class="wcard c12 reveal" style="min-height:320px">
+        <a class="full" href="https://barberia-larena-gijon.netlify.app" target="_blank" rel="noopener" aria-label="Barbería L'Arena — view the live site"></a>
+        <div class="bg"><img src="/assets/larena.webp" alt="Barbería L'Arena, a barbershop in Gijón — live one-page website" loading="lazy" /></div>
+        <div class="wtop"><span class="wk" data-i18n="work.p9k">Website design</span><span class="tag live" data-i18n="work.tag.live">Live</span></div>
+        <div class="wc-in">
+          <h3 data-i18n="work.p9t">Barbería L'Arena</h3>
+          <p data-i18n="work.p9p">A premium one-page website for a Gijón barbershop — a full-storefront hero, online booking, services, gallery and loyalty card, in three languages.</p>
+          <span class="wcta" data-i18n="work.p9cta">View it live →</span>
+        </div>
+      </article>
+
       <!-- 8 AsturAi brand -->
       <article class="wcard c12 reveal solid" style="min-height:260px">
         <div class="wtop"><span class="wk" data-i18n="work.p8k">Brand identity</span><span class="tag" data-i18n="work.tag.case">Case study</span></div>
@@ -724,9 +747,10 @@ body.intro-lock{overflow:hidden}
     <h2 class="reveal" data-i18n="contact.title">Tell me one task that wastes your time.</h2>
     <p class="sub reveal" data-i18n="contact.sub">Pick one thing that eats your week — and I'll show you, with no commitment, how AI could take it off your plate. First conversation is free.</p>
     <div class="contact-ctas reveal">
-      <a href="https://wa.me/34613286809" target="_blank" rel="noopener" class="btn btn-gold btn-lg" data-i18n="contact.wa">WhatsApp me</a>
-      <a href="mailto:contact@asturai.com" class="btn btn-ghost btn-lg" data-i18n="contact.mail">Send an email</a>
+      <a href="https://wa.me/34613286809" target="_blank" rel="noopener" class="btn btn-gold btn-lg" data-i18n="contact.wa">Free first look on WhatsApp</a>
+      <a href="mailto:contact@asturai.com" class="btn btn-ghost btn-lg" data-i18n="contact.mail">Or send an email</a>
     </div>
+    <p class="reveal" style="margin-top:28px;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cream-faint)" data-i18n="contact.next">Usually a reply within a day · a short call · no pressure, no pitch</p>
   </div>
 </section>
 
@@ -750,11 +774,11 @@ body.intro-lock{overflow:hidden}
    ========================================================= */
 const STR = {
   en:{
-    "nav.services":"What I build","nav.work":"My work","nav.faq":"FAQ","nav.about":"About","nav.cta":"Talk to me",
-    "hero.eyebrow":"AI Solutions Architect &amp; Developer · Automation &amp; Systems Engineer",
+    "nav.services":"What I build","nav.work":"My work","nav.faq":"FAQ","nav.about":"About","nav.cta":"Free first look",
+    "hero.eyebrow":"Done-for-you AI for real estate",
     "hero.title":"Put the boring work of your business on <span class='gold'>autopilot</span>.",
-    "hero.lead":"I'm Evan — an AI solutions architect and developer who designs, builds and runs done-for-you AI and automation systems for businesses anywhere. Assistants that answer messages, read voice notes and emails, value properties, follow up with leads, make video, and more — so you spend less time on admin and more on what actually grows your business. I work fully remotely, so where you are doesn't matter.",
-    "hero.cta1":"Talk to me","hero.cta2":"See my work",
+    "hero.lead":"Done-for-you AI for real-estate businesses — assistants that answer WhatsApp, transcribe voice notes, value properties and follow up with leads. The same systems fit any business that loses hours to busywork. I build it, run it and keep it working for you — fully remote, so where you are doesn't matter.",
+    "hero.cta1":"Free first look","hero.cta2":"See my work",
     "strip.1":"<b>Done-for-you</b> — I build it, you use it",
     "strip.2":"<b>Plain language</b> — no jargon, ever",
     "strip.3":"<b>Private by design</b> — your data stays yours",
@@ -763,24 +787,12 @@ const STR = {
     "services.eyebrow":"What I build",
     "services.title":"Real AI that earns its keep.",
     "services.sub":"Everything here I've designed and built myself — and most of it is already running for real businesses. Pick the one that fits, or tell me your problem and I'll design the right mix.",
-    "s1t":"AI back-office systems",
-    "s1p":"A tailored AI system that quietly runs the repetitive admin of your business in the background — built around how you actually work, then maintained for you.",
-    "s2t":"AI assistants that know your business",
-    "s2p":"Chat and hands-free voice assistants in Spanish, English and Russian. They read your messages, files and emails, then answer or act — always with your approval first.",
-    "s3t":"Private \"ask your documents\" AI",
-    "s3p":"Ask questions about your own contracts, manuals or files and get answers with the exact page they came from — running on your own machine, so nothing ever leaves your business.",
-    "s4t":"WhatsApp &amp; Telegram bots",
-    "s4p":"AI bots that read messages and voice notes, route them, match people, moderate groups and handle bookings — on your real number, running on a real server, day and night.",
-    "s5t":"Property valuation tools",
-    "s5p":"Honest market-value tools built on Spain's official Catastro registry and live local market data — a real price range in seconds, with a client-ready report.",
-    "s6t":"CRM, email &amp; calendar integration",
-    "s6p":"I connect the tools you already use — your CRM, Gmail, calendar — so client records fill themselves in, reminders sync, and nobody copies data by hand again.",
-    "s7t":"Get found by AI search",
-    "s7p":"I check whether ChatGPT, Gemini and Claude recommend your business when a buyer asks — show who they name instead, and exactly how to get your name there. Tracked month by month.",
-    "s8t":"AI video &amp; social reels",
-    "s8p":"A handful of photos or clips become polished vertical reels in three languages — titles, music, brand — ready to post in minutes instead of an afternoon of editing.",
-    "s9t":"Websites &amp; brand identity",
-    "s9p":"High-craft bilingual websites with no templates, plus full brand identities — logo, colour, type and a brand book your whole team can use.",
+    "services.fam1":"Assistants and bots",
+    "services.fam1p":"AI that talks, reads and replies for you — chat &amp; voice assistants that know your business, private \"ask-your-documents\" AI, and WhatsApp &amp; Telegram bots on your real number.",
+    "services.fam2":"Automation and data",
+    "services.fam2p":"The busywork and records, handled in the background — AI back-office systems, CRM, email &amp; calendar integration, and honest property valuation.",
+    "services.fam3":"Visibility and media",
+    "services.fam3p":"Get found, get seen, look the part — AI-search visibility, multilingual video reels, and high-craft websites &amp; brand identity.",
     "how.eyebrow":"How it works",
     "how.title":"Three steps, and it's off your plate.",
     "how.d1":"Step one","how.d2":"Step two","how.d3":"Step three",
@@ -810,6 +822,9 @@ const STR = {
     "work.p7p":"A wedding-and-events proposal for a historic Asturian palace — delivered as a working website, not a PDF, complete with on-site photography and a cinematic AI-generated video of the palace.",
     "work.p8k":"Brand identity","work.p8t":"The AsturAi brand",
     "work.p8p":"A complete brand built from scratch — the octopus mark, the navy-and-gold palette, the typography and a full brand book — the same identity you're looking at on this page.",
+    "work.p9k":"Website design","work.p9t":"Barbería L'Arena",
+    "work.p9p":"A premium one-page website for a Gijón barbershop — a full-storefront hero, online booking, services, gallery and loyalty card, in three languages.",
+    "work.p9cta":"View it live →",
     "work.more":"And more — secure multi-client systems, custom Telegram bots, lead pipelines, an honest from-scratch encryption engine, a tool that cuts AI running costs. <a href='#contact'>Ask to see whatever fits your business →</a>",
     "about.eyebrow":"Why an octopus","about.title":"Many arms. One brain.",
     "about.p1":"An octopus handles many things at once — but there's a single mind behind it all. That's exactly what good automation gives your business: lots of small tasks taken care of in the background, with one clear intelligence steering them.",
@@ -835,15 +850,16 @@ const STR = {
     "faq.a7":"Yes. Alongside the AI work I build high-craft bilingual websites and complete brand identities — logo, colour, typography and brand guidelines — all without templates.",
     "contact.eyebrow":"Let's talk","contact.title":"Tell me one task that wastes your time.",
     "contact.sub":"Pick one thing that eats your week — and I'll show you, with no commitment, how AI could take it off your plate. First conversation is free.",
-    "contact.wa":"WhatsApp me","contact.mail":"Send an email",
+    "contact.wa":"Free first look on WhatsApp","contact.mail":"Or send an email",
+    "contact.next":"Usually a reply within a day · a short call · no pressure, no pitch",
     "foot.tag":"Done-for-you AI · built remotely for business anywhere"
   },
   es:{
-    "nav.services":"Qué hago","nav.work":"Mi trabajo","nav.faq":"Preguntas","nav.about":"Sobre mí","nav.cta":"Hablemos",
-    "hero.eyebrow":"Arquitecto y Desarrollador de Soluciones de IA · Ingeniero de Automatización y Sistemas",
+    "nav.services":"Qué hago","nav.work":"Mi trabajo","nav.faq":"Preguntas","nav.about":"Sobre mí","nav.cta":"Diagnóstico gratis",
+    "hero.eyebrow":"IA a medida para inmobiliarias",
     "hero.title":"Pon en <span class='gold'>piloto automático</span> el trabajo aburrido de tu negocio.",
-    "hero.lead":"Soy Evan — arquitecto y desarrollador de soluciones de IA que diseña, construye y mantiene sistemas de IA y automatización a medida para empresas de cualquier lugar. Asistentes que responden mensajes, leen notas de voz y correos, valoran inmuebles, hacen seguimiento de clientes, crean vídeo y más — para que dediques menos tiempo al papeleo y más a lo que de verdad hace crecer tu negocio. Trabajo 100% en remoto, así que dónde estés no importa.",
-    "hero.cta1":"Hablemos","hero.cta2":"Ver mi trabajo",
+    "hero.lead":"IA a medida para inmobiliarias — asistentes que responden WhatsApp, transcriben notas de voz, valoran inmuebles y hacen seguimiento de clientes. Los mismos sistemas encajan en cualquier negocio que pierda horas en tareas repetitivas. Yo lo construyo, lo mantengo y lo dejo funcionando por ti — 100% en remoto, estés donde estés.",
+    "hero.cta1":"Diagnóstico gratis","hero.cta2":"Ver mi trabajo",
     "strip.1":"<b>Hecho por mí</b> — yo lo construyo, tú lo usas",
     "strip.2":"<b>Lenguaje claro</b> — sin tecnicismos, nunca",
     "strip.3":"<b>Privado por diseño</b> — tus datos siguen siendo tuyos",
@@ -852,24 +868,12 @@ const STR = {
     "services.eyebrow":"Qué construyo",
     "services.title":"IA de verdad, que se gana su sueldo.",
     "services.sub":"Todo lo que ves aquí lo he diseñado y construido yo mismo — y la mayor parte ya funciona para empresas reales. Elige lo que encaje, o cuéntame tu problema y yo diseño la combinación adecuada.",
-    "s1t":"Sistemas de IA para la oficina",
-    "s1p":"Un sistema de IA a medida que se ocupa en segundo plano del papeleo repetitivo de tu negocio — hecho a la medida de cómo trabajas de verdad, y mantenido por mí.",
-    "s2t":"Asistentes de IA que conocen tu negocio",
-    "s2p":"Asistentes por chat y por voz manos libres en español, inglés y ruso. Leen tus mensajes, archivos y correos, y luego responden o actúan — siempre con tu aprobación primero.",
-    "s3t":"IA privada para «preguntar a tus documentos»",
-    "s3p":"Haz preguntas sobre tus propios contratos, manuales o archivos y obtén respuestas con la página exacta de la que salen — funcionando en tu propio ordenador, sin que nada salga de tu empresa.",
-    "s4t":"Bots de WhatsApp y Telegram",
-    "s4p":"Bots con IA que leen mensajes y notas de voz, los clasifican, conectan personas, moderan grupos y gestionan reservas — con tu número real, en un servidor real, día y noche.",
-    "s5t":"Herramientas de valoración de inmuebles",
-    "s5p":"Herramientas de valor de mercado honestas, basadas en el Catastro oficial de España y en datos reales del mercado local — un rango de precio real en segundos, con informe listo para el cliente.",
-    "s6t":"Integración con CRM, correo y agenda",
-    "s6p":"Conecto las herramientas que ya usas — tu CRM, Gmail, tu agenda — para que las fichas de cliente se rellenen solas, los recordatorios se sincronicen y nadie vuelva a copiar datos a mano.",
-    "s7t":"Que la IA te encuentre",
-    "s7p":"Compruebo si ChatGPT, Gemini y Claude recomiendan tu negocio cuando un cliente pregunta — te enseño a quién nombran en su lugar y exactamente cómo poner ahí tu nombre. Con seguimiento mes a mes.",
-    "s8t":"Vídeo con IA y reels para redes",
-    "s8p":"Unas pocas fotos o clips se convierten en reels verticales cuidados en tres idiomas — títulos, música, marca — listos para publicar en minutos, no en una tarde de edición.",
-    "s9t":"Webs e identidad de marca",
-    "s9p":"Webs cuidadas y bilingües sin plantillas, además de identidades de marca completas — logo, color, tipografía y un manual de marca para todo tu equipo.",
+    "services.fam1":"Asistentes y bots",
+    "services.fam1p":"IA que habla, lee y responde por ti — asistentes por chat y voz que conocen tu negocio, IA privada para «preguntar a tus documentos» y bots de WhatsApp y Telegram con tu número real.",
+    "services.fam2":"Automatización y datos",
+    "services.fam2p":"El papeleo y las fichas, resueltos en segundo plano — sistemas de IA para la oficina, integración con CRM, correo y agenda, y valoración honesta de inmuebles.",
+    "services.fam3":"Visibilidad y medios",
+    "services.fam3p":"Que te encuentren, que te vean y con buena imagen — visibilidad en IA, reels multilingües y webs e identidad de marca cuidadas.",
     "how.eyebrow":"Cómo funciona",
     "how.title":"Tres pasos, y deja de ser tu problema.",
     "how.d1":"Paso uno","how.d2":"Paso dos","how.d3":"Paso tres",
@@ -899,6 +903,9 @@ const STR = {
     "work.p7p":"Una propuesta de bodas y eventos para un palacio histórico asturiano — entregada como una web que funciona, no un PDF, con fotografía hecha en el sitio y un vídeo cinematográfico del palacio generado con IA.",
     "work.p8k":"Identidad de marca","work.p8t":"La marca AsturAi",
     "work.p8p":"Una marca construida desde cero — el pulpo, la paleta azul marino y oro, la tipografía y un manual de marca completo — la misma identidad que estás viendo en esta página.",
+    "work.p9k":"Diseño web","work.p9t":"Barbería L'Arena",
+    "work.p9p":"Una web premium de una sola página para una barbería de Gijón — con un hero a pantalla completa del local, reserva online, servicios, galería y tarjeta de fidelidad, en tres idiomas.",
+    "work.p9cta":"Verla en vivo →",
     "work.more":"Y más — sistemas seguros multicliente, bots de Telegram a medida, canales de captación de clientes, un motor de cifrado honesto hecho desde cero, una herramienta que reduce el coste de la IA. <a href='#contact'>Pídeme ver lo que encaje con tu negocio →</a>",
     "about.eyebrow":"Por qué un pulpo","about.title":"Muchos brazos. Un solo cerebro.",
     "about.p1":"Un pulpo se ocupa de muchas cosas a la vez — pero hay una sola mente detrás de todo. Eso es justo lo que una buena automatización le da a tu negocio: muchas tareas pequeñas resueltas en segundo plano, con una inteligencia clara que las dirige.",
@@ -924,7 +931,8 @@ const STR = {
     "faq.a7":"Sí. Junto al trabajo de IA creo webs cuidadas y bilingües e identidades de marca completas — logo, color, tipografía y manual de marca — todo sin plantillas.",
     "contact.eyebrow":"Hablemos","contact.title":"Dime una tarea que te hace perder el tiempo.",
     "contact.sub":"Elige una sola cosa que te coma la semana — y te enseño, sin compromiso, cómo la IA podría quitártela de encima. La primera conversación es gratis.",
-    "contact.wa":"Escríbeme por WhatsApp","contact.mail":"Enviar un correo",
+    "contact.wa":"Diagnóstico gratis por WhatsApp","contact.mail":"O envíame un correo",
+    "contact.next":"Normalmente respondo en un día · una llamada corta · sin presión, sin venderte nada",
     "foot.tag":"IA hecha a medida · construida en remoto para negocios de cualquier lugar"
   }
 };
@@ -1187,13 +1195,12 @@ if(REDUCED || !hasGSAP){
 })();
 </script>
 
-<!-- ============ VISITOR ANALYTICS (Cloudflare Web Analytics — free, privacy-first, no cookies) ============
-     TO TURN ON: open Cloudflare dashboard → Analytics & Logs → Web Analytics → add site asturai.com,
-     copy the "token" it gives you, and paste it below in place of PASTE_YOUR_TOKEN_HERE.
-     (Because this site is on Cloudflare Pages you can also enable it with one click in the Pages
-     project settings and delete this snippet entirely — either way works.) -->
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-        data-cf-beacon='{"token": "PASTE_YOUR_TOKEN_HERE"}'></script>
+<!-- ============ VISITOR ANALYTICS ============
+     This site runs on Cloudflare Pages, so the visitor counter is turned on with ONE CLICK in the
+     dashboard — no code needed (that's why the old placeholder snippet was removed from here).
+     Turn it on:  Cloudflare dashboard → Workers & Pages → your "asturai" project → Metrics
+                  (or: Analytics & Logs → Web Analytics → enable for asturai.com).
+     See the numbers later in the SAME place. -->
 
 </body>
 </html>
